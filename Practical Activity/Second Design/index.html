@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Enhanced Website</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Styles */
+        .nav-container {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+        }
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            
+        }
+        .main-nav li {
+            margin: 0 15px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+        .main-nav a:hover {
+            text-decoration: underline;
+            color: #ffd700;
+        }
+        /* Header Styles */
+        .header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #fff;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+          
+        }
+        /* Main Content Styling */
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .about-section, .services-section, .contact-section {
+            background-color: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .about-section h2, .services-section h2, .contact-section h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .about-section p, .services-section p, .contact-section p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        /* Text Formatting */
+        .highlight {
+            background-color: #ffd700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        .email {
+            color: #3498db;
+            font-weight: bold;
+            
+        }
+        .email:hover {
+            text-decoration: underline;
+        }
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .new-section {
+            text-align: center;
+            padding: 2rem; 
+            background-color: #fff;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <div class="nav-container">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Welcome to My Website</h1>
+        <p class="subtitle">Learning <em>HTML</em> and <em>CSS</em></p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <div class="about-section" id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our website! Here you'll find <span style="font-size: 1.2em;">amazing content</span>             about web development.</p>
+        </div>
+
+        <div class="services-section" id="services">
+            <h2>Our Services</h2>
+            <p>We specialize in:</p>
+            <ul>
+                <li><span class="highlight">Web Design</span></li>
+                <li><em>Content Creation</em></li>
+                <li><strong>Digital Marketing</strong></li>
+            </ul>
+        </div>
+
+        <div class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch: <span class="email">email@example.com</span></p>
+        </div>
+
+        <div class="new-section">
+            <h3>Gallery</h3>
+            <p>This is <span style="color: #ff6b6b;">Gallery sesection where 
+                you can checkout through my newly designed website as a newbie developer</span> and     
+                <span style="font-weight: bold;">I believe you will surely find something very captivating.</span>.
+            </p>
+            <p>This is <span style="text-decoration: underline;">underlined</span> and    <span style="text-decoration: line-through;">strikethrough</span> text.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 My Website</p>
+    </div>
+</body>
+</html>
