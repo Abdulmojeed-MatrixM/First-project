@@ -79,3 +79,11 @@ nav ul li a:hover {
     background-color: #353333; /* Light background color */
 }
 
+/*Gallery section*/
+
+#main-gallery-container {
+    margin-top: 50px; /* Add margin to the top */
+}
+
+#gallery {
+}
