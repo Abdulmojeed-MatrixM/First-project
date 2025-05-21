@@ -8,9 +8,14 @@ body {
 }
 
 h1{
-    font-size: 80px;
-    color: rgb(3, 3, 79);
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.0rem; /* Responsive font size */;
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+    font-size: 1.4rem; /* Responsive font size */;
+    color: #e6e6e6;
 }
 
 /*Grand Parent Selector for Nav bar */
@@ -62,6 +67,108 @@ nav ul li a:hover {
     padding: 5px; /* Add padding on hover */
     
 }
+
+/* Header styling */
+.header-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100wh; /* Full viewport width */
+    text-align: center; /* Center text */
+    padding: 2rem; /* Padding for header content */
+    padding-top: 60px; /* Extra padding for top */
+    background-image: url('yatch2.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* No repeat for the background image */
+    position: relative; /* Position relative for pseudo-element */
+
+}
+.header-content::before { /* Pseudo-element for overlay */
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolute for overlay */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 0; /* Ensure overlay is above background image */
+}
+.header-text, .content-button { /* Header text and button styling */
+    z-index: 1; /* Ensure content is above overlay */
+    position: relative; /* Position relative for stacking context */
+}
+
+/* Header Button styling */
+
+button {
+    text-transform: uppercase; /* Uppercase text */
+    position: relative; /* Position relative for stacking context */
+    border: none; /* Remove default border */
+    font-size: 25px; /* Font size for button */
+    transform: 0.2s; /* Smooth transition */
+    background-color: transparent; /* transparent background */
+    outline: none; /* none; Remove default shadow */
+    border-radius: 3px; /* Rounded corners */
+    margin: 0px 10px; /* Space between buttons */
+    padding: 23px 33px; /* Padding for button */
+    border: 3px solid transparent; /* Transparent border */
+}
+button a {
+    text-decoration: none; /* Remove underline from links */
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for button text */
+}
+button:active {
+    transform:translate(3px); /* Move button down on click */
+}
+button::after, button::after { /* Pseudo-element for button */
+    border-radius: 3px; /* Rounded corners */
+}
+.content-button {
+    background-color: transparent; /* Transparent background */
+    color: #3d3d3d; /* Dark text color */
+    width:max-content; 
+    padding: 20px 20px; /* Padding for button */
+    
+}
+.content-button:hover {
+    background-color: transparent; /* Change background color on hover */
+    color: #e6e6e6; /* Light text color */
+    box-shadow: none; /* Remove shadow on hover */
+}
+.content-button::before { /* Pseudo-element for button */
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolute for overlay */
+    top: 0; /* Align to the top */
+    left: 0; 
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border: 3px solid #959595; /* Border color */
+    transition: opacity 0.3s border 0.3s; /* Smooth transition */
+}
+.content-button:hover::before { /* Pseudo-element for button hover */
+    opacity: 0; /* Fade out on hover */
+}
+.content-button::after { /* Pseudo-element for button hover */
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolute for overlay */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: transparent; /* Background color */
+    border: 3px solid #e6e6e6; /* Border color */
+    opacity: 0; /* Initial opacity */
+    z-index: -1; /* Ensure pseudo-element is below content */
+    transform: scaleX(1.1) scaleY(1.3); /* Scale effect */
+    transition: transform 0.3s opacity 0.3s; /* Smooth transition */
+}
+.content-button:hover::after { /* Pseudo-element for button hover */
+    opacity: 1; /* Fade in on hover */
+    transform: scaleX(1) scaleY(1); /* Scale effect */
+}
     
 .container {
     max-width: 1200px; /* Set a maximum width for the container */
@@ -69,6 +176,23 @@ nav ul li a:hover {
     padding: 20px; /* Add padding inside the container */
     border: #15a2b5 solid 10px; /* Add border to the container */
     background-color: #353333; /* Light background color */
+}
+.content-header {
+    padding: 20px; /* Add padding inside the div */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);  
+    margin: 80px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+.content-header h1 {
+    font-size: 24px; /* Font size for chapter headings */
+    color: #e6e6e6;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5px; /* Space below the heading */
+    border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    display: inline-block; /* Align with the text */
+    padding-bottom: 5px; /* Space for the underline effect */
 }
 
 .chapter-section {
@@ -78,7 +202,15 @@ nav ul li a:hover {
     border: #15a2b5 solid 10px; /* Add border to the container */
     background-color: #353333; /* Light background color */
 }
-<<<<<<< HEAD
+.chapter-section h1 {
+    font-size: 24px; /* Font size for chapter headings */
+    color: #e6e6e6;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5px; /* Space below the heading */
+    border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    display: inline-block; /* Align with the text */
+    padding-bottom: 5px; /* Space for the underline effect */
+}
 
 /*Gallery section*/
 
@@ -86,7 +218,32 @@ nav ul li a:hover {
     margin-top: 50px; /* Add margin to the top */
 }
 
-#gallery {
-}
-=======
->>>>>>> 9176f9cdd2e4adf48fa289d36dcdd841380c13b6
+
+
+
+/*Gallery section*/
+
+
+/* Footer Styling */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: rgb(63, 62, 62);
+            margin-top: 2rem;
+        }
+        .footer-content {
+            max-width: 800px; /* Max width for footer content */
+            margin: 0 auto; /* Centering the footer content */
+            padding: 0 1rem; /* Padding for footer content */
+        }
+
+        
+    div {
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
