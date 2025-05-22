@@ -14,7 +14,7 @@ h1{
 }
 
 h2 {
-    font-size: 1.4rem; /* Responsive font size */;
+    font-size: 1.0rem; /* Responsive font size */;
     color: #e6e6e6;
 }
 
@@ -91,7 +91,7 @@ nav ul li a:hover {
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
     bottom: 0; /* Align to the bottom */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
     z-index: 0; /* Ensure overlay is above background image */
 }
 .header-text, .content-button { /* Header text and button styling */
@@ -194,6 +194,7 @@ button::after, button::after { /* Pseudo-element for button */
     border-bottom: 2px solid #e6e6e6; /* Underline effect */
     display: inline-block; /* Align with the text */
     padding-bottom: 5px; /* Space for the underline effect */
+    text-align: left; 
 }
 .content-header p {
     font-size: 12px; /* Font size for paragraph */
@@ -289,6 +290,7 @@ footer {
     color: #1da1f2; /* Twitter color */
 }
 
+
         .footer {
             text-align: center;
             padding: 2rem;
@@ -298,7 +300,10 @@ footer {
         }
 
         
-    div {
+    
+
+
+   /* div {
             margin: 20px;
             text-align: center;
             padding: 20px;
@@ -306,3 +311,4 @@ footer {
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+ */
