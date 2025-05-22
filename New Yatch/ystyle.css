@@ -64,8 +64,7 @@ nav ul li a:hover {
     border-bottom: 2px solid #e6e6e6; /* Add underline on hover */
     background-color: #27d2e529; /* Change background color on hover */
     border-radius: 5px; /* Add rounded corners */
-    padding: 5px; /* Add padding on hover */
-    
+    padding: 10px; /* Add padding on hover */
 }
 
 /* Header styling */
@@ -169,13 +168,15 @@ button::after, button::after { /* Pseudo-element for button */
     opacity: 1; /* Fade in on hover */
     transform: scaleX(1) scaleY(1); /* Scale effect */
 }
-    
+
+
+    /* Main section styling */
 .container {
-    max-width: 1200px; /* Set a maximum width for the container */
+    max-width: 600px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add padding inside the container */
-    border: #15a2b5 solid 10px; /* Add border to the container */
-    background-color: #353333; /* Light background color */
+    /* border: #15a2b5 solid 10px;  Add border to the container */
+    /* background-color: #353333; /* Light background color */
 }
 .content-header {
     padding: 20px; /* Add padding inside the div */
@@ -194,6 +195,14 @@ button::after, button::after { /* Pseudo-element for button */
     display: inline-block; /* Align with the text */
     padding-bottom: 5px; /* Space for the underline effect */
 }
+.content-header p {
+    font-size: 12px; /* Font size for paragraph */
+    text-align: justify; 
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */   
+}
+
 
 .chapter-section {
     max-width: 1200px; /* Set a maximum width for the container */
@@ -212,7 +221,8 @@ button::after, button::after { /* Pseudo-element for button */
     padding-bottom: 5px; /* Space for the underline effect */
 }
 
-/*Gallery section*/
+
+/*Gallery styling*/
 
 #main-gallery-container {
     margin-top: 50px; /* Add margin to the top */
@@ -223,17 +233,68 @@ button::after, button::after { /* Pseudo-element for button */
 
 
 /* Footer Styling */
+
+footer {
+    background-color: #1b1b20; /* Dark background color */
+    color: #e6e6e6; /* Light text color */
+    padding: 40px 0; /* Padding for footer */
+}
+.footer-content {
+    max-width: 12000px; /* Set a maximum width for the footer */
+    margin: 0 auto; /* Centering the footer content */
+    text-align: center; /* Center text in the footer */
+}
+.footer-links {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the links */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove default list style */
+    gap: 20px; /* Space between links */
+}
+.footer-links a {
+    color: #e6e6e6; /* Light text color */
+    text-decoration: none; /* Remove underline from links */
+    font-family: "Montserrat", sans-serif; /* Font family for footer links */
+    font-size: 18px; /* Font size for footer links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+.footer-links a:hover {
+    color: #1d9ba9; /* Change text color on hover */
+    bottom: -2px; /* Move text down on hover */
+    border-bottom: 2px solid #e6e6e6; /* Add underline on hover */
+    background-color: #27d2e529; /* Change background color on hover */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 10px; /* Add padding on hover */
+}
+.footer-social-icons {
+    margin-top: 0px; /* Space above the icons */
+}
+.footer-social-icons a {
+    color: #e6e6e6; /* Light text color */
+    font-size: 24px; /* Font size for social icons */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+.footer-social-icons a:hover { 
+    color: #1d9ba9; /* Change text color on hover */
+    transform: scale(1.2); /* Scale effect on hover */
+}
+.footer-social-icons a.fb  {
+    color: #3b5998; /* Facebook color */
+}
+.footer-social-icons a.ig {
+    color: #e1306c; /* Instagram color */
+}
+.footer-social-icons a.tw {
+    color: #1da1f2; /* Twitter color */
+}
+
         .footer {
             text-align: center;
             padding: 2rem;
             background-color: #333;
             color: rgb(63, 62, 62);
             margin-top: 2rem;
-        }
-        .footer-content {
-            max-width: 800px; /* Max width for footer content */
-            margin: 0 auto; /* Centering the footer content */
-            padding: 0 1rem; /* Padding for footer content */
         }
 
         
