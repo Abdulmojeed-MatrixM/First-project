@@ -98,6 +98,20 @@ nav ul li a:hover {
     z-index: 1; /* Ensure content is above overlay */
     position: relative; /* Position relative for stacking context */
 }
+.header-text h1 {
+    font-size: 2rem; /* Responsive font size */
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for header text */
+    margin-bottom: 20px; /* Space below the heading */
+}
+/*.header-text h2 {
+    font-size: 1.0rem; /* Responsive font size */
+    /*color: #e6e6e6; /* Light text color */
+    /*font-family: "Montserrat", sans-serif; /* Font family for header text */
+    /*margin-bottom: 20px; /* Space below the heading */
+    /*border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    /*display: inline-block; /* Align with the text */
+/*}
 
 /* Header Button styling */
 
