@@ -141,7 +141,7 @@ button::after, button::after { /* Pseudo-element for button */
 }
 .content-button {
     background-color: transparent; /* Transparent background */
-    color: #3d3d3d; /* Dark text color */
+    color: #d3d3d3; /* Light text color */
     width:max-content; 
     padding: 20px 20px; /* Padding for button */
     
