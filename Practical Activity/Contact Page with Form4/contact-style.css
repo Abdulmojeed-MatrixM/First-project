@@ -31,7 +31,7 @@
             position: center; /* Center the logo */
         }
 
-/* Parent Selector for Nav bar */
+        /* Parent Selector for Nav bar */
         nav ul {
             list-style: none; /* Remove default list style */
             margin: 0; /* Remove default margin */
@@ -41,7 +41,7 @@
             align-items: center; /* Center the items vertically */
         }
 
-/*Child Selector for Nav bar */
+        /*Child Selector for Nav bar */
         nav ul li {
             margin: 0 10px; /* Add space between list items */
             list-style: none;
