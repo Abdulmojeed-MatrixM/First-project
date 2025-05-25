@@ -1,0 +1,122 @@
+<!--In this page, I built a contact form web page.
+Where I used my Understanding of HTML5 form elements and attributes to
+Implement proper form validation techniques and Create a responsive form layouts with CSS. 
+I follow the web accessibility best practices for forms to Manage form state and user feedback-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact-style.css" />
+    <style>
+        
+    </style>
+        
+</head>
+<body>
+    <!-- Navigation Section -->
+       
+    <nav>
+        <ul>
+            <li><a href="index.html" ></a> <img class="logo" 
+                src="logo5.jpg" alt="My Logo" height="60px"/></li> 
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>   
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Establish the foundational layout of our contact page using semantic -->
+     
+    <!-- Header Section -->
+    <header>
+       
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you! Please fill out the form below to get in touch.</p>
+        <aside>
+            <address > <p>Get in Touch:</p> <br>
+                    10, Downing Road,<br>
+                    London, Kt2 7NA, <br>United Kingdom<br>
+                Phone: <a href="tel:+441234567890">+44 123 456 7890</a><br>
+                Email: <a href="email:example@email.com" class="email">example@email.com</a> 
+            </address>
+        </aside>
+    </header>
+        
+    <!-- Main Content Section -->
+    <main class="contact-container">
+        <section class="contact-info">
+        
+        
+        <form id="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required minlength="2"
+                        placeholder="Enter your full name" >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required
+                        placeholder="Enter your Email address" >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" 
+                        placeholder="Enter your Phone number" >
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required >
+                    <option value="">Please select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="billing">Billing Question</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required minlength="10" 
+                placeholder="Your Message..."> </textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                    Subscribe to our newsletter
+                </label>
+            </div>
+
+            <button type="submit">
+                Send Message
+            </button>
+        </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+        
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        
+            <p class="footer-social">Follow us on social media: 
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://instagram.com" target="_blank">Instagram</a> |
+                <a href="https://x.com" target="_blank">X</a>
+            </p>
+        
+        
+    </footer>
+</body>
+</html>
+
