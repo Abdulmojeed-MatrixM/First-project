@@ -172,27 +172,6 @@
         }
 
         
-
-        /* Responsive Header */
-        @media (max-width: 700px) { /* Mobile styles */
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 1rem;
-            }
-
-            nav ul {
-                flex-direction: column; /* Stack items vertically */
-                gap: 0.5rem; /* Space between items */
-                width: 100%; /* Full width */
-            }
-            nav ul li {
-                width: 100%; /* Full width for each item */
-            }
-            .logo { 
-                margin-bottom: 0.5rem; /* Space between logo and nav */
-            }
-        }
         
         /* Main content spacing to avoid header overlap */
         main { /* Main content (container) */
@@ -248,6 +227,80 @@
             color: #056138;
         }
 
+
+
+        /* Responsive Header */
+        @media (max-width: 700px) { /* Mobile styles */
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                gap: 0.5rem; /* Space between items */
+                width: 100%; /* Full width */
+            }
+            nav ul li {
+                width: 100%; /* Full width for each item */
+            }
+            .logo { 
+                margin-bottom: 0.5rem; /* Space between logo and nav */
+            }
+        }
+        
+        /* Responsive Main Content */
+        @media (max-width: 700px) { /* Mobile styles */
+            main {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            form {
+                flex-direction: column; /* Stack form elements vertically */
+                gap: 0.5rem; /* Space between form elements */
+                width: 100%; /* Full width for form */
+            }
+            button{
+                width: 100%; /* Full width for each item */
+            }
+            aside {
+                width: 100%; /* Full width for aside */
+                margin-top: 1rem; /* Space above the aside */
+            }
+            .logo { 
+                margin-bottom: 0.5rem; /* Space between logo and nav */
+            }
+        }
+
+
+        /* Responsive Main Content */
+        @media (max-width: 1300px) { /* Tablet styles */
+            main {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            form {
+                flex-direction: column; /* Stack form elements vertically */
+                gap: 0.5rem; /* Space between form elements */
+                width: 100%; /* Full width for form */
+            }
+            button{
+                width: 100%; /* Full width for each item */
+            }
+            aside {
+                width: 100%; /* Full width for aside */
+                margin-top: 1rem; /* Space above the aside */
+            }
+            .logo { 
+                margin-bottom: 0.5rem; /* Space between logo and nav */
+            }
+        }
+            
          /* Responsive Footer */
         @media (max-width: 700px) { /* Mobile styles */
             footer {
