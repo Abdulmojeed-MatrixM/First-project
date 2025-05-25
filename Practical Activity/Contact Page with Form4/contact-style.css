@@ -50,7 +50,7 @@
             gap: 2rem;
         }
 
-/*Grand child Selector for Nav bar */
+        /*Grand child Selector for Nav bar */
         nav ul li a {
             /* font-family: "Montserrat", sans-serif; */
             font-size: 20px; /* Font size for the links */
@@ -63,7 +63,7 @@
             position: relative; /* Position relative for pseudo-element */
         }
 
-/* Great grant child (Hover effect) for Nav bar */
+        /* Great grant child (Hover effect) for Nav bar */
         nav ul li a:hover {
             color: #043d3a; /* Change text color on hover */
             bottom: -2px; /* Move text down on hover */
