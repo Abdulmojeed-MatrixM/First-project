@@ -18,6 +18,7 @@ h2 {
     color: #e6e6e6;
 }
 
+/* Navigation Bar Styling */
 /*Grand Parent Selector for Nav bar */
 nav {
     position: fixed; /* Fixed position to keep the navbar at the top */
@@ -114,7 +115,6 @@ nav ul li a:hover {
 /*}
 
 /* Header Button styling */
-
 button {
     text-transform: uppercase; /* Uppercase text */
     position: relative; /* Position relative for stacking context */
