@@ -1,0 +1,112 @@
+<!--On this page, I've embedded content from other sources using iframes. 
+I made sure these embedded sections look good on any device (responsive design) and are easy for everyone to use (accessibility). 
+I also focused on making sure they load efficiently and securely, even when pulling content from different websites.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Content</title>
+    <link rel="stylesheet" href="istyle.css" />
+    <style>
+        
+    </style>
+        
+</head>
+<body>
+    <!-- Navigation Section -->
+       
+    <nav>
+        <ul>
+            <li><a href="index.html"></a> <img class="logo" 
+                src="logo5.jpg" alt="My Logo" height="60px"/></li> 
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>   
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Establish the foundational layout of our contact page using semantic -->
+     
+    <!-- Header Section -->
+    <header>
+       
+        <h1>Visit Our Location</h1>
+        <p> 
+            Welcome to our contact page! Here, you can find all the information you need to get in touch with us. 
+            Whether you have a question, feedback, or just want to say hello, we're here to help.
+        </p>
+        
+    </header>
+
+    
+    <!-- Main Content Section -->
+    <main class="contact-container">
+        <section class="location-section">
+            <h2>Our Location</h2>
+            <p>We're located in the heart of the city, easily accessible by public transport.</p>
+            
+            <div class="iframe-container">
+                 <iframe     src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE"
+                        title="Google Maps Location"
+                        width="600"
+                        height="450"
+                        loading="lazy"
+                        allowfullscreen=""
+                        referrerpolicy="no-referrer-when-downgrade"
+                        sandbox="allow-scripts allow-same-origin allow-popups">
+                        <p>Your browser does not support iframes. Please visit our <a href="location-link">location page</a>.</p>
+                </iframe>
+            </div>
+
+            <div class="iframe-controls">
+                <button onclick="reloadFrame()">Reload Content</button>
+                <button onclick="toggleFullscreen()">Fullscreen</button>
+            </div>
+
+            <script>
+                function reloadFrame() {
+                const frame = document.querySelector('iframe');
+                frame.src = frame.src;
+             }
+
+                function toggleFullscreen() {
+                const frame = document.querySelector('iframe');
+                    if (frame.requestFullscreen) {
+                    frame.requestFullscreen();
+                    }
+                }
+            </script>
+            <aside class="location-info">
+                <h3>Store Hours</h3>
+                <ul>
+                    <li>Monday - Friday: 9am - 6pm</li>
+                    <li>Saturday: 10am - 4pm</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </aside>
+        </section>
+        
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+        
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        
+            <p class="footer-social">Follow us on social media: 
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://instagram.com" target="_blank">Instagram</a> |
+                <a href="https://x.com" target="_blank">X</a>
+            </p>
+        
+        
+    </footer>
+</body>
+</html>
+
