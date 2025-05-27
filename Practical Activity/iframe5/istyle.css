@@ -1,7 +1,7 @@
 * { 
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         }
         body {
             font-family: Arial, sans-serif;
@@ -92,7 +92,7 @@
             /*font-size: 1.1rem;  Slightly larger font size */
             text-align: center; /* Center the paragraph */
         }
-        
+
 .location-section {
     margin: 2rem 0; /* Space above and below the section */
     padding: 1rem; /* Padding inside the section */
@@ -100,6 +100,8 @@
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
+
+    /* iframe container styling */
 .iframe-container {
     position: relative;
     width: 100%;

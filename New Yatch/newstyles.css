@@ -1,0 +1,267 @@
+body {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for the body */
+    line-height: 1.6; /* Line height for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+p {
+    font-size: 15px; /* Font size for paragraphs */
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for paragraphs */
+    margin-top: -13px; /* Adjust top margin for paragraphs */
+}
+
+h1{
+    font-size: 2.5rem; /* Responsive font size */;
+    color: #e6e6e6; /* Light text color */
+    margin-bottom: 10px; /* Space below the heading */
+    font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+    font-size: 1.4rem; /* Responsive font size */;
+    color: #b0b0b8; /* Light text color */
+}
+
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+
+        /* Create three equal column  Styling that floats next to eachother*/
+.column {
+    float: left; /* Float the columns to the left */
+    width: 33.33%; /* Set each column to take up one-third of the container */
+    padding: 10px; /* Add padding inside each column */
+    height: 300px; /* Set a fixed height for the columns */
+    /*background-color: rgba(255, 255, 255, 0.05); /* Light background color with transparency */
+    /*border-radius: 5px; /* Rounded corners for the columns */
+    /*margin: 10px; /* Space between columns */
+}
+        /* Clear float after the columns */
+.row:after {
+    content: ""; /* Empty content for the pseudo-element */
+    display: table; /* Display as a table to clear the float */
+    clear: both; /* Clear the float */
+}
+
+
+    /* Navigation Bar Styling */
+/*Grand Parent Selector for Nav bar */
+nav {
+    position: fixed; /* Fixed position to keep the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0; /* Add padding to the top and bottom */
+    z-index: 1000; /* Ensure the navbar is above other content */
+    background-color: rgba(50, 50, 60, 0.95); /* Semi-transparent background */
+    box-shadow: 0 2px 10px rgba(50, 50, 60, 0.2); /* shadow effect */
+}
+
+/* Parent Selector for Nav bar */
+nav ul {
+    list-style: none; /* Remove default list style */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the list items */
+    align-items: center; /* Center the items vertically */
+}
+
+/*Child Selector for Nav bar */
+nav ul li {
+    margin: 0 15px; /* Add space between list items */
+}
+
+/*Grand child Selector for Nav bar */
+nav ul li a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px; /* Font size for the links */
+    color: #e6e6e6; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s border-bottom 0.3s; /* Smooth transition for hover effect */
+    padding-bottom: 5px; /* Add space below the text */
+    /*border-bottom: 2px solid transparent; /* Add space below the text */
+    position: relative; /* Position relative for pseudo-element */
+}
+
+/* Great grant child (Hover effect) for Nav bar */
+nav ul li a:hover {
+    color: #1b1b20; /* Change text color on hover */
+    border-bottom: 2px solid #e6e6e6; /* Add underline on hover */
+    /*bottom: -2px; /* Move text down on hover */
+    /*background-color: #27d2e529; /* Change background color on hover */
+    /*border-radius: 5px; /* Add rounded corners */
+    /*padding: 10px; /* Add padding on hover */
+}
+
+        /* Header Section styling - containers */
+.header-content,
+.button-container {
+    position: relative; /* Position relative for stacking context */
+    z-index: 1; /* Ensure content is above background image */
+}
+
+/* Header Button styling */
+button {
+    text-transform: uppercase; /* Uppercase text */
+    position: relative; /* Position relative for stacking context */
+    border: none; /* Remove default border */
+    font-size: 18px; /* Font size for button */
+    transform: 0.2s; /* Smooth transition */
+    background-color: #313131; /* Dark background color for button */
+    outline: none; /* none; Remove default shadow */
+    border-radius: 3px; /* Rounded corners */
+    margin: 0px 10px; /* Space between buttons */
+    padding: 12px 33px; /* Padding for button */
+    border: 3px solid transparent; /* Transparent border */
+    color: #fff; /* Light text color */
+}
+button:active {
+    transform:translate(3px); /* Move button down on click */
+}
+button::after, 
+button::after { /* Pseudo-element for button */
+    border-radius: 3px; /* Rounded corners */
+}
+.content-button /* .shrink-border */ {
+    background-color: transparent; /* Transparent background */
+    /*color: #1b1b20; /* Dark text color */
+    color: #d3d3d3; /* Light text color */
+}
+.content-button:hover {
+    background-color: transparent; /* Change background color on hover */
+    color: #e6e6e6; /* Light text color */
+    box-shadow: none; /* Remove shadow on hover */
+}
+.content-button::before { /* Pseudo-element for button */
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolute for overlay */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border: 3px solid #959595; /* Border color */
+    /*border: 3px solid #1b1b20; /* Border color */
+    transition: opacity 0.3s border 0.3s; /* Smooth transition */
+}
+.content-button:hover::before { /* Pseudo-element for button hover */
+    opacity: 0; /* Fade out on hover */
+}
+.content-button::after { /* Pseudo-element for button hover */
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Position absolute for overlay */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: transparent; /* Background color */
+    border: 3px solid #e6e6e6; /* Border color */
+    opacity: 0; /* Initial opacity */
+    z-index: -1; /* Ensure pseudo-element is below content */
+    transform: scaleX(1.1) scaleY(1.3); /* Scale effect */
+    transition: transform 0.3s opacity 0.3s; /* Smooth transition */
+}
+.content-button:hover::after { /* Pseudo-element for button hover */
+    opacity: 1; /* Fade in on hover */
+    transform: scaleX(1) scaleY(1); /* Scale effect */
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #1b1b20; /* Dark background color */
+    color: #e6e6e6; /* Light text color */
+    padding: 40px 0; /* Padding for footer */
+}
+.footer-content {
+    max-width: 1200px; /* Set a maximum width for the footer content */
+    margin: 0 auto; /* Centering the footer content */
+    text-align: center; /* Center text in the footer */
+}
+.footer-links {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the links */
+    padding: 0; /* Remove default padding */
+    list-style-type: none; /* Remove default list style */
+    gap: 20px; /* Space between links */
+}
+.footer-links a {
+    color: #e6e6e6; /* Light text color */
+    text-decoration: none; /* Remove underline from links */
+    /*font-family: "Montserrat", sans-serif; /* Font family for footer links */
+    /*font-size: 18px; /* Font size for footer links */
+    transform: color 0.3s; /* Smooth transition for hover effect */
+}
+.footer-links a:hover {
+    color: #2b6289; /* Change text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+    transform: color 0.3s; /* Smooth transition for hover effect */
+    /*
+    bottom: -2px; /* Move text down on hover */
+    /*border-bottom: 2px solid #e6e6e6; /* Add underline on hover */
+    /*background-color: #27d2e529; /* Change background color on hover */
+    /*border-radius: 5px; /* Add rounded corners */
+    /*padding: 10px; /* Add padding on hover */
+}
+.footer-social-icons {
+    margin-top: 0px; /* Space above the icons */
+}
+.footer-social-icons a {
+    color: #e6e6e6; /* Light text color */
+    font-size: 24px; /* Font size for social icons */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline from links */
+}
+.footer-social-icons a:hover { 
+    color: #2b6289; /* Change text color on hover */
+    /* transform: scale(1.2); /* Scale effect on hover */
+}
+
+
+        /* Media Section Styles */
+.column img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+    
+.div-tour-content {
+    /* background-color: rgba(255, 255, 255, 0.05); /* Light background color with transparency */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the content */
+    box-shadow: 0 4px 15px rgba(50, 50, 60, 0.1); /* Shadow effect */
+    height: auto; /* Allow content to adjust height */
+}
+
+.section-tour-content {
+    background-color: rgba(255, 255, 255, 0.05); /* Light background color with transparency */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the content */
+    box-shadow: 0 4px 15px rgba(50, 50, 60, 0.1); /* Shadow effect */
+    height: auto; /* Allow content to adjust height */
+    border: 1px solid #fff; /* Add a border to the content */
+}
+
+.tour-button {
+    text-transform: uppercase; /* Uppercase text */
+    font-family: "Montserrat", sans-serif; /* Font family for button */
+    font-size: 16px; /* Font size for button */
+    color: #fff; /* Light text color */
+}
+
+
+   /* div {
+            margin: 20px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+ */

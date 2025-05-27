@@ -256,7 +256,7 @@ footer {
     padding: 40px 0; /* Padding for footer */
 }
 .footer-content {
-    max-width: 12000px; /* Set a maximum width for the footer */
+    max-width: 1200px; /* Set a maximum width for the footer content */
     margin: 0 auto; /* Centering the footer content */
     text-align: center; /* Center text in the footer */
 }
