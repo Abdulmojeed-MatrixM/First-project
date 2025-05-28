@@ -346,10 +346,12 @@ figure:hover img {
     line-height: 1.6; /* Line height for better readability */
     margin: 0;
 }
+
+/*contact input[text], .contact textarea[message] { */
 .contact input, .contact textarea {
     font-size: 18px; /* Font size for input fields */
     margin: 0; /* Remove default margin */
-    width: 95%; /* Full width for input fields */
+    /*width: 95%; /* Full width for input fields */
     padding: 10px; /* Padding for input fields */
     margin-bottom: 20px; /* Space below input fields */
     border: none; /* Remove default border */
