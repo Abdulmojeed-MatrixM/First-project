@@ -237,14 +237,16 @@ button::after, button::after { /* Pseudo-element for button */
 }
 
 
-/*Gallery styling*/
+/*Gallery section styling*/
 
 #main-gallery-container {
     margin-top: 50px; /* Add margin to the top */
+
 }
 
 
-/*Gallery section*/
+
+
 
 
 
