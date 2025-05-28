@@ -315,6 +315,67 @@ figure:hover img {
     transform: scale(1.05); /* Scale effect on hover */
 }
 
+
+
+        /* Contact section styling */
+.contact {
+    max-width: 800px; /* Set a maximum width for the contact section */
+    margin: 80px auto; /* Center the contact section */
+    margin-bottom: 40vh; /* Add margin to the bottom */
+    padding: 20px; /* Add padding inside the contact section */
+    border-radius: 10px; /* Rounded corners for contact section */
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+.contact h1 {
+    font-size: 24px; /* Font size for contact heading */
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for contact heading */
+    margin-bottom: 20px; /* Space below the heading */
+    border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    display: inline-block; /* Align with the text */
+    padding-bottom: 5px; /* Space for the underline effect */
+}
+.contact form {
+    /*display: flex; /* Use flexbox for layout */
+    font-family: "Montserrat", sans-serif; /* Font family for form */
+    font-size: 18px; /* Font size for form */
+    /*flex-direction: column; /* Stack items vertically */
+    /*flex-wrap: wrap; /* Allow items to wrap */
+    color: #e6e6e6; /* Light text color */
+    line-height: 1.6; /* Line height for better readability */
+    margin: 0;
+}
+.contact input, .contact textarea {
+    font-size: 18px; /* Font size for input fields */
+    margin: 0; /* Remove default margin */
+    width: 95%; /* Full width for input fields */
+    padding: 10px; /* Padding for input fields */
+    margin-bottom: 20px; /* Space below input fields */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for input fields */
+}
+.contact button {
+    background-color: transparent; /* Transparent background */
+    background-color: #27d2e529; /* Button background color */   
+    color: #e6e6e6; /* Button text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size for button */
+    padding: 10px 20px; /* Padding for button */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+.contact button:hover {
+    background-color: #1d9ba9; /* Change background color on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+
+
+
         /* Responsive Design == Adding media query*/
 @media screen and (max-width: 768px) {
     nav ul {

@@ -24,11 +24,42 @@
         </ul>
     </nav> 
 
-      
-    <h1>Contact Yatch Tours</h1>
+      <!-- Contact form section -->
+       
+    <!-- Name field form section -->
+    <div class="contact"> 
+        <h1>Contact Yatch Tours</h1>
+        <div class="contact-box">
+            <h2>Send Us a Message</h2>
+            <form action="submit_contact.php" method="post">
+                <label for="firstname">FirstName:</label> 
+                <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+                <br>
 
-    <!-- Contact form section -->
-    
+                <label for="lastname">LastName:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+                <br>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number.">
+                <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+                <br>
+
+                <button type="submit">Send Message</button>
+                <button type="reset">Reset</button>
+                <br>
+                <p class="contact-info">For immediate assistance, call us at: <strong>+1-234-567-890</strong></p>
+                <p class="contact-info">Or email us at: <strong>
+            </form>
+        </div>
+    </div>
 
     
     <!-- Footer section -->
