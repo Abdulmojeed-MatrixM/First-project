@@ -247,8 +247,8 @@ button::after, button::after { /* Pseudo-element for button */
 }
 #gallery {
     display: grid; /* Use grid layout for gallery */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
-    /*grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
     width: 75%; /* Set width to 75% of the container */
     margin: 20px auto; /* Center the gallery */
     gap: 10px; /* Space between images */
