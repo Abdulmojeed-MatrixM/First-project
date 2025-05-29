@@ -319,7 +319,7 @@ figcaption {
     text-align: center; /* Center text in caption */
 }
 figure:hover img {
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(2.05); /* Scale effect on hover */
 }
 
 
