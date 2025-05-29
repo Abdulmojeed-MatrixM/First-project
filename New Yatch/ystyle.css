@@ -412,13 +412,11 @@ figure:hover img {
     margin-top: 100px; /* Add margin to the top */
     margin-left: 70px; /* Add margin to the left */
     margin-right: 70px; /* Add margin to the right */
-    margin-bottom: 50px; /* Add margin to the bottom */
+    margin-bottom: 20px; /* Add margin to the bottom */
     padding: 20px; /* Add padding inside the container */
     
 }
 .right-column {
-    align-content: center;
-    text-align: center;
     margin-left: 20px; /* Space between columns */
     flex-direction: column; /* Stack items vertically */    
     flex-basis: 48%; /* Set width for right column */
@@ -468,6 +466,51 @@ figure:hover img {
     padding-bottom: 5px; /* Space for the underline effect */
     text-align: left; /* Align text to the left */
 }
+.about-section p {
+    font-size: 16px; /* Font size for paragraph */  
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for paragraph */
+    line-height: 1.6; /* Line height for better readability */
+    margin: 20px; /* Remove default margin */
+}
+.call-to-action {
+    background-color: rgba(75, 186, 253, 0.08); /* Semi-transparent background */
+    padding: 50px 20px; /* Add padding inside the call to action section */
+    margin: 80px auto; /* Center the call to action section */
+    max-width: 1200px; /* Set a maximum width for the call to action section */
+    text-align: center; /* Center text in the call to action section */
+    margin-top: 0px;
+}
+.three-row-container {
+    margin: 20px; /* Space between columns */
+    flex-direction: row; /* Stack items vertically */    
+    padding: 20px; /* Add padding inside the right column */
+    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners for right column */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center text in the three-row container */
+    margin-bottom: 40px; /* Space below the three-row container */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.three-row-container h2 {
+    font-size: 14px; /* Font size for three-row container heading */
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for three-row container heading */
+    margin-bottom: 5px; /* Space below the heading */
+    border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    display: inline-block; /* Align with the text */
+    padding-bottom: 5px; /* Space for the underline effect */
+}
+.three-row-container p {   
+    font-size: 12px; /* Font size for paragraph */
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for paragraph */
+    line-height: 1.6; /* Line height for better readability */
+    margin: 0; /* Remove default margin */  
+    padding: 0; /* Remove default padding */
+}
 
 
         /* Responsive Design == Adding media query*/
@@ -502,6 +545,7 @@ figure:hover img {
         grid-template-columns: 1fr; /* Single column layout for gallery */
         width: 90vw; /* Set width to 90% of viewport width */
     }
+    
     
 }
 
