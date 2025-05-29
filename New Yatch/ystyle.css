@@ -193,6 +193,10 @@ button::after, button::after { /* Pseudo-element for button */
     /* border: #15a2b5 solid 10px;  Add border to the container */
     /* background-color: #353333; /* Light background color */
 }
+.container h1 {
+    margin-top: 50px;
+    margin-bottom: auto;
+}
 .content-header {
     padding: 20px; /* Add padding inside the div */
     border-radius: 10px;
@@ -224,8 +228,10 @@ button::after, button::after { /* Pseudo-element for button */
     max-width: 1200px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add padding inside the container */
-    border: #15a2b5 solid 10px; /* Add border to the container */
+    border: #15a2b579 solid 10px; /* Add border to the container */
     background-color: #353333; /* Light background color */
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 .chapter-section h1 {
     font-size: 24px; /* Font size for chapter headings */
@@ -511,6 +517,55 @@ figure:hover img {
     margin: 0; /* Remove default margin */  
     padding: 0; /* Remove default padding */
 }
+
+
+    /* Tours Section styling */
+.tour-button-container {
+    text-align: right;
+    margin-top: 10px;
+}
+.tour-button {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif; /* Font family for paragraph */
+    font-size: 16px;
+    color: #fff;
+    background-color: #1b1b20;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.tour-button:hover {
+    background-color: #2b6289;
+}
+.tour-content h2 {
+    font-size: 18px; /* Font size for about section heading */ 
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for about section heading */
+    margin-bottom: 5px; /* Space below the heading */
+    border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    display: inline-block; /* Align with the text */
+    padding-bottom: 5px; /* Space for the underline effect */
+    text-align: center; /* Align text to the left */
+}
+.tour-content p {
+    font-size: 14px; /* Font size for paragraph */  
+    color: #e6e6e6; /* Light text color */
+    font-family: "Montserrat", sans-serif; /* Font family for paragraph */
+    line-height: 1.6; /* Line height for better readability */
+    margin: 20px; /* Remove default margin */
+}
+/* Button Alignment for Tours Page */
+.tour-content {
+    display: flex;
+    justify-content: space-between;
+}
+.tour-btton {
+    align-self: flex-end;
+}
+    
+
 
 
         /* Responsive Design == Adding media query*/
