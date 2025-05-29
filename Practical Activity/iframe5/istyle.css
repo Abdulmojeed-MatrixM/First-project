@@ -101,6 +101,16 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
+.two-column-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    margin-top: 100px; /* Add margin to the top */
+    margin-left: 70px; /* Add margin to the left */
+    margin-right: 70px; /* Add margin to the right */
+    margin-bottom: 20px; /* Add margin to the bottom */
+    padding: 20px; /* Add padding inside the container */   
+}
+
     /* iframe container styling */
 .iframe-container {
     position: relative;
