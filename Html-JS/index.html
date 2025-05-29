@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Content</title>
+    <link rel="stylesheet" href="istyle.css" />
+    <style>
+        
+    </style>
+        
+</head>
+<body>
+    <!-- Navigation Section -->
+       
+    <nav>
+        <ul>
+            <li><a href="index.html"></a> <img class="logo" 
+                src="logo5.jpg" alt="My Logo" height="60px"/></li> 
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>   
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Establish the foundational layout of our contact page using semantic -->
+     
+    <!-- Header Section -->
+    <header>
+       
+        <h1>Visit Our Location</h1>
+        <p> 
+            Welcome to our contact page! Here, you can find all the information you need to get in touch with us. 
+            Whether you have a question, feedback, or just want to say hello, we're here to help.
+        </p>
+        
+    </header>
+
+    <section class="chapter-section">
+        <h1>Visit Our Location</h1>
+        <button onclick="myFunction">
+            Click Me
+        </button>
+    </section>
+
+    <section class="chapter-section">
+        <h2 id="change">Elegant Yatch</h2>
+        <div>
+            <script >
+                function myFunction() {
+                    document.getElementById("test").innerHTML="This is the changed heading"
+                }
+            </script>
+            <hi id="test">
+                This is the original heading
+            </hi>
+            <button onclick="myFunction"> Click Me </button>
+        </div>
+    </section>
+
+    <section class="chapter-section">
+        <h2 id="heading">Hello Wolrd!</h2>
+        <button onclick="ChangeTag()"> Change Tag </button>
+
+        <script>
+            functionChangeTag() {
+                //get the existing heading element
+                var heading = document.getElementById("heading");
+                //create a new paragrpgh
+            }
+        </script>
+    </section>
+
+
+
+
+
+            <script >
+                function myFunction() {
+                    alert("Button Clicked");
+                }
+            </script>
+</body>
+</html>
