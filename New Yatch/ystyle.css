@@ -544,10 +544,12 @@ figure:hover img {
     #gallery {
         grid-template-columns: 1fr; /* Single column layout for gallery */
         width: 90vw; /* Set width to 90% of viewport width */
+    }    
+    .two-column-container {
+        flex-direction: column; /* Stack columns vertically */
     }
-    
-    
 }
+
 
 
 
