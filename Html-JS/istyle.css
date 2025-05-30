@@ -113,7 +113,8 @@
     border: #15a2b579 solid 10px; /* Add border to the container */
     background-color: #35333364; /* Light background color */
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .chapter-section h1 {
     font-size: 24px; /* Font size for chapter headings */

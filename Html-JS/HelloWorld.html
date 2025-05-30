@@ -32,7 +32,7 @@
     <!-- Header Section -->
     <header>
        
-        <h1>Trying Out JavaScripting</h1>
+        <h1>Trying Out JavaScripting - Hello World!</h1>
         <p> 
             <\ctrlJS84> Diving into the world of Javascripting, 
             I'm excited to explore its dynamic capabilities, 
@@ -41,47 +41,37 @@
             possibilities this powerful language 
             offers for bringing digital ideas to life.
         </p>
-        
     </header>
-    <!-- JS - Button click Alert Void -->
+    
+
+    <!--(2) JS - Hello Wolrd  -->
     <section class="chapter-section">
-        <h1>Visit Our Location</h1>
-        <button onclick="myFunction">
-            Click Me
-        </button>
-        
+        <h2 id="heading">Hello Wolrd!</h2>
+        <button onclick="ChangeTag()"> Change Tag </button>
+
+        <script>
+            function ChangeTag() {
+                //get the existing heading element
+                var heading = document.getElementById("heading");
+                //create a new paragraph element
+                var newParagraph = document.createElement("p")
+                //set the content of the paragraph
+                newParagraph.textContent = "This is a new paragraph created dynamically";
+                //replace the existing heading with new paragraph
+                heading.parentNode.replaceChild(newParagraph, heading);
+            }
+        </script>
+        <br>
+        <h1 id="test">This is the original heading.</h1>
+        <button onclick="myFunction()"> Click Me Change Content </button>
     </section>
-
-     
-
-    <!-- (1)JS - Button click Alert  -->
-    <section class="chapter-section">
-        <h2 id="change">Elegant Yacht</h2>
-        <div>
-            <script>
-                function myFunction() {
-                    document.getElementById("test").innerHTML="This is the changed Heading";
-                }
-            </script>    
-            <h1 id="dynamicHeading">
-                This is the original heading
-            </h1>
-            <button onclick="myFunction()"> Click Me </button>
-            
-        </div>
-    </section>
-
-
-   
 
                 <script >
                     function myFunction() {
                     alert("Button Clicked");
                     }
                 </script>
-           
-
-       
+                
 
 
 <!-- Footer section -->

@@ -32,7 +32,7 @@
     <!-- Header Section -->
     <header>
        
-        <h1>Trying Out JavaScripting</h1>
+        <h1>Trying Out JavaScripting - Keyboard Engagement</h1>
         <p> 
             <\ctrlJS84> Diving into the world of Javascripting, 
             I'm excited to explore its dynamic capabilities, 
@@ -41,47 +41,29 @@
             possibilities this powerful language 
             offers for bringing digital ideas to life.
         </p>
-        
     </header>
-    <!-- JS - Button click Alert Void -->
+    
+    
+
+    <!-- (4) JS Using Keyboard Input  -->
     <section class="chapter-section">
-        <h1>Visit Our Location</h1>
-        <button onclick="myFunction">
-            Click Me
-        </button>
+        <img id="my-Images" width="500" 
+            src="yatch4.jpg" alt="Original Image" /> 
         
-    </section>
-
-     
-
-    <!-- (1)JS - Button click Alert  -->
-    <section class="chapter-section">
-        <h2 id="change">Elegant Yacht</h2>
-        <div>
             <script>
-                function myFunction() {
-                    document.getElementById("test").innerHTML="This is the changed Heading";
-                }
-            </script>    
-            <h1 id="dynamicHeading">
-                This is the original heading
-            </h1>
-            <button onclick="myFunction()"> Click Me </button>
-            
-        </div>
+                    document.addEventListener("DOMContentLoaded", function() {
+                    var image = document.getElementById("my-Images");
+                    //change image sourceon "Enter" key press
+                    document.addEventListener("keydown", function(event) {
+                        if (event.key === "Enter") {
+                            image.src = "yatch8.jpg";
+                        }
+                    });
+                })
+            </script>
     </section>
-
-
-   
-
-                <script >
-                    function myFunction() {
-                    alert("Button Clicked");
-                    }
-                </script>
-           
-
-       
+               
+                
 
 
 <!-- Footer section -->
