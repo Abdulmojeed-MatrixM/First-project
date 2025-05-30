@@ -93,13 +93,6 @@
             text-align: center; /* Center the paragraph */
         }
 
-.location-section {
-    margin: 2rem 0; /* Space above and below the section */
-    padding: 1rem; /* Padding inside the section */
-    background-color: #fff; /* White background for the section */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
 
 .two-column-container {
     display: flex; /* Use flexbox for layout */
@@ -111,67 +104,7 @@
     padding: 20px; /* Add padding inside the container */   
 }
 
-    /* iframe container styling */
-.iframe-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    margin: 2rem 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: red 2px solid;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.iframe-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-.iframe-controls button {
-    background-color: #030338; /* Button background color */
-    font-size: 1rem; /* Font size for the button */
-    color: white; /* Button text color */
-    border: none; /* Remove default border */
-    padding: 0.5rem 1rem; /* Padding for the button */
-    margin: 0 0.5rem; /* Space between buttons */
-    margin-bottom: 40px; /* Space below the buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-}
-.iframe-controls button:hover {
-    background-color: #1f1fee43; /* Change background color on hover */
-    transform: translateY(-2px); /* Slightly lift the button on hover */
-}
-
-.location-info {
-    margin-top: 1rem;
-    text-align: center; /* Center the location info */
-    font-size: 1.2rem; /* Font size for location info */
-    color: #333; /* Text color for location info */
-}
-.location-info h3 {
-    margin-bottom: 0.5rem; /* Space below the heading */
-    color: #089e94; /* Color for the heading */
-}
-.location-info li {
-    margin: 0.5rem 0; /* Space between list items */
-    color: #666; /* Lighter color for the list items */
-    text-align: center; /* Center the list items */
-    list-style: none; /* Remove default list style */
-}
+   
 
 .chapter-section {
     max-width: 1200px; /* Set a maximum width for the container */
