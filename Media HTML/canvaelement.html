@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - Exmp1</title>
+    <link rel="stylesheet" href="newstyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation bar section -->
+    <nav>
+        <ul>
+            <li><a href="yhome.html">Home</a></li> 
+            <li><a href="canvaelement.html">Canvas1</a></li>
+            <li><a href="ytours.html">Tours</a></li>
+            <li><a href="ygallery.html">Gallery</a></li>
+            <li><a href="ycontact.html">Contact Us</a></li>
+        </ul>
+    </nav> 
+     
+    <canvas id="mycanvas" width="200" height="100">
+
+    </canvas>
+    <script>
+        const canvas = document.getElementById("myCanvas"); //get the HTML canvas Element
+        const ctx = canvas.getContext ("2d"); //get the 2d rendering context
+        ctx.fillStyle = "white"; //set the fill style property of the drawing context
+        ctx.fillRect (10, 10, 150, 80); //draw & fill the rectangle
+    </script>
+</body>
+</html>

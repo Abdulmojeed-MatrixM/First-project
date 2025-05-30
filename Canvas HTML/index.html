@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas - Home</title>
-    <link rel="stylesheet" href="newstyles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <title>Canvas Element1</title>
+    <link rel="stylesheet" href="cstyles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
             integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
 
+   
 </head>
 <body>
     
     <!-- Navigation bar section -->
     <nav>
         <ul>
-            <li><a href="yhome.html">Home</a></li> 
-            <li><a href="yabout.html">About Us</a></li>
-            <li><a href="ytours.html">Tours</a></li>
-            <li><a href="ygallery.html">Gallery</a></li>
-            <li><a href="ycontact.html">Contact Us</a></li>
+            <li><a href="index.html"></a> <img class="logo" 
+                src="logo5.jpg" alt="My Logo" height="60px"/></li> 
+            <li><a href="index.html">Canvas1</a></li> 
+            <li><a href="canvaselement.html">Canvas2</a></li>
+            <li><a href="JSinGallery.html">Canvas3</a></li>   
+            <li><a href="JSK-board.html">Canvas4</a></li>
         </ul>
-    </nav> 
+    </nav>
      
     <!-- Header section -->
     <header>
@@ -42,21 +46,21 @@
         </div>
     </header>
 
-    <!-- Main section -->
-    <section class="container">
-        <div class="content-header">
-            <h1>Discover Ocean's Mystery</h1>
-            <p>
-                Set sail with us as we explore untouched islands, 
-                crystal clear waters, and breathtaking sunsets.
-                <strong> tour is a <i>curated experience</i>,</strong> ensuring you 
-                witness the beauty and tranquility of the sea.
-                <em>Join us for an unforgettable journey</em> where every 
-                wave tells a story and every sunset paints a memory with
-                <b> &COPY; Elegant Yatch Tours &TRADE; &copysr;. </b> &lt; &gt;
-            </p>
-        </div>
+    <section class="chapter-section">
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <script>
+            const canvas = document.getElementById("myCanvas"); //get the HTML canvas Element
+            const ctx = canvas.getContext ("2d"); //get the 2d rendering context
+            ctx.fillStyle = "green"; //set the fill style property of the drawing context
+            ctx.fillRect (10, 10, 150, 80); //draw & fill the rectangle
+        </script>
     </section>
+               
+
+        
+
+    <!-- Main section -->
+    
         
     <!-- Footer section -->
     <footer>

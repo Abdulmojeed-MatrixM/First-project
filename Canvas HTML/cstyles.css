@@ -1,0 +1,235 @@
+* { 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 2.0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Styling */
+        nav {
+            position: fixed; /* Fixed position to keep the navbar at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 0; /* Add padding to the top and bottom */
+            padding: 1rem 0;
+            position: sticky;
+            z-index: 1000; /* Ensure the navbar is above other content */
+            background-color: #030338; /* Semi-transparent background */
+            box-shadow: 0 2px 10px rgba(50, 50, 60, 0.95); /* shadow effect */
+        }
+
+        /* Logo Styling */
+        .logo { 
+            font-size: 1.5rem; /* Logo font size */
+            font-weight: bold; /* Logo font weight */
+            letter-spacing: 2px; /* Logo letter spacing */
+            position: center; /* Center the logo */
+        }
+
+        /* Parent Selector for Nav bar */
+        nav ul {
+            list-style: none; /* Remove default list style */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox for horizontal layout */
+            justify-content: center; /* Center the list items */
+            align-items: center; /* Center the items vertically */
+        }
+
+        /*Child Selector for Nav bar */
+        nav ul li {
+            margin: 0 10px; /* Add space between list items */
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        /*Grand child Selector for Nav bar */
+        nav ul li a {
+            /* font-family: "Montserrat", sans-serif; */
+            font-size: 20px; /* Font size for the links */
+            color: #fff; /* Text color */
+            text-decoration: none; /* Remove underline from links */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+            padding-bottom: 5px; /* Add space below the text */
+            padding: 0.5rem 1rem;
+            border-bottom: 2px solid transparent; /* Add space below the text */
+            position: relative; /* Position relative for pseudo-element */
+        }
+
+        /* Great grant child (Hover effect) for Nav bar */
+        nav ul li a:hover {
+            color: c; /* Change text color on hover */
+            bottom: -2px; /* Move text down on hover */
+            border-bottom: 2px solid #e6e6e6; /* Add underline on hover */
+            background-color: #4d27e529; /* Change background color on hover */
+            border-radius: 5px; /* Add rounded corners */
+            padding: 10px; /* Add padding on hover */
+        }
+
+ /* Header Styling */
+        header {
+            background-color: #86d8d891;
+            padding: 2rem;
+            text-align: relative;
+            border-bottom: 2px solid #ccc;
+        }
+        header h1 {
+            margin-bottom: 5px; /* Space below the heading */
+            border-bottom: 2px solid #089e94; /* Underline effect */
+            display: inline-block; /* Align with the text */
+            color: #089e94;
+        }
+        header p {
+            margin-top: 10px; /* Space above the paragraph */
+            color: #666; /* Lighter color for the paragraph */
+            /*font-size: 1.1rem;  Slightly larger font size */
+            text-align: center; /* Center the paragraph */
+        }
+
+
+.two-column-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    margin-top: 100px; /* Add margin to the top */
+    margin-left: 70px; /* Add margin to the left */
+    margin-right: 70px; /* Add margin to the right */
+    margin-bottom: 20px; /* Add margin to the bottom */
+    padding: 20px; /* Add padding inside the container */   
+}
+
+   
+
+.chapter-section {
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding inside the container */
+    border: #15a2b579 solid 10px; /* Add border to the container */
+    background-color: #35333364; /* Light background color */
+    border-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.chapter-section h1 {
+    font-size: 24px; /* Font size for chapter headings */
+    color: #e6e6e6;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5px; /* Space below the heading */
+    border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    display: inline-block; /* Align with the text */
+    padding-bottom: 5px; /* Space for the underline effect */
+}        
+
+/* Main content spacing to avoid header overlap */
+        main { /* Main content (container) */
+            margin-top: 80px; /* Space for fixed header */
+        }
+
+        /* Footer Styles */
+        footer {
+            /* position: fixed; */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #030338;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0.5rem;
+            z-index: 999; 
+        }
+        .footer-links {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center the links */
+            padding: 0; /* Remove default padding */
+            list-style: none; /* Remove default list style */
+            gap: 20px; /* Space between links */
+        }
+        .footer-links a {
+            color: #e6e6e6; /* Light text color */
+            text-decoration: none; /* Remove underline from links */
+          /* Font family for footer links */
+            font-size: 1rem; /* Font size for footer links */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+        }
+        .footer-links a:hover {
+            color: #056138; /* Change text color on hover */
+            bottom: -2px; /* Move text down on hover */
+            border-bottom: 2px solid #e6e6e6; /* Add underline on hover */
+            background-color: #4de52729; /* Change background color on hover */
+            border-radius: 5px; /* Add rounded corners */
+            padding: 10px; /* Add padding on hover */
+        }
+        
+
+        .footer-social {
+            margin: 0.5rem 0;
+        }
+        .footer-social a {
+            color: #e6e6e6;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .footer-social a:hover {
+            color: #056138;
+        }
+
+
+        /* Responsive Header */
+        @media (max-width: 700px) { /* Mobile styles */
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack items vertically */
+                gap: 0.5rem; /* Space between items */
+                width: 100%; /* Full width */
+            }
+            nav ul li {
+                width: 100%; /* Full width for each item */
+            }
+            .logo { 
+                margin-bottom: 0.5rem; /* Space between logo and nav */
+            }
+        }
+        
+        /* Responsive Main Content */
+        @media (max-width: 700px) { /* Mobile styles */
+            main {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            form {
+                flex-direction: column; /* Stack form elements vertically */
+                gap: 0.5rem; /* Space between form elements */
+                width: 100%; /* Full width for form */
+            }
+            button{
+                width: 100%; /* Full width for each item */
+            }
+            aside {
+                width: 100%; /* Full width for aside */
+                margin-top: 1rem; /* Space above the aside */
+            }
+            .logo { 
+                margin-bottom: 0.5rem; /* Space between logo and nav */
+            }
+        }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .iframe-container {
+        padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+    }
+}
