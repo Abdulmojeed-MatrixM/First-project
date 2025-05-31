@@ -51,31 +51,24 @@
     
     
 
-    <!-- (4) JS Using Keyboard Input  -->
+    <!-- (4) JS Using Keyboard Input  -->               
+                
     <section class="chapter-section">  
-
-        <canvas id="myCanvas" width="400" height="200"></canvas>      
+            <canvas id="myCanvas" width="400" height="200"></canvas>      
         <script>
-            const canvas=document.getElementById("myCanvas");
-            const canvasContext=canvas.getContext("2d");
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
             canvas.addEventListener("click", function (event) {
-                const x=event.clientX - canvas.offsetLeft;
-                const y=event.clientY - canvas.offsetTop;
-                //Draw a circle where the user clicked
-                canvasContext.beginPath();
-                canvasContext.arc(x, y, 10, 0, 2 * Math.PI);
-                const circleColor = getComputedStyle(document.documentElement).getPropertyValue("'--circle-color'").trim();
-                ctx.fillStyle = circleColor;
-                canvasContext.fill();
+                const x = event.clientX - canvas.getBoundingClientRect().left;
+                const y = event.clientY - canvas.getBoundingClientRect().top;
+            // Draw a circle where the user clicked
+                ctx.beginPath();
+                ctx.arc(x, y, 10, 0, 2 * Math.PI);
+                ctx.fillStyle = "orange";
+                ctx.fill();
             });
-
         </script>
     </section>
-               
-
-    
-                
-
 
 <!-- Footer section -->
     <footer>
