@@ -1,0 +1,12 @@
+body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url("space.jpg");
+            background-repeat: no-repeat, repeat;
+
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 2.0;
+            background-color: #f4f4f4;
+        }
