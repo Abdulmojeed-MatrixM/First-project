@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - Exmp1</title>
+    <link rel="stylesheet" href="newstyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    
+    <!-- Navigation bar section -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="mediapage.html">Media</a></li>
+        </ul>
+    </nav> 
+     
+    <!-- Media section -->
+    <div class="row push-down">
+        <!-- Music section -->
+        <div class="column div-tour-content">
+            <section class="section-tour-content" style="margin-bottom: 20px;">
+                <h2> Track: Surah Fatiha </h2>
+                <p> Artist: Husary </p>
+                <audio controls>
+                    <source src="001_husary_fatiha.mp3" type="audio/mpeg">
+                    <source src="001_husary_fatiha.ogg" type="audio/ogg">
+                    Your browser doesn not support the audio element.
+                </audio>
+            </section>
+
+            <section class="section-tour-content" style="margin-bottom: 20px;">
+                <h2> Track: Surah Ikhlas </h2>
+                <p> Artist: Matrud </p>
+                <audio id="player" src="112.mp3"> </audio>
+                <div>
+                    <button onclick="document.getElementById('player').play()"> 
+                        Play </button>
+                    <button onclick="document.getElementById('player').pause()"> 
+                        Pause </button>
+                    <button onclick="document.getElementById('player').muted 
+                            =!document.getElementById('player').muted"> 
+                            Mute/Unmute </button>
+                </div>
+            </section>
+
+            <section class="section-tour-content" style="margin-bottom: 20px;">
+                <h2> Track: Surah Falq </h2>
+                <p> Artist: AlAfasy </p>
+                <audio id="player" src="mishary-rashid-alafasy-113-al-falaq-28-7803.mp3"> </audio>
+                <div>
+                    <button onclick="document.getElementById('player').play()"> 
+                        Play </button>
+                    <button onclick="document.getElementById('player').pause()"> 
+                        Pause </button>
+                    <button onclick="document.getElementById('player').muted 
+                            =!document.getElementById('player').muted"> 
+                            Mute/Unmute </button>
+                </div>
+            </section>
+
+            <section class="section-tour-content" style="margin-bottom: 20px;">
+                <h2> Track: Surah Naas </h2>
+                <p> Artist: Sudays </p>
+                <audio id="player" src="114_AnNaas.mp3"> </audio>
+                <div>
+                    <button onclick="document.getElementById('player').play()"> 
+                        Play </button>
+                    <button onclick="document.getElementById('player').pause()"> 
+                        Pause </button>
+                    <button onclick="document.getElementById('player').muted 
+                            =!document.getElementById('player').muted"> 
+                            Mute/Unmute </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- This is the Artist Image Section -->
+        <div class="column div-tour-content">
+            <section class="section-tour-content">
+                <h2> Artist: MatrixM </h2>
+                <img src="logo5.jpg">
+            </section>
+        </div>
+        
+        <!-- This is the Embeded Video Section -->
+        <div class="column div-tour-content">
+            <section class="section-tour-content" style="margin-bottom: 20px;">
+                <h2> Video: Maher Zain & Harris J - Qalbi Fil Madinah | Official Music Video | قلبي في المدينة  </h2>
+                <iframe width="400" height="200" src="https://www.youtube.com/embed/2VLqZtded_0?si=P9BfEiu0Izi1-qL-" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+            </section>
+
+            <section class="section-tour-content" style="margin-bottom: 20px;">
+                <h2> Video: Ali Hammuda  </h2>
+                <video width="400" height="240" controls>
+                    <source src="ShwowingOFF evilEYE 1.MP4" type="video/MP4">
+                    <source src="ShwowingOFF evilEYE 1.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+        </div>
+    </div>
+
+    
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-content">
+            <p> Elegant Yatching Tours   |   &copy; 2025   |   All rights reserved.</p>
+        
+                <ul class="footer-links">
+                    <li><a href="yhome.html">Home</a></li> 
+                    <li><a href="yabout.html">About Us</a></li>
+                    <li><a href="ytours.html">Tours</a></li>
+                    <li><a href="ygallery.html">Gallery</a></li>
+                    <li><a href="ycontact.html">Contact Us</a></li>
+                </ul>
+          
+            <p class="footer-social-icons"> Follow us on social media:
+                <a class="fb" href="https://www.facebook.com"> <i class="fa-brands fa-square-facebook"></i></i></a> |
+                <a class="ig" href="https://www.instagram.com"> <i class="fa-brands fa-square-instagram"></i></a> |
+                <a class="tw" href="https://www.twitter.com"> <i class="fa-brands fa-square-x-twitter"></i></a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
+</body>
+</html>
