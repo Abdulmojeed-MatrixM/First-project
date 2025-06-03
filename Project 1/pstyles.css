@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
-    background: #111;
+    background: #0d0d0d; /*#111;*/
     color: #fff;
 }
 header {
@@ -96,6 +96,9 @@ button a {
 }
 .intro h1 {
     font-size: 45px;
+}
+.intro p {
+    font-size: 14px;
 }
 .hero-img {
     width: 100%;
