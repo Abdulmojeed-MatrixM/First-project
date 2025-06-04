@@ -158,27 +158,88 @@ button a {
     border-radius: 10px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.5);
 }
-.portfolio-section h2,
-.services-section h2,
-.about-section h2,
-.contact-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+
+
+/* Portfolio Section Styling*/
+.section-portfolio-section {
+    margin-top: 50px; /* Add margin to the top */
+    margin: 50px; /* Add margin to the bottom */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Add padding inside the div */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);  
+    margin: 80px auto; /* Center the container */
+    max-width: 1200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
-.portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+.gallery-header h2{
+    text-align: left; /* Center the header text */
+    margin-bottom: 20px; /* Space below the header */
+    border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    display: inline-block; /* Align with the text */
+    padding-bottom: 5px; /* Space for the underline effect */
+    color: #e6e6e6;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px; /* Font size for chapter headings */
+    margin-bottom: 1px; /* Space below the heading */
 }
-.portfolio-gallery img {
-    width: 170px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-    background: #222;
+
+
+#gallery {
+    display: grid; /* Use grid layout for gallery */
+    /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    width: 75%; /* Set width to 75% of the container */
+    margin: 20px auto; /* Center the gallery */
+    gap: 10px; /* Space between images */
+    padding: 20px; /* Padding inside the gallery */
+    image-resolution: from-image; /* Use image resolution */
 }
+figure {
+    position: relative; /* Position relative for overlay */
+    overflow: hidden; /* Hide overflow for images */
+    border-radius: 10px; /* Rounded corners for images */
+    margin: 10px; /* Space between images */
+    padding: 5px; /* Padding for images */
+    box-shadow: 0 2px 10px rgba(50, 50, 60, 0.95); /* Shadow effect */
+}
+figure img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+#gallery img {
+    width: 100%; /* Full width for images */
+    position: relative; /* Position relative for overlay */
+    padding: 0px; /* Remove padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-shadow: 0 2px 10px rgba(50, 50, 60, 0.95); /* Shadow effect */
+    z-index: -1; /* Ensure images are below overlay */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+figcaption {
+    position: absolute; /* Position absolute for overlay */
+    bottom: 6px; /* Align to the bottom */
+    padding: 9px 0px 11px 0px; /* Padding for caption */
+    text-transform: uppercase; /* Uppercase text */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    width: 100%; /* Full width for caption */
+    color: #e6e6e6; /* Light text color */
+    z-index: 1; /* Ensure caption is above images */
+    font-family: "Montserrat", sans-serif; /* Font family for caption */
+    font-size: 15px; /* Font size for caption */
+    text-align: center; /* Center text in caption */
+}
+figure:hover img {
+    transform: scale(2.05); /* Scale effect on hover */
+}
+
+
+
 .services-section ul {
     display: flex;
     flex-wrap: wrap;
