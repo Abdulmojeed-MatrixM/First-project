@@ -104,6 +104,8 @@ nav ul li a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
     margin-right: 90px;
     margin-left: -30px;
+    
+    
 }
 .right-column h1 {
     font-size: 75px; /* Font size for left column heading */
@@ -245,6 +247,20 @@ figure:hover img {
     color: #000;
 }
 
+/* Services Section Styling*/
+.section-services-section  {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+    margin-top: 80px; /* Add margin to the top */
+    margin-left: 150px; /* Add margin to the left */
+    margin-right: 150px; /* Add margin to the right */
+    margin-bottom: 20px; /* Add margin to the bottom */
+    padding: 20px; /* Add padding inside the container */
+    color: #e6e6e6; /* Light text color */
+    background-color: rgba(255, 255, 255, 0.03); /* Semi-transparent background */
+    font-family: 'Roboto', Arial, sans-serif; /* Font family for left column heading */
+    
+}
 
 
 
