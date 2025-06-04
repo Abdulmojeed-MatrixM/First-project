@@ -274,10 +274,10 @@ button::after, button::after { /* Pseudo-element for button */
     display: grid; /* Use grid layout for gallery */
     /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
     grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
-    width: 75%; /* Set width to 75% of the container */
+    width: 100%; /* Set width to 75% of the container */
     margin: 20px auto; /* Center the gallery */
     gap: 10px; /* Space between images */
-    padding: 20px; /* Padding inside the gallery */
+    padding: 10px; /* Padding inside the gallery */
     image-resolution: from-image; /* Use image resolution */
 }
 figure {
@@ -301,7 +301,7 @@ figure img {
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     box-shadow: 0 2px 10px rgba(50, 50, 60, 0.95); /* Shadow effect */
     z-index: -1; /* Ensure images are below overlay */
-    height: auto; /* Maintain aspect ratio */
+    height: 50%;/* auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners for images */
     transition: transform 0.3s; /* Smooth transition for hover effect */
 }
@@ -310,12 +310,12 @@ figcaption {
     bottom: 6px; /* Align to the bottom */
     padding: 9px 0px 11px 0px; /* Padding for caption */
     text-transform: uppercase; /* Uppercase text */
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.107); /* Semi-transparent background */
     width: 100%; /* Full width for caption */
     color: #e6e6e6; /* Light text color */
     z-index: 1; /* Ensure caption is above images */
     font-family: "Montserrat", sans-serif; /* Font family for caption */
-    font-size: 15px; /* Font size for caption */
+    font-size: 9px; /* Font size for caption */
     text-align: center; /* Center text in caption */
 }
 figure:hover img {
