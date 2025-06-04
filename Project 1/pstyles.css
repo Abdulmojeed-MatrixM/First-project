@@ -80,10 +80,17 @@ nav ul li a:hover {
     margin-left: 150px; /* Add margin to the left */
     margin-right: 150px; /* Add margin to the right */
     margin-bottom: 20px; /* Add margin to the bottom */
-    padding: 20px; /* Add padding inside the container */
+    /*padding: 20px; /* Add padding inside the container */
     color: #e6e6e6; /* Light text color */
     background-color: rgba(255, 255, 255, 0.03); /* Semi-transparent background */
     font-family: 'Roboto', Arial, sans-serif; /* Font family for left column heading */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    min-height: 80vh;
+    padding: 0 3rem;
+    /*margin-top: 2rem;*/
 }
 
 .right-column {
@@ -96,7 +103,7 @@ nav ul li a:hover {
 }
 .left-column {
     /*align-content: center;*/
-    font-size: 14px;
+    font-size: 0.9rem; /*14px;*/
     flex-direction: column; /* Stack items vertically */
     flex-basis: 100%; /* Set width for left column */
     padding: 18px; /* Add padding inside the left column */
@@ -119,24 +126,14 @@ nav ul li a:hover {
 }
 
 /* Header Button styling */
-button {
-    text-transform: uppercase; /* Uppercase text */
-    position: relative; /* Position relative for stacking context */
-    border: none; /* Remove default border */
-    font-size: 25px; /* Font size for button */
-    transform: 0.2s; /* Smooth transition */
-    background-color: #e6e6e6; /* transparent background */
-    outline: none; /* none; Remove default shadow */
-    border-radius: 3px; /* Rounded corners */
-    margin: 0px 10px; /* Space between buttons */
-    padding: 23px 33px; /* Padding for button */
-    border: 3px solid transparent; /* Transparent border */
-}
+
+
 button a {
     text-decoration: none; /* Remove underline from links */
     color: #111; /* Light text color */
     font-family: 'Roboto', Arial, sans-serif; /* Font family for left column heading */
 }
+
 .home-section {
     text-align: center;
 
@@ -250,19 +247,95 @@ figure:hover img {
 /* Services Section Styling*/
 .section-services-section  {
     display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between columns */
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    min-height: 80vh;
+    padding: 0 3rem;
+    margin-top: 2rem;
+
     margin-top: 80px; /* Add margin to the top */
     margin-left: 150px; /* Add margin to the left */
     margin-right: 150px; /* Add margin to the right */
     margin-bottom: 20px; /* Add margin to the bottom */
-    padding: 20px; /* Add padding inside the container */
+    /*padding: 20px; /* Add padding inside the container */
     color: #e6e6e6; /* Light text color */
     background-color: rgba(255, 255, 255, 0.03); /* Semi-transparent background */
     font-family: 'Roboto', Arial, sans-serif; /* Font family for left column heading */
     
 }
 
-
+.column-left {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.column-left h1 {
+    font-size: 3.0rem;
+    font-weight: 300;
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+    color: #fff;
+}
+.column-right {
+    flex: 2.5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto) 1fr;
+    gap: 2.5rem 3rem;
+    margin-left: 2rem;
+    margin-top: 2.5rem;
+    position: relative;
+}
+.service-card {
+    background: transparent;
+    color: #fff;
+    padding: 0;
+    border: none;
+}
+.service-card h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 0.5rem 0;
+}
+.service-card p {
+    font-size: 0.9rem;
+    color: #e6e6e6;
+    margin: 0;
+}
+.services-divider {
+    grid-column: 1 / span 2;
+    border: none;
+    border-top: 5px solid #fff;
+    margin: 0.1rem 0 0rem 0;
+    width: 100%;
+    background: none;
+    margin-top: -15px;
+    
+}
+.cta-btn {
+    text-transform: uppercase;
+    grid-column: 2 / 3;
+    justify-self: end;
+    background: #fff;
+    color: #232527;
+    border: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    padding: 1rem 2.5rem;
+    border-radius: 2px;
+    margin-top: -1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.cta-btn:hover {
+    background: #232527;
+    color: #fff;
+    border: 2px solid #fff;
+}
 
 .services-section ul {
     display: flex;
