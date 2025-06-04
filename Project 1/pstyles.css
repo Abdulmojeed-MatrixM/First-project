@@ -59,7 +59,7 @@ nav ul li a:hover {
     text-align: center; /* Center text */
     padding: 2rem; /* Padding for header content */
     padding-top: 60px; /* Extra padding for top */
-    background-image: url('hero-image.jpg'); /* Background image */
+    background-image: url('images/hero-image.jpg'); /* Background image */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* No repeat for the background image */
