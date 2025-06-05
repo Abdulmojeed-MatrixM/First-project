@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #000;
+    background: #0000009d;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -362,18 +362,25 @@ figure:hover img {
     border-radius: 50%;
     box-shadow: 0 2px 12px rgba(0,0,0,0.5);
 }
+
+
+#contact {
+    background-image: url('images/contact-page-image.jpg');
+}
+
 .section-contact-section {
     font-family: 'Roboto', Arial, sans-serif;
     max-width: 800px; /* Set a maximum width for the contact section */
-    margin: 80px auto; /* Center the contact section */
+    margin: auto; /* Center the contact section */
     font-weight: normal;
     margin-bottom: 40vh; /* Add margin to the bottom */
     padding: 20px; /* Add padding inside the contact section */
     border-radius: 10px; /* Rounded corners for contact section */
-    background-color: rgba(255, 255, 255, 0.03); /* Semi-transparent background */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    background-color: rgb(3, 1, 19); /* Semi-transparent background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */   
 }
-.section-contact-section h2 {
+
+#contact h2 {
     text-transform: uppercase;
     font-size: 24px; /* Font size for contact heading */
     color: #e6e6e6; /* Light text color */
@@ -382,7 +389,10 @@ figure:hover img {
     /*border-bottom: 2px solid #e6e6e6; /* Underline effect */
     /*display: inline-block; /* Align with the text */
     padding-bottom: 5px; /* Space for the underline effect */
+    margin-top: 70px; /* Space above the icons */
+    margin-left: 345px;
 }
+
 .section-contact-section form {
     text-transform: uppercase;
     display: flex;
@@ -404,6 +414,25 @@ figure:hover img {
     color: #e6e6e6; /* Light text color */
     font-family: "Montserrat", sans-serif; /* Font family for input fields */
 }
+
+.footer-social-icons {
+    margin-top: -255px; /* Space above the icons */
+    margin-left: 830px;
+}
+.footer-social-icons a {
+    color: #e6e6e6; /* Light text color */
+    font-size: 32px; /* Font size for social icons */
+    margin: 0 10px; /* Space between icons */
+    
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+.footer-social-icons a:hover { 
+    color: #1d9ba9; /* Change text color on hover */
+    transform: scale(1.2); /* Scale effect on hover */
+}
+
+
+
 
 .contact-section input,
 .contact-section textarea {

@@ -6,8 +6,11 @@
     <title>My Design Portfolio</title>
     <link rel="stylesheet" href="pstyles.css">
     <link rel="preload" href="Fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body id="contact">
     <header>
         <div class="logo">N O V A</div>
         <nav>
@@ -21,10 +24,15 @@
         </nav>
     </header>
     <main>
-        
+        <h2>Let ME Tell Your Digital Stories</h2>
         <!-- Contact Section -->
-        <section id="contact" class="section-contact-section">
-            <h2>Let ME Tell Your Digital Stories</h2>
+         <!--**How it works:**
+        - The left column shows the large heading.
+        - The right column is a grid of four service cards, a horizontal line, and a call-to-action button.
+        - Responsive for smaller screens. -->
+
+        <section class="section-contact-section">
+            
             <form action="submit_contact.php" method="post">
                 <label for="firstname">FirstName:</label> 
                 <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
@@ -42,7 +50,13 @@
                     <a href="portfolio.html">Submit</a>
                 </button> 
             </form>
+            
         </section>
+            <p class="footer-social-icons"> Follow us on social media:
+                <a class="fb" href="https://www.facebook.com"> <i class="fa-brands fa-square-facebook"></i></i></a> |
+                <a class="ig" href="https://www.instagram.com"> <i class="fa-brands fa-square-instagram"></i></a> |
+                <a class="tw" href="https://www.twitter.com"> <i class="fa-brands fa-square-x-twitter"></i></a>
+            </p>
     </main>
     <footer>
         <p>&copy; 2025 My Portfolio. All rights reserved.</p>
