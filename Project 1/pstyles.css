@@ -336,6 +336,29 @@ figure:hover img {
     color: #fff;
     border: 2px solid #fff;
 }
+.cnt-cta-btn {
+    text-transform: uppercase;
+    grid-column: 2 / 3;
+    justify-self: end;
+    background: #fff;
+    color: #232527;
+    border: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    padding: 1rem 2.5rem;
+    border-radius: 2px;
+    margin-top: -1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin-left: 550px;
+}
+.cnt-cta-btn:hover {
+    background: #232527;
+    color: #fff;
+    border: 2px solid #fff;
+}
 
 .services-section ul {
     display: flex;
@@ -372,6 +395,7 @@ figure:hover img {
     font-family: 'Roboto', Arial, sans-serif;
     max-width: 800px; /* Set a maximum width for the contact section */
     margin: auto; /* Center the contact section */
+    margin-top: -15px;
     font-weight: normal;
     margin-bottom: 40vh; /* Add margin to the bottom */
     padding: 20px; /* Add padding inside the contact section */
@@ -389,7 +413,7 @@ figure:hover img {
     /*border-bottom: 2px solid #e6e6e6; /* Underline effect */
     /*display: inline-block; /* Align with the text */
     padding-bottom: 5px; /* Space for the underline effect */
-    margin-top: 70px; /* Space above the icons */
+    margin-top: 60px; /* Space above the icons */
     margin-left: 345px;
 }
 
@@ -398,17 +422,18 @@ figure:hover img {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    max-width: 600px;
-    margin: 0px 50px;
+    width: 95%;
+    margin: 10px 10px;
 }
 .section-contact-section input, 
 .section-contact-section textarea {
     font-size: 18px; /* Font size for input fields */
     margin: 0; /* Remove default margin */
-    /*width: 95%; /* Full width for input fields */
+    width: 100%; /* Full width for input fields */
     padding: 10px; /* Padding for input fields */
+    
     margin-bottom: 20px; /* Space below input fields */
-    border: none; /* Remove default border */
+    border: #e6e6e6 solid 1px; /* Remove default border */
     border-radius: 5px; /* Rounded corners for input fields */
     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     color: #e6e6e6; /* Light text color */
@@ -416,7 +441,7 @@ figure:hover img {
 }
 
 .footer-social-icons {
-    margin-top: -255px; /* Space above the icons */
+    margin-top: -265px; /* Space above the icons */
     margin-left: 830px;
 }
 .footer-social-icons a {
