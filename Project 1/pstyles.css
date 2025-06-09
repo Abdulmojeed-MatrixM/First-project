@@ -72,7 +72,7 @@ nav ul li a:hover {
     background-image: url('images/hero-image.jpg'); /* Background image */
 }
 
-/* About Section*/
+/* About Section Styling*/
 .section-about-section  {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space between columns */
@@ -102,7 +102,6 @@ nav ul li a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 .left-column {
-    /*align-content: center;*/
     font-size: 0.9rem; /*14px;*/
     flex-direction: column; /* Stack items vertically */
     flex-basis: 100%; /* Set width for left column */
