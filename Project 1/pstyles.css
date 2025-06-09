@@ -119,14 +119,10 @@ nav ul li a:hover {
     font-family: 'Roboto', Arial, sans-serif; /* Font family for left column heading */
     padding-bottom: 5px; /* Space for the underline effect */
     /*margin-bottom: 20px; /* Space below the heading */
-    /*border-bottom: 2px solid #e6e6e6; /* Underline effect */
-    /*display: inline-block; /* Align with the text */
-    
 }
 
+
 /* Header Button styling */
-
-
 button a {
     text-decoration: none; /* Remove underline from links */
     color: #111; /* Light text color */
@@ -221,8 +217,6 @@ figcaption {
     font-family: 'Roboto', Arial, sans-serif; /* Font family for left column heading */
     font-size: 14px; /* Font size for caption */
     text-align: center; /* Center text in caption */
-
-    /*height: 10%;*/
 }
 figure:hover img {
     transform: scale(2.05); /* Scale effect on hover */
@@ -243,16 +237,15 @@ figure:hover img {
     color: #000;
 }
 
+
 /* Services Section Styling*/
 .section-services-section  {
-    display: flex; /* Use flexbox for layout */
+    display: flex;
     flex-direction: row;
     justify-content: flex-start; 
     align-items: flex-start;
     min-height: 80vh;
-    padding: 0 3rem;
-    margin-top: 2rem;
-
+    padding: 0 3rem;    
     margin-top: 80px; /* Add margin to the top */
     margin-left: 150px; /* Add margin to the left */
     margin-right: 150px; /* Add margin to the right */
@@ -261,7 +254,6 @@ figure:hover img {
     color: #e6e6e6; /* Light text color */
     background-color: rgba(255, 255, 255, 0.03); /* Semi-transparent background */
     font-family: 'Roboto', Arial, sans-serif; /* Font family for left column heading */
-    
 }
 
 .column-left {
@@ -311,7 +303,6 @@ figure:hover img {
     width: 100%;
     background: none;
     margin-top: -15px;
-    
 }
 .cta-btn {
     text-transform: uppercase;
