@@ -1,0 +1,34 @@
+a {
+    text-decoration: none;
+    
+}
+
+.css-pract {
+    background-color: rgba(127, 255, 212, 0.182);
+    margin: 30px 30px 30px 30px;
+    border-style: groove;
+    border-width: 10px;
+    border-left-width: 50px;
+    border-right-color: green;
+    border-color: crimson;
+    border-top: dotted;
+    border-left-style: dashed;
+    border-radius: 20px;
+    /* border: 10px solid crimson; */
+    height: 500px;
+    padding: 50px;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-decoration: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-thickness: 2px;
+    text-decoration-style: double;
+}
+
+p {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    letter-spacing: 15px;
+    line-height: 1.6;
+}
+
