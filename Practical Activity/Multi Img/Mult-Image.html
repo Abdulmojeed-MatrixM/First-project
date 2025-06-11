@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Enhanced Website</title>
+    <title>Multiple Background Images</title>
     <style>
         /* Basic Reset */
+        .multiple-background {
+            width: 500px;
+            height: 300px;
+            background-image: url('yatch6.jpg'), url('yatch8.jpg');
+            background-position: top left, bottom right;
+            background-size: cover, contain;
+            background-repeat: no-repeat, no-repeat;
+        }
+        
         * {
             margin: 0;
             padding: 0;
