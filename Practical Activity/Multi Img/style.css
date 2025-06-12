@@ -32,3 +32,6 @@ p {
     line-height: 1.6;
 }
 
+h1 {
+    text-shadow: 5px 5px 5px orange;
+}
