@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Montserrat:wght@100..900&display=swap');
+
+
 a {
     text-decoration: none;
     
@@ -30,6 +34,7 @@ p {
     unicode-bidi: bidi-override;
     letter-spacing: 15px;
     line-height: 1.6;
+    font-family: "Candal";
 }
 
 h1 {
