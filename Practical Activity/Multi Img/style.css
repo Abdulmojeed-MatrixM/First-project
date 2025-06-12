@@ -4,16 +4,28 @@
 
 a {
     text-decoration: none;
-    
+    font-size: 50px;
+    color: rgb(20, 120, 123);
 }
-
+/*a:link {
+    color: yellow;
+}
+a:visited {
+    color: aqua;
+}*/
+a:hover {
+    color: rgb(33, 2, 99);
+}
+a:active {
+    color: green;
+}
 .css-pract {
     background-color: rgba(127, 255, 212, 0.182);
     margin: 30px 30px 30px 30px;
     border-style: groove;
     border-width: 10px;
     border-left-width: 50px;
-    border-right-color: green;
+    /*border-right-color: green;*/
     border-color: crimson;
     border-top: dotted;
     border-left-style: dashed;
@@ -21,17 +33,17 @@ a {
     /* border: 10px solid crimson; */
     height: 500px;
     padding: 50px;
-    direction: rtl;
+    /*direction: rtl;
     unicode-bidi: bidi-override;
-    text-decoration: underline;
-    text-decoration-color: blueviolet;
+    text-decoration: underline;*/
+    /*text-decoration-color: blueviolet;*/
     text-decoration-thickness: 2px;
-    text-decoration-style: double;
+    color: blueviolet;
 }
 
 p {
-    direction: rtl;
-    unicode-bidi: bidi-override;
+    /*direction: rtl;
+    unicode-bidi: bidi-override;*/
     letter-spacing: 15px;
     line-height: 1.6;
     font-family: "Candal";
@@ -42,10 +54,3 @@ h1 {
 }
 
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
