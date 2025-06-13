@@ -6,6 +6,7 @@ a {
     text-decoration: none;
     font-size: 50px;
     color: rgb(20, 120, 123);
+    background-color: rgba(127, 255, 212, 0.407);
 }
 /*a:link {
     color: yellow;
@@ -14,7 +15,11 @@ a:visited {
     color: aqua;
 }*/
 a:hover {
-    color: rgb(33, 2, 99);
+    /*color: rgb(33, 2, 99);*/
+    background-color: rgba(114, 67, 9, 0.488);
+    border-color: rgba(0, 0, 255, 0.207);
+    border-width: 5px;
+    border-style: solid;
 }
 a:active {
     color: green;
