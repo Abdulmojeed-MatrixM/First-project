@@ -58,4 +58,10 @@ h1 {
     text-shadow: 5px 5px 5px orange;
 }
 
-
+ul {
+    /*list-style-type: circle;
+    list-style-type: square;
+    list-style-type: upper-roman;*/
+    list-style-type: lower-alpha;
+    
+}
