@@ -137,3 +137,21 @@ li a:hover {
     
     overflow-y: auto;
 }
+
+
+.more-info5 {
+    font-size: 20px;
+    border-width: auto;
+    border-color: #00ff44;
+    padding: 30px;
+    font-family: sans-serif;
+    background-color: rgb(242, 250, 215);
+    margin: inherit;
+}
+.img {
+    float: right;
+    margin: 25px;
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+}
