@@ -48,10 +48,10 @@ a:active {
 
 p {
     /*direction: rtl;
-    unicode-bidi: bidi-override;*/
-    letter-spacing: 1px;
+    unicode-bidi: bidi-override;
+    letter-spacing: 1px;*/
     line-height: 1.6;
-    font-family: "Candal";
+    font-family: "sans-serif";
 }
 
 h1 {
@@ -88,9 +88,41 @@ li a:hover {
     border: 3px solid #ff000f;
 }
 
-.more-info1 {
-    position: fixed;
-    left: 0px;
-    border: 3px solid #ff000f;
+.more-info2 {
+    position: absolute;
+    left: 1200px;
+    right: 20px;
+    top: 40px;
+    border: 3px solid #4800ff;
+    padding: 10px;;
+    background-color: rgba(127, 255, 212, 0.459);
 }
 
+.more-info3 {
+    font-size: 20px;
+    border-width: 5px;
+    border-color: #0000ff;
+    padding: 20px;
+    font-family: sans-serif;
+    background-color: rgba(250, 235, 215, 0.597);
+    position: absolute;
+    top: 20px;
+    right: 380px;
+    bottom: 400px;
+    width: 300px;
+}
+
+.more-info4 {
+    font-size: 20px;
+    border-width: 5px;
+    border-color: #00ff44;
+    padding: 20px;
+    font-family: sans-serif;
+    background-color: rgba(242, 250, 215, 0.597);
+    position: sticky;
+    top: 20px;
+    left: 400px;
+    right: 380px;
+    bottom: 400px;
+    width: 300px;
+}
