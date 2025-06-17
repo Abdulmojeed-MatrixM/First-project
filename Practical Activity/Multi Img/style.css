@@ -49,7 +49,7 @@ a:active {
 p {
     /*direction: rtl;
     unicode-bidi: bidi-override;*/
-    letter-spacing: 15px;
+    letter-spacing: 1px;
     line-height: 1.6;
     font-family: "Candal";
 }
@@ -80,5 +80,17 @@ li a:hover {
     border-color: rgba(0, 255, 136, 0.207);
     border-width: 5px;
     border-style: solid;
+}
+
+.more-info1 {
+    position: relative;
+    left: 0px;
+    border: 3px solid #ff000f;
+}
+
+.more-info1 {
+    position: fixed;
+    left: 0px;
+    border: 3px solid #ff000f;
 }
 
