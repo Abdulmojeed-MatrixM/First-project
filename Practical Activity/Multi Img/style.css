@@ -86,6 +86,12 @@ li a:hover {
     position: relative;
     left: 0px;
     border: 3px solid #ff000f;
+    max-width: 75%;
+    overflow-y: auto;
+    height: 90px;
+    width: 500px;
+    margin: auto;
+
 }
 
 .more-info2 {
@@ -110,6 +116,8 @@ li a:hover {
     right: 380px;
     bottom: 400px;
     width: 300px;
+    height: 90px;
+    overflow-y: auto;
 }
 
 .more-info4 {
@@ -118,11 +126,14 @@ li a:hover {
     border-color: #00ff44;
     padding: 20px;
     font-family: sans-serif;
-    background-color: rgba(242, 250, 215, 0.597);
+    background-color: rgb(242, 250, 215);
     position: sticky;
     top: 20px;
     left: 400px;
     right: 380px;
     bottom: 400px;
     width: 300px;
+    height: 150px;
+    
+    overflow-y: auto;
 }
