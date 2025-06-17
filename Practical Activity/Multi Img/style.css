@@ -53,6 +53,9 @@ p {
     line-height: 1.6;
     font-family: "sans-serif";
 }
+p:hover {
+    background-color: rosybrown;
+}
 
 h1 {
     text-shadow: 5px 5px 5px orange;
@@ -154,4 +157,8 @@ li a:hover {
     height: 200px;
     width: 200px;
     border-radius: 8px;
+}
+
+.more-info5:hover {
+    background-color: rgba(127, 255, 212, 0.614);
 }
