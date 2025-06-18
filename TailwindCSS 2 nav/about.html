@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <title>Tailwind Practice</title>
+</head>
+<body>
+
+    <div class="flex justify-content-center bg-amber-200 p-3">
+        <a href="#home" class="m-1 p-2 rounded-md bg-green-400 hover:bg-emerald-300"> Home </a>
+        <a href="#about" class="m-1 p-2 rounded-md bg-green-400 hover:bg-gray-300"> About </a>
+        <a href="#contact" class="m-1 p-2 rounded-md bg-green-400 hover:bg-purple-300"> Contact </a>
+        <a href="#gallery" class="m-1 p-2 rounded-md bg-green-400 hover:bg-orange-300"> Gallery </a>
+
+    </div>
+    <header class="bg-emerald-400 p-4">
+        
+       
+         <br>
+         <h1 class="text-white font-bold sm:text-3xl lg:text-4xl sm:text-red-500 lg:text-emerald-500">My Tailwind Website</h1>
+    </header>
+    
+    <h5 class="text-3xl font-bold underline text-clifford text-green-500">
+      Hello world!
+    </h5>
+    <br>
+    <p >
+        Alhamdulillah, this is a simple Tailwind CSS practice.
+    </p>
+    <br>
+    <!-- flexbox section-->
+    <div class="flex">
+        <div> Item 1</div>
+        <div> Item 2</div>
+        <div> Item 3</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!-- grid with 3 columns section-->
+    <div class="grid grid-cols-3 gap-5">
+        <div> Item 1</div>
+        <div> Item 2</div>
+        <div> Item 3</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!-- grid with 3 rows section-->
+    <div class="grid grid-rows-3 gap-5">
+        <div> Item 1:</div>
+        <div> Item 2:</div>
+        <div> Item 3:</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!-- grid with 3 rows section-->
+    <div class="flex">
+        <div class="text-center border border-gray bg-pink-500 flex-auto"> Item 1:</div>
+        <div class="text-center border border-gray bg-blue-500 flex-auto"> Item 2:</div>
+        <div class="text-center border border-gray bg-emerald-500 flex-1"> Item 3:</div>
+    </div>
+</body>
+</html>
