@@ -8,17 +8,16 @@
     <title>Tailwind Practice</title>
 </head>
 <body>
-    <header class="bg-emerald-400 p-4">
+    <header class="bg-emerald-400 p-3 flex justify-between ">
         
-        <nav class="text-red-500 font-bold float-right">
-            <div class="flex justify-center bg-amber-200 p-3">
+      <nav class="text-red-500 font-bold">
+            
         <a href="home.html" class="m-1 p-2 rounded-md bg-green-400 hover:bg-emerald-300"> Home </a>
         <a href="about.html" class="m-1 p-2 rounded-md bg-green-400 hover:bg-gray-300"> About </a>
         <a href="contact.html" class="m-1 p-2 rounded-md bg-green-400 hover:bg-purple-300"> Contact </a>
         <a href="gallery.html" class="m-1 p-2 rounded-md bg-green-400 hover:bg-orange-300"> Gallery </a>
-
-    </div>         
-  </nav>
+      
+      </nav>
          <br>
          <h1 class="text-white font-bold sm:text-3xl lg:text-4xl sm:text-red-500 lg:text-emerald-500">My Tailwind Website</h1>
     </header>
@@ -44,27 +43,45 @@
     "Welcome to my Tailwind CSS practice page! Here, I am experimenting my skills of CSS with Tailwind utility classes."
 </div>
 
-<div class="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
-  <div class="md:flex">
-    <div class="md:shrink-0">
-      <img
-        class="h-48 w-full object-cover md:h-full md:w-48"
-        src="yatch2.jpg"
-        alt="Modern building architecture"
-      />
+    <div class="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
+      <div class="md:flex">
+        <div class="md:shrink-0">
+          <img
+            class="h-48 w-full object-cover md:h-full md:w-48"
+            src="yatch2.jpg"
+            alt="Modern building architecture"
+          />
+        </div>
+
+        <div class="p-8">
+          <div class="text-sm font-semibold tracking-wide text-indigo-500 uppercase">My World of Creativity</div>
+            <a href="#" class="mt-1 block text-lg leading-tight font-medium text-black hover:underline">
+              Incredible domain for your coding journey, let's Crack it together!
+            </a>
+          <p class="mt-2 text-gray-500 sm:text-indigo-500 lg:text-emerald-500">
+            Looking to start your dream away on a coding career and enjoy awesome sojourn into building tech world, let's take in the sunshine. 
+            We have have got series of flight to catch for the greater destination be justified.
+            It's Time!
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="p-8">
-      <div class="text-sm font-semibold tracking-wide text-indigo-500 uppercase">My World of Creativity</div>
-      <a href="#" class="mt-1 block text-lg leading-tight font-medium text-black hover:underline">
-        Incredible domain for your coding journey, let's Crack it together!
-      </a>
-      <p class="mt-2 text-gray-500 sm:text-indigo-500 lg:text-emerald-500">
-        Looking to start your dream away on a coding career and enjoy awesome sojourn into building tech world, let's take in the sunshine. 
-        We have have got series of flight to catch for the greater destination be justified.
-        It's Time!
-      </p>
+
+  <footer class="bg-emerald-400 p-3 flex justify-center ">
+    <div class="text-center text-gray-700">
+      <nav class="text-red-500 font-bold">      
+        <a href="home.html" class="m-1 p-2 rounded-md bg-green-400 hover:bg-emerald-300"> Home </a>
+        <a href="about.html" class="m-1 p-2 rounded-md bg-green-400 hover:bg-gray-300"> About </a>
+        <a href="contact.html" class="m-1 p-2 rounded-md bg-green-400 hover:bg-purple-300"> Contact </a>
+        <a href="gallery.html" class="m-1 p-2 rounded-md bg-green-400 hover:bg-orange-300"> Gallery </a>
+      </nav>
+        <p>&copy; Cuan Swan ltd.</p>
+        <p>44 Address Road <br>
+        LivingPlace<br>
+        4444
+        </p>
+        <p>brought to you by TailwindCSS</p>
     </div>
-  </div>
-</div>
+  </footer>
 </body>
 </html>
