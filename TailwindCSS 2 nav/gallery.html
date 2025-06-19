@@ -20,7 +20,7 @@
     
     <title>Tailwind Practice</title>
 </head>
-<body>
+<body class=" justify-center p-3 bg-gradient-to-r from-emerald-400 to-emerald-100">
     <!-- Header div-->
     <header class="bg-emerald-400 p-3 flex justify-between ">
         
@@ -36,6 +36,25 @@
     </header>
     
     <!-- Gallery div-->
+     <!--We have made a gallery.html file that we will be 
+     using to demonstrate how to create a grid layout with Tailwind. 
+     Firstly, we are going to size all the images that we have there 
+     should be 9 of them. Make them have a class of "w-64" and "h-64". 
+     This should make all the images 256px by 256px. -->
+     <div class="grid grid-cols-2 sm:grid-cols-3 my-12 mx-24  gap-1" >
+     
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1 rounded-md" src="images/yatch1.jpg">
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1" src="images/yatch10 vertical-shot-yacht-body-water-new-zealand.jpg">
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1 rounded-md" src="images/yatch2.jpg">
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1" src="images/yatch3 big-yacht-with-boats-sea-summer-greece.jpg">
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1 rounded-md" src="images/yatch4.jpg">
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1" src="images/yatch5.jpg">
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1 rounded-md" src="images/yatch6.jpg">
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1" src="images/yatch8.jpg">
+        <img class="w-64 h-64 border-2 border-emerald-900 p-1 rounded-md" src="images/yatch9.jpg">
+    </div>
+
+
     <div class="my-12 mx-24 grid grid-cols-2 sm:grid-cols-3 gap-1">
         <div class="size border bg-sky-500"> A </div>
         <div class="size border bg-sky-500"> B </div>
@@ -48,29 +67,8 @@
         <div class="size border bg-sky-500"> I </div>
     </div>
     <br>
-    <div class="my-12 mx-24 grid grid-cols-1 sm:grid-cols-2 gap-2">
-        <div class="size border bg-sky-500"> <img
-        class="h-48 w-full object-cover md:h-full md:w-48"
-        src="yatch2.jpg"
-        alt="Modern building architecture"/> </div>
+    
 
-        <div class="size border bg-sky-500"> <img
-        class="h-48 w-full object-cover md:h-full md:w-48"
-        src="yatch2.jpg"
-        alt="Modern building architecture"/> </div>
-
-        <div class="size border bg-sky-500"> <img
-        class="h-48 w-full object-cover md:h-full md:w-48"
-        src="yatch2.jpg"
-        alt="Modern building architecture"/> </div>
-        
-        <div class="size border bg-sky-500"> <img
-        class="h-48 w-full object-cover md:h-full md:w-48"
-        src="yatch2.jpg"
-        alt="Modern building architecture"/> </div>
-
-    </div>
-    <br>
     <p >
         Alhamdulillah, this is a simple Tailwind CSS practice.
     </p>
