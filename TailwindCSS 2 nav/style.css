@@ -3,10 +3,11 @@
     height: 100px;
 }
 
-body {
+/*body {
+    
     background-image: url('yatch2.jpg');
     background-size: cover;
-    background-position: center;
+    justify-content: center;
     background-repeat: no-repeat;
-    height: 100vh;
-}
+    height: 100vh; /* Full viewport height 
+}*/
