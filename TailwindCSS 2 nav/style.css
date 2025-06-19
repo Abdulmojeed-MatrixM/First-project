@@ -2,3 +2,11 @@
     width: 100px;
     height: 100px;
 }
+
+body {
+    background-image: url('yatch2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
