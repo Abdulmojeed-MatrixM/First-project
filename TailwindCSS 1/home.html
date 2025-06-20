@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            mint: '#9ef886',
+            Aquamarine1: '#7FFFD4',
+          }
+        }
+      }
+    }
+  </script>
     <title>Tailwind Practice</title>
 </head>
 <body>
@@ -17,7 +29,8 @@
             <a href="#contact" class="m-2 px-2 border-2 text-emerald-900 bg-emerald-200 rounded border-emerald-700 p-0.5 hover:bg-purple-300 p-0.5 block text-md sm:inline sm:text-xl">Contact</a>
          </nav>
          <br>
-         <h1 class="text-white font-bold sm:text-3xl lg:text-4xl sm:text-red-500 lg:text-emerald-500">My Tailwind Website</h1>
+         <h2 class="text-3xl font-bold underline text-Aquamadrine1">Tailwind</h2>
+         <h1 class="text-white font-bold sm:text-3xl lg:text-4xl sm:text-red-500 lg:text-emerald-900">My Tailwind Website</h1>
     </header>
     
     <h5 class="text-3xl font-bold underline text-clifford text-green-500">
