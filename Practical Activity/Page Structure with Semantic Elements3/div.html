@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="structure-style.css" />
+    <style>
+       .parent {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: lightblue;
+       }
+
+       .child {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background: yellow;
+            padding: 10px;
+            border: 2px solid black;
+        }
+         .child1 {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            background: rgba(21, 0, 255, 0.488);
+            padding: 10px;
+            border: 2px solid black;
+        }
+         .child2 {
+            position: absolute;
+            top: 190px;
+            left: 20px;
+            background: rgba(255, 0, 0, 0.504);
+            padding: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+ <div class="child">I'm absolutely positioned</div>
+ <div class="child1">I'm absolutely positioned</div>
+ <div class="child2">I'm absolutely positioned</div>
+
+</div>
+
+ <h5 class="text-3xl font-bold underline text-clifford text-green-500">
+      Hello world!
+    </h5>
+    <br>
+    <p >
+        Alhamdulillah, this is a simple Tailwind CSS practice.
+    </p>
+    <br>
+    <!-- flexbox section-->
+    <div class="flex">
+        <div> Item 1</div>
+        <div> Item 2</div>
+        <div> Item 3</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!-- grid with 3 columns section-->
+    <div class="grid grid-cols-3 gap-5">
+        <div> Item 1</div>
+        <div> Item 2</div>
+        <div> Item 3</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!-- grid with 3 rows section-->
+    <div class="grid grid-rows-3 gap-5">
+        <div> Item 1:</div>
+        <div> Item 2:</div>
+        <div> Item 3:</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <footer>
+            <p>&copy; 2025 My Website. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </nav>
+            <p class="footer-social">Follow us on social media: 
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://instagram.com" target="_blank">Instagram</a> |
+                <a href="https://x.com" target="_blank">X</a>
+            </p>
+                    
+    </footer>
+</body>
+</html>
+
+
+
