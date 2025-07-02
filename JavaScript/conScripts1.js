@@ -14,4 +14,3 @@ else {
 }
 // If the temperature is greater than 30, it prints "It's a Hot Day!".
 
-//conditional statements
