@@ -2,13 +2,13 @@
 
 // Traffic speed limit Offense and fine Simulation
 var speedLimit = 80; // Speed limit in km/h
-var vehicleSpeed = 80; // Speed of the vehicle in km/h
+var vehicleSpeed = 90; // Speed of the vehicle in km/h
 var fineAmount = 0; // Variable to store the fine amount
 
 if (vehicleSpeed > speedLimit) {
     //calc fine amount based on the difference between vehicle speed and speed limit.
     console.log("Speeding Offense Detected.");
-    var overSpeed = vehicleSpeed - speedLimit;
+    var speedDifference = vehicleSpeed - speedLimit;
     //fine calc logic: for every 5km/hr over the speed limit, issue a $50 fine.
     var fineAmount = Math.ceil (speedDifference / 5) * 50;
     console.log("You were driving at " + vehicleSpeed + " km/hr, exceeding the speed limit of " + "km/hr ");
