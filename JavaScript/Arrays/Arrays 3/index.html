@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Plotter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Graph Web App</h1>
+    <div class="input-container">
+        <input type="number" id="input1" placeholder="value 1">
+        <input type="number" id="input2" placeholder="value 2">
+        <input type="number" id="input3" placeholder="value 3">
+        <input type="number" id="input4" placeholder="value 4">
+        <input type="number" id="input5" placeholder="value 5">
+
+        <button onclick="storeData()"> Plot Graph </button>
+        <button onclick="clearData()"> Clear Data </button>
+    </div>
+
+    <div id="graph-container">
+        <canvas id="graphCanvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>    
+</body>
+</html>
