@@ -2,7 +2,7 @@ let person = {
     name: "AbduLLAh",
     age: 34,
     greet: function() {
-        retrun (
+        return (
             "Hello, my name is " + this.name + " and I'm " + this.age + "years old."
         );
     }
