@@ -1,4 +1,4 @@
-//Daily School Run Simulation (Daily Weekdays)
+// Daily School Run Simulation (Daily Weekdays)
 
 /**
  * This object, 'ourDailyRoutine', encapsulates all the data (properties)
@@ -148,37 +148,18 @@ const ourDailyRoutine = {
       console.log("No children attending school for pick-up today.");
     }
     console.log("\n=== End of Daily School Run ===\n");
-  },
-
-  /**
-   * Method: simulateSchoolTerm
-   * Purpose: Simulates the daily school run for a full school term (e.g., 13 weeks, Monday-Friday).
-   * This method orchestrates the 'runDailySchedule' method for each day of the week
-   * over the specified number of weeks, demonstrating nested loops.
-   */
-  simulateSchoolTerm: function() {
-    const totalWeeks = 13;
-    // Array of string datatypes for weekdays
-    const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-
-    console.log(`\n--- Starting School Term Simulation (${totalWeeks} Weeks) ---`);
-
-    // Outer loop for the number of weeks
-    for (let week = 1; week <= totalWeeks; week++) {
-      console.log(`\n==================== WEEK ${week} ====================`);
-      // Inner loop for each weekday
-      for (const day of weekdays) {
-        // Call the existing runDailySchedule method for each weekday,
-        // passing 'day' as a parameter.
-        this.runDailySchedule(day);
-      }
-    }
-    console.log(`\n--- School Term Simulation Completed for ${totalWeeks} Weeks ---`);
   }
 };
 
-// --- Simulating the Daily Routine for a full School Term ---
+// --- Simulating the Daily Routine for Monday to Friday ---
 
-// Calling the new 'simulateSchoolTerm' method of the 'ourDailyRoutine' object
-// to run the entire 13-week simulation.
-ourDailyRoutine.simulateSchoolTerm();
+const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+console.log(`\n--- Starting Daily School Run Simulation (Monday to Friday) ---`);
+
+// Loop through each weekday and run the daily schedule
+for (const day of weekdays) {
+  ourDailyRoutine.runDailySchedule(day);
+}
+
+console.log(`\n--- Daily School Run Simulation Completed ---`);
