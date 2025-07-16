@@ -38,7 +38,7 @@ const newHTML2 = `
 document.body.innerHTML = newHTML2;
 
 
-// String Concatination 
+// String Concatenation 
 const userString = new User ("AbdurRahman", 40, "a.rahman@example.com");
 console.log(userString);
 
