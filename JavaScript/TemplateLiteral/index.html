@@ -6,17 +6,35 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li> 
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav> 
     
     <h1>
         Hello AbduLLAh
     </h1>
-    <h1>
+    <h2>
         Your Age is 35
-    </h1>
-    <h1>
+    </h2>
+    <h3>
         Your email address is abdullah@example.com
-    </h1>
+    </h3>
     
     <script src="script.js"></script>
+
+    <script>
+        const secondNavItem = document.querySelectorAll("nav ul li:nth-child(2)");
+        secondNavItem.forEach(item => {
+            item.style.backgroundColor = "mintgreen";
+            item.style.padding = "10px";
+            item.style.borderRadius = "5px";
+        });
+    </script>
 </body>
 </html>
