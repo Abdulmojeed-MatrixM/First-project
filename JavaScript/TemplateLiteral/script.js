@@ -11,7 +11,7 @@ class User {
 const userObject = new User ("Sponge Bob", 45, "spongebob@example.com");
 console.log(userObject);
 
-// create a new user obect
+// 1. create a new user obect
 const newHTML = `
     
     <h1>Your email address is abdullah@example.com</h1>
@@ -23,7 +23,7 @@ const newHTML = `
 // Display the new HTML content
 document.body.innerHTML = newHTML;
 
-
+// 2. create a new user obect
 const userBluey = new User ("Bluey", 25, "bluey@example.com");
 console.log(userBluey);
 
@@ -36,3 +36,16 @@ const newHTML2 = `
 
 // Display the new HTML content
 document.body.innerHTML = newHTML2;
+
+
+// String Concatination 
+const userString = new User ("AbdurRahman", 40, "a.rahman@example.com");
+console.log(userString);
+
+const newHTML3 = "<h1> Hello " + userString.name + "</h1>" + "</ br>" +
+                "<h1> Your Age is " + userString.age + "</h1>" + "</ br>" +
+                "<h1> Your Email is " + userString.email + "</h1>" + "</ br>";
+
+
+// Display the new HTML content
+document.body.innerHTML = newHTML3;
