@@ -11,6 +11,6 @@ function addElement() {
     newSection.appendChild(newContent);
 
     // add the newly created element and its content into the DOM 
-    const currentSection = document.querySelector("#section-id-container");
+    const currentSection = document.querySelector("chapter-section-id");
     document.body.insertBefore(newSection, currentSection);
-}
+} 
