@@ -14,4 +14,4 @@ document.querySelector(".services-section").className;
 console.log("Service section class name:", document.querySelector(".services-section").className);
 
 //classList
-document.querySelector("nav").classList.add("header");
+//document.querySelector("nav").classList.add("header");
