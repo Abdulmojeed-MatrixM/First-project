@@ -3,6 +3,6 @@
     "development"
   ],
   "hints": {
-    "button-type": "off"
+    "axe/name-role-value": "off"
   }
 }

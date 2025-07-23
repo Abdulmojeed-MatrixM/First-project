@@ -5,7 +5,7 @@ let library = [
     "Pride and Prejudice"
 ]
 
-function displayBooks() {
+function searchBook() {
     let bookList = document.getElementById("bookList");
     bookList.innerHTML = ""; // Clear the list before displaying books
 
