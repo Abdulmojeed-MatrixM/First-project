@@ -5,8 +5,8 @@ const section = document.querySelector(".about-section");
 section.addEventListener("click", function() {
     //Togggling the "about-section" class on the section
     this.classList.toggle("about-section");
-   
-})
+    console.log("About section clicked and class toggled.");
+});
 
 //className is used to select the section with class "service-section"
 document.querySelector(".services-section").className;
