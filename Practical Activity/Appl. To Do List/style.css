@@ -39,7 +39,7 @@ h1 {
     transition: background 0.2s;
 }
 #addTaskBtn:hover {
-    background: #0056b3;
+    background: #8900b3;
 }
 #taskList {
     list-style: none;
