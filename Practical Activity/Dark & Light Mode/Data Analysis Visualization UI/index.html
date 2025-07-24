@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Visualization UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="logo">DataViz Pro</div>
+        <nav>
+            <ul>
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#charts">Charts</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+        <button id="toggleButton">Switch to Dark Mode</button>
+    </header>
+    <main>
+        <section id="dashboard" class="card">
+            <h2>Dashboard Overview</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p>2,340</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Sessions</h3>
+                    <p>187</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Data Sources</h3>
+                    <p>12</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Alerts</h3>
+                    <p>3</p>
+                </div>
+            </div>
+        </section>
+        <section id="charts" class="card">
+            <h2>Visualization Charts</h2>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Monthly Users</h3>
+                    <canvas id="barChart" width="300" height="180"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Session Distribution</h3>
+                    <canvas id="pieChart" width="300" height="180"></canvas>
+                </div>
+            </div>
+        </section>
+        <section id="reports" class="card">
+            <h2>Recent Reports</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Report Name</th>
+                        <th>Status</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-07-24</td>
+                        <td>User Growth Analysis</td>
+                        <td><span class="status completed">Completed</span></td>
+                        <td><a href="#">PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-23</td>
+                        <td>Session Trends</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td><a href="#">PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-22</td>
+                        <td>Source Breakdown</td>
+                        <td><span class="status ongoing">Ongoing</span></td>
+                        <td><a href="#">PDF</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="settings" class="card">
+            <h2>Settings</h2>
+            <form>
+                <label>
+                    Notification Email:
+                    <input type="email" placeholder="your@email.com">
+                </label>
+                <label>
+                    Change Password:
+                    <input type="password" placeholder="New Password">
+                </label>
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 DataViz Pro - Data Analysis Visualization UI</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
