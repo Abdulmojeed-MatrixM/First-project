@@ -130,13 +130,53 @@ let stdDev = calculateStandardDeviation(number);
 console.log("Standard Deviation:", stdDev);
 
 
+
+
+
+
+
+//Math Assignment:
 let samples = [{"sample1": 4.2}, {"sample2": 5.1}, 
     {"sample3": 3.8}, {"sample4": 4.7}, {"sample5": 5.3}];
 //let sampleValues = Object.values(samples);
 for (let i = 0; i < samples.length; i++) {
     console.log("Sample " + (i + 1) + ": " + samples[i]["sample" + (i + 1)]);
-    sum += samples[i] ["sample" + (i + 1)];
+    sum += samples[i]["sample" + (i + 1)];
 }
 
 let meanSamples = sum / samples.length;
 console.log("Mean of samples: " + meanSamples);
+console.log("Mean of samples: " + Math.round(meanSamples));
+
+
+
+
+
+
+// Sample data for the experiment
+let values = [4.2, 5.1, 3.8, 4.7, 5.3];
+// Function to calculate the mean of an array
+function calculateMean(values) {
+    var sum = 0;
+    for (i = 0; i < values.length; i++) {
+        sum += values[i];
+    }
+    return sum / values.length;
+}
+
+//calculate the mean
+var mean = calculateMean(values);
+var roundedMean = Math.round(mean * 100) / 100; // Round to two decimal places
+var resultMessage = "Mean: " + roundedMean;
+console.log(resultMessage);
+
+// Function to calculate the standard deviation of an array
+function calculateStandardDeviation(values) {
+    var mean = calculateMean(values);
+    var squaredDifferences = values.map(function(value) {
+        var difference = value - mean;
+        return difference * difference;
+    });
+    var variance = calculateMean(squaredDifferences);
+    return Math.round(Math.sqrt(variance) * 100) / 100; // Round to two decimal places
+}
