@@ -138,12 +138,12 @@ console.log("Standard Deviation:", stdDev);
 //Math Assignment: SELF
 let samples = [{"sample1": 4.2}, {"sample2": 5.1}, 
     {"sample3": 3.8}, {"sample4": 4.7}, {"sample5": 5.3}];
+    
 //let sampleValues = Object.values(samples);
 for (let i = 0; i < samples.length; i++) {
     console.log("Sample " + (i + 1) + ": " + samples[i]["sample" + (i + 1)]);
     sum += samples[i]["sample" + (i + 1)];
 }
-
 
 let meanSamples = sum / samples.length;
 console.log("Mean of samples: " + meanSamples);
