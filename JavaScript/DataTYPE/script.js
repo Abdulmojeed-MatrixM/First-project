@@ -144,6 +144,7 @@ for (let i = 0; i < samples.length; i++) {
     sum += samples[i]["sample" + (i + 1)];
 }
 
+
 let meanSamples = sum / samples.length;
 console.log("Mean of samples: " + meanSamples);
 console.log("Mean of samples: " + Math.round(meanSamples));
