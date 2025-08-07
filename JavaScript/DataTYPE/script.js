@@ -180,3 +180,6 @@ function calculateStandardDeviation(values) {
     var variance = calculateMean(squaredDifferences);
     return Math.round(Math.sqrt(variance) * 100) / 100; // Round to two decimal places
 }
+var stadDev = calculateStandardDeviation(values);
+var stadDevMessage = "Standard Deviation: " + stadDev;
+console.log(stadDevMessage);
