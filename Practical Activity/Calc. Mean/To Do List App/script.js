@@ -11,3 +11,18 @@ console.log("Mean of samples: " + meanSamples);
 console.log("Mean of samples: " + Math.round(meanSamples));
 console.log("Mean of samples: " + meanSamples);
 console.log("Rounded mean of samples: " + Math.round(meanSamples));
+
+// Function to calculate the standard deviation of an array
+function calculateStandardDeviation(values) {
+    var mean = calculateMean(values);
+    var squaredDifferences = values.map(function(value) {
+        var difference = value - mean;
+        return difference * difference;
+    });
+    var variance = calculateMean(squaredDifferences);
+    return Math.round(Math.sqrt(variance) * 100) / 100; // Round to two decimal places
+}
+var stadDev = calculateStandardDeviation(values);
+var stadDevMessage = "Standard Deviation: " + stadDev;
+console.log(stadDevMessage);
+
