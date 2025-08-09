@@ -2,43 +2,43 @@ let array = [];
 
 // Display the array elements in the #arrayElements div
 function displayArray() {
-    const displayDiv = document.getElementById('arrayElements');
-    displayDiv.innerHTML = '';
+    const arrayContainer = document.getElementById("arrayElements");
+    arrayContainer.innerHTML = ""; // Clear previous content
     if (array.length === 0) {
-        displayDiv.textContent = "Array is empty.";
+        arrayContainer.textContent = "Array is empty."; // Display a message if the array is empty
         return;
     }
-    array.forEach((el, idx) => {
-        const div = document.createElement('div');
-        div.className = "array-item";
-        div.textContent = `Element ${idx}: ${el}`;
-        displayDiv.appendChild(div);
+    array.forEach((element, index) => {
+        const elementDiv = document.createElement("div");
+        elementDiv.className = "array-item"; // Add a class for styling
+        elementDiv.textContent = `Element ${index}: ${element}`; // Display element with its index
+        arrayContainer.appendChild(elementDiv); // Append the new div to the display
     });
 }
 
-// Add element to the end (push)
+// A function to addelement to the end (push)
 function addElement() {
-    const input = document.getElementById('elementInput');
-    const value = input.value.trim();
+    const elementInput = document.getElementById("elementInput");
+    const value = elementInput.value.trim();
     if (value === "") {
         alert("Please enter a value.");
         return;
     }
-    array.push(value);
-    input.value = "";
+    array.push(value); // Add the value to the array
+    elementInput.value = ""; // To clear the input field after adding
     displayArray();
 }
 
 // Add element to the beginning (unshift)
 function addFirst() {
-    const input = document.getElementById('elementInput');
-    const value = input.value.trim();
+    const elementInput = document.getElementById("elementInput");
+    const value = elementInput.value.trim(); 
     if (value === "") {
         alert("Please enter a value.");
         return;
     }
     array.unshift(value);
-    input.value = "";
+    elementInput.value = ""; // To clear the input field after adding
     displayArray();
 }
 
@@ -48,7 +48,7 @@ function removeLast() {
         alert("Array is already empty.");
         return;
     }
-    array.pop();
+    array.pop(); // Remove the last element from the array
     displayArray();
 }
 
@@ -62,15 +62,15 @@ function removeFirst() {
     displayArray();
 }
 
-// Remove element at specific index (splice)
+// To remove element from the beginning or end of the array (at specific index (splice))
 function removeAtIndex() {
-    const indexInput = document.getElementById('removeIndex');
-    const idx = parseInt(indexInput.value, 10);
-    if (isNaN(idx) || idx < 0 || idx >= array.length) {
+    const indexInput = document.getElementById("removeIndex");
+    const index = parseInt(indexInput.value, 10);
+    if (isNaN(index) || index < 0 || index >= array.length) {
         alert("Please enter a valid index.");
         return;
     }
-    array.splice(idx, 1);
+    array.splice(index, 1);
     indexInput.value = "";
     displayArray();
 }

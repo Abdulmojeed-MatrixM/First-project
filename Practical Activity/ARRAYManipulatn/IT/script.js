@@ -25,17 +25,17 @@ function addElement() {
 }
 
 // Function to remove element from the beginning or end of the array
-function removeElement(type) {
+function removeElement(index) {
     if (array.length === 0) {
         alert('Array is empty.');
         return;
     }
 
-    switch (type) {
-        case 'first':
+    switch (index) {
+        case 0:
             array.shift();
             break;
-        case 'last':
+        case 1:
             array.pop();
             break;
         default:
@@ -44,3 +44,17 @@ function removeElement(type) {
 
     displayArray();
 }
+
+// if (array.length === 0) {
+   // alert('Array is empty.');
+   // return;
+ //}
+
+  //  if (index < 0 || index >= array.length) {
+      //  alert('Invalid index.');
+     //   return;
+   // }
+
+  //  array.splice(index, 1);
+  //  displayArray();
+//}
