@@ -1,18 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: #e2e2e2;
     margin: 0;
     padding: 0;
 }
 h1 {
     text-align: center;
     margin-top: 2rem;
-    color: #1976d2;
+    color: #4d0446;
 }
 .container {
-    max-width: 500px;
+    max-width: 600px;
     margin: 2rem auto;
-    background: #fff;
+    background: #e6e6e6;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     padding: 2rem;
@@ -40,11 +40,12 @@ button {
     transition: background 0.2s;
 }
 button:hover {
-    background: #125ea2;
+    background: #4d0446;
 }
 #arrayElements {
     background: #e3f2fd;
-    border-radius: 4px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
     padding: 1rem;
     min-height: 40px;
     font-size: 1.1rem;
