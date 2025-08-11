@@ -20,10 +20,35 @@
                     console.log("Salam Alaykum, this is " + this.name + " from " + this.city + " and he is " + this.age + " years old.");
                 }
         }
-        
+
         // Calling the function and method
         saySalam("AbduLLah");
         ibaduLLAh.saySalam();
+
+        // Function to calculate the area of a triangle
+        function calculateTriangleArea (base, height) {
+            return 0.5 * base * height;
+        }
+        const area1 = calculateTriangleArea (3, 9);
+        console.log("The area of the triangle is: " + area1 + " square units.");
+
+        const area2 = calculateTriangleArea (2, 8);
+        console.log("The area of the triangle is: " + area2 + " square units.");
+
+        console.log("The sum total of the areas of the triangle: Area 1 + Area 2 = " + (area1 + area2) + " square units in total.");
+
+
+        // Function to format the current date
+        function formatDate (date) {
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            const day = date.getDate();
+            return `${year}-${month + 1}-${day}`;
+        }
+
+        const today = new Date();
+        const formattedDate = formatDate(today);
+        console.log("Formatted Date for Today's date is: " + formattedDate);
     </script>
 </body>
-</html>
+</html>   
