@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Greetings</h1>
+    <p>Welcome to our website!</p>
+    <script>
+        // This function logs a greeting message to the console
+        function saySalam (name) {
+            console.log("Salaam Alaykum WarahmotuLLahi, " + name + "!");
+        }
+        
+        // This is a simple JavaScript object representing a person
+        const ibaduLLAh = { name: "Abdullah", age: 25, city: "Medina",
+                saySalam: function () {
+                    console.log("Salam Alaykum, this is " + this.name + " from " + this.city + " and he is " + this.age + " years old.");
+                }
+        }
+        
+        // Calling the function and method
+        saySalam("AbduLLah");
+        ibaduLLAh.saySalam();
+    </script>
+</body>
+</html>
