@@ -15,7 +15,7 @@
         }
 
         // outer function factory
-        function createDataLogger(logMeesage) {
+        function createDataLogger(logMessage) {
             //Closure that remembers the LogMessage from the outer function
             const logData = (error, data) => {
                 if (error) {
@@ -26,14 +26,20 @@
             };
 
             // return a new function that calls fetchData with the logData closure as a callback
-            return (callback) => {
-                fetchData(callback);
+            //return (callback) => {
+                //fetchData(callback);
+
+            // Return a function that calls fetchDate with the logData closure as a callback
+            return () => {
+                fetchDate(logData);
             };
         }
 
         // Usage
         const logAPIData = createDataLogger("API Data:");
-        logAPIData(logData); // Output (after 2 seconds): API Data: { message: "Hello, World!"}
+        // logAPIData(logData); // Output (after 2 seconds): API Data: { message: "Hello, World!"}
+        logAPIData(); 
+        
     </script>
 </body>
 </html>

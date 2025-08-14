@@ -9,3 +9,15 @@ function outerFunction() {
 }
 const closure = outerFunction();
 closure();
+
+
+
+// fucntion parameters
+const bestColors = ["Coral", "Blue", "DeepPink"];
+
+function updateMyBestColors(previousColors, newColor) {
+   const mybestColors = [...previousColors, newColor];
+   return mybestColors;
+}
+
+updateMyBestColors(bestColors, "GreenYellow");
