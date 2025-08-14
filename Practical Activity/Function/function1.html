@@ -17,22 +17,14 @@
 
         // Callback function to handle the fetched data
         function handleData(error, data) {
-            //Closure that remembers the LogMessage from the outer function
-            const logData = (error, data) => {
                 if (error) {
                     console.error("Error:", error);
                 } else {
                     console.log("Data:", data);
                 }
             };
-        }
-
-            // return a new function that calls fetchData with the logData closure as a callback
-            //return (callback) => {
-                //fetchData(callback);
-
-            // Call the fetchData function and pass the handleData function as a callback
-            fetchData(handleData);// output (after 2 seconds): Data: { message: "Hello World!" }
+        // Call the fetchData function and pass the handleData function as a callback
+        fetchData(handleData);// output (after 2 seconds): Data: { message: "Hello World!" }
     </script>
 </body>
 </html>
