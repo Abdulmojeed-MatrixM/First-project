@@ -1,0 +1,60 @@
+// Initialize an empty array
+let array = [];
+
+// Function to display array elements
+function displayArray() {
+    const arrayContainer = document.getElementById('arrayElements');
+    arrayContainer.innerHTML = ''; // Clear previous content
+
+    array.forEach((element, index) => {
+        const elementDiv = document.createElement('div');
+        elementDiv.textContent = `Element ${index + 1}: ${element}`;
+        arrayContainer.appendChild(elementDiv);
+    });
+}
+
+// Function to add element to the end of the array
+function addElement() {
+    const elementInput = document.getElementById('elementInput').value.trim();
+    if (elementInput !== '') {
+        array.push(elementInput);
+        displayArray();
+    } else {
+        alert('Please enter a valid element.');
+    }
+}
+
+// Function to remove element from the beginning or end of the array
+function removeElement(index) {
+    if (array.length === 0) {
+        alert('Array is empty.');
+        return;
+    }
+
+    switch (index) {
+        case 0:
+            array.shift();
+            break;
+        case 1:
+            array.pop();
+            break;
+        default:
+            alert('Invalid operation.');
+    }
+
+    displayArray();
+}
+
+// if (array.length === 0) {
+   // alert('Array is empty.');
+   // return;
+ //}
+
+  //  if (index < 0 || index >= array.length) {
+      //  alert('Invalid index.');
+     //   return;
+   // }
+
+  //  array.splice(index, 1);
+  //  displayArray();
+//}
