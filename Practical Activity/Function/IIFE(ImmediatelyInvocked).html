@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately Invoked Function Expression (IIFE)</title>
+</head>
+<body>
+    <script>
+        (function() {
+            console.log("This is an IIFE");
+        })();
+    </script>
+
+    <script>
+        var counter = (function () {
+            var count = 0;
+            return {
+            increment: function () {
+                count++;
+            },
+            decrement: function () {
+                count--;
+            },
+            getCount: function () {
+                return count;
+            },
+            };
+        })();
+
+        // Increment the counter
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        console.log(counter.getCount()); // Output: 3
+
+        // Trying to access the private count variable directly
+        console.log(counter.count); // Output: undefined (cannot access private variable)
+
+    </script>
+</body>
+</html>
