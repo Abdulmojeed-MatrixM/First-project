@@ -1,0 +1,36 @@
+Objective:
+
+Create an interactive image gallery using HTML, CSS, and JavaScript, allowing users to add and remove images dynamically. It demonstrates practical application of JavaScript events, DOM manipulation, and basic styling techniques.
+
+Instructions:
+
+
+1. Setup:
+
+Create a new folder for your project files.
+Inside the folder, create index.html, styles.css, and script.js files.
+2. HTML Structure:
+
+In index.html, create the structure with an input field for image URLs, an "Add Image" button, and a section to display the images.
+3. CSS Styling:
+
+In styles.css, add some basic styling for the gallery.
+4. JavaScript Functionality (In script.js, add event listeners and functions to handle adding and removing images)
+
+Create a new function to add an image to the gallery.
+In the function body use the getElementById() method to access the value of the URL and store this expression in a variable.
+In the function body create a conditional if statement with one condition that takes the input variable as an expression.
+In the body of the conditional statement access the HTML element that will be used to display the image using the getElementById() method.
+In the body of the conditional statement:
+ use the createElement() method to create a new div for the gallery item and store this in a variable.
+use the add() method of the classList property of the gallery item element to add a new CSS class to the gallery item element.
+create an image element by using the createElement() method and store this in a variable.
+access the src attribute of the new image element and assign the variable to the source that contains the value of the URL of the input field.
+use the createElement() method to create a new remove button and store this in a variable.
+access the textContent property of the new remove button and assign the text "Remove" to it.
+use this add() method of the classList property of the new remove button HTML element to add a CSS class to the element. 
+access the onclick property of the new remove button element and assign an arrow function  that will use the removeChild() method to remove the HTML element that contains the image.
+use the appendChild() method to append the image and remove button to the gallery item element.
+use the appendChild() method to append the gallery item element to the gallery.
+use the getElementById() method to access the value of the image input element and assign an empty string to clear the input field.
+Add an event listener to add the "add image button" element by using the getElementById() method and appending an addEventListener() method.
