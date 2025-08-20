@@ -1,3 +1,18 @@
+## This project demonstrates the following concepts:
+
+- How to access HTML elements using JavaScript.
+- How to get data from an input field in JavaScript.
+- How to store data from an input field to a variable in JavaScript.
+- How to create new HTML elements with JavaScript.
+- How to access and add new CSS classes to HTML elements with JavaScript.
+- How to access and update the src attributes of HTML element with JavaScript.
+- How to assign text to HTML elements using JavaScript.
+- How to assign and invoke arrow functions to an onclick event.
+- How to append items to HTML elements with JavaScript.
+- How to add event listeners and pass type and listener arguments to event listeners with JavaScript.
+- How to add event listeners to HTML elements with JavaScript.
+
+
 Objective:
 
 Create an interactive image gallery using HTML, CSS, and JavaScript, allowing users to add and remove images dynamically. It demonstrates practical application of JavaScript events, DOM manipulation, and basic styling techniques.
