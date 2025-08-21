@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System App</title>
+</head>
+<body>
+    <h1>Welcome to the Banking System App</h1>
+    <form id="banking-form">
+        <label for="account-number">Account Number:</label>
+        <input type="text" id="account-number" required><br><br>
+
+        <label for="account-balance">Account Balance:</label>
+        <input type="number" id="account-balance" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="transaction-section" style="display:none;">
+        <h2>Transaction</h2>
+        <label for="transaction-type">Transaction Type:</label>
+        <select id="transaction-type">
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+        </select><br><br>
+
+        <label for="transaction-amount">Amount:</label>
+        <input type="number" id="transaction-amount" required><br><br>
+
+        <button id="process-transaction">Process Transaction</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('banking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('transaction-section').style.display = 'block';
+        });
+
+        document.getElementById('process-transaction').addEventListener('click', function() {
+            const accountNumber = document.getElementById('account-number').value;
+            const accountBalance = parseFloat(document.getElementById('account-balance').value);
+            const transactionType = document.getElementById('transaction-type').value;
+            const transactionAmount = parseFloat(document.getElementById('transaction-amount').value);
+            let resultMessage = '';
+
+            if (transactionType === 'deposit') {
+                accountBalance += transactionAmount;
+                resultMessage = `Deposited ${transactionAmount} to account ${accountNumber}. New balance: ${accountBalance}`;
+            } else if (transactionType === 'withdraw') {
+                if (transactionAmount > accountBalance) {
+                    resultMessage = `Insufficient funds in account ${accountNumber}. Current balance: ${accountBalance}`;
+                } else {
+                    accountBalance -= transactionAmount;
+                    resultMessage = `Withdrew ${transactionAmount} from account ${accountNumber}. New balance: ${accountBalance}`;
+                }
+            }
+
+            document.getElementById('result').innerText = resultMessage;
+        });
+    </script>
+</body>
+</html>
