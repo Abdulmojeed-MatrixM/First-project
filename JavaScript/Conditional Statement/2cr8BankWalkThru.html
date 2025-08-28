@@ -283,6 +283,7 @@
             const newAccount = new BankAccount(accountNumber, accountHolder, initialBalance);
             accounts.set(accountNumber, newAccount);
             document.getElementById("output").innerText = `Account created successfully! Account Number: ${accountNumber}`;
+            //document.getElementById("output").innerHTML = `Account created successfully! Account Number: <b>${accountNumber}</b> for Account Holder: <b>${accountHolder}!</b>`;
             renderTransactions(newAccount);
         }
 
