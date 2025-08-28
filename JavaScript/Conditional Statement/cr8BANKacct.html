@@ -114,6 +114,9 @@
             <div class="form-group">
                 <label for="loginName">Name</label>
                 <input type="text" id="loginName" placeholder="Enter your name" required>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
             </div>
             <button type="submit">Login</button>
         </form>
@@ -248,7 +251,8 @@
         loginForm.onsubmit = (e) => {
             e.preventDefault();
             const name = document.getElementById('loginName').value.trim();
-            if (!name) return;
+            const password = document.getElementById('loginPassword').value.trim();
+            if (!name || !password) return;
             const account = accounts[name.toLowerCase()];
             if (!account) {
                 alert('Account not found. Please register.');
