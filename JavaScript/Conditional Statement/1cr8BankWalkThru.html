@@ -211,7 +211,8 @@
             const accountNumber = Math.floor(Math.random() * 1000000);
             const newAccount = new BankAccount(accountNumber, accountHolder, initialBalance);
             accounts.set(accountNumber, newAccount);
-            document.getElementById("output").innerText = `Account created successfully! Account Number: ${accountNumber}`;
+            document.getElementById("output").innerText = `Account created successfully! Account Number: ${accountNumber} for Account Holder: ${accountHolder}`;
+            //document.getElementById("output").innerHTML = `Account created successfully! Account Number: <b>${accountNumber}</b> for Account Holder: <b>${accountHolder}!</b>`;
         }
 
         function deposit() {
