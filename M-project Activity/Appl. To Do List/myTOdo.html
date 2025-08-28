@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive To-Do List App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Minimal styling for a professional look -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd 0%, #fff0fa 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .todo-container {
+            max-width: 400px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(123, 31, 58, 0.12);
+            padding: 2rem;
+        }
+        h1 {
+            text-align: center;
+            color: #7b1f3a;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+        .input-group {
+            display: flex;
+            gap: 0.7rem;
+            margin-bottom: 1.5rem;
+        }
+        #taskInput {
+            flex: 1;
+            padding: 0.7rem;
+            border: 2px solid #7b1f3a;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            background: #f8f8fa;
+        }
+        #addTaskBtn {
+            background: #43a047;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.3rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(67, 160, 71, 0.08);
+        }
+        #addTaskBtn:hover {
+            background: #7b1f3a;
+            color: #fff0fa;
+            box-shadow: 0 4px 16px rgba(123, 31, 58, 0.15);
+        }
+        #taskList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #taskList li {
+            background: #e3f2fd;
+            border-radius: 8px;
+            margin-bottom: 0.7rem;
+            padding: 0.7rem 1rem;
+            font-size: 1rem;
+            color: #7b1f3a;
+            box-shadow: 0 2px 8px rgba(123, 31, 58, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.2s;
+        }
+        .remove-btn {
+            background: #d32f2f;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .remove-btn:hover {
+            background: #7b1f3a;
+        }
+        @media (max-width: 500px) {
+            .todo-container {
+                max-width: 95vw;
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <!-- Input field and button for adding tasks -->
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <!-- List to display tasks -->
+        <ul id="taskList"></ul>
+    </div>
+    <!-- Link to external JS file -->
+    <script>
+        // Array to hold tasks
+let tasks = [];
+
+// Get DOM elements
+const taskInput = document.getElementById('taskInput');
+const addTaskBtn = document.getElementById('addTaskBtn');
+const taskList = document.getElementById('taskList');
+
+/**
+ * Adds a new task to the tasks array and updates the display.
+ */
+function addTask() {
+    const taskText = taskInput.value.trim();
+    if (taskText === "") return; // Ignore empty input
+
+    tasks.push(taskText); // Add task to array
+    taskInput.value = ""; // Clear input field
+    displayTasks(); // Update task list
+}
+
+/**
+ * Displays all tasks in the tasks array.
+ * Each task has a "Remove" button next to it.
+ */
+function displayTasks() {
+    taskList.innerHTML = ""; // Clear current list
+
+    // Loop through tasks and create list items
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.textContent = task;
+
+        // Create Remove button for each task
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = "Remove";
+        removeBtn.className = "remove-btn";
+        removeBtn.onclick = () => removeTask(index);
+
+        li.appendChild(removeBtn); // Add button to list item
+        taskList.appendChild(li);  // Add list item to list
+    });
+}
+
+/**
+ * Removes a task from the tasks array by index and updates the display.
+ * @param {number} index - The index of the task to remove.
+ */
+function removeTask(index) {
+    tasks.splice(index, 1); // Remove task from array
+    displayTasks();         // Update task list
+}
+
+// Event listener for Add Task button
+addTaskBtn.addEventListener('click', addTask);
+
+// Optional: Add task on Enter key press
+taskInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') addTask();
+});
+
+// Initial display (in case tasks array is pre-filled)
+displayTasks();
+    </script>
+</body>
+</html>
