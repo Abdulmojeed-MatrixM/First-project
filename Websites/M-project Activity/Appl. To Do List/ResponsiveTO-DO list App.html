@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive To-Do List App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Minimal styling for a professional look -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd 0%, #fff0fa 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .todo-container {
+            max-width: 400px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(123, 31, 58, 0.12);
+            padding: 2rem;
+        }
+        h1 {
+            text-align: center;
+            color: #7b1f3a;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+        .input-group {
+            display: flex;
+            gap: 0.7rem;
+            margin-bottom: 1.5rem;
+        }
+        #todoInput {
+            flex: 1;
+            padding: 0.7rem;
+            border: 2px solid #7b1f3a;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            background: #f8f8fa;
+        }
+        #addBtn {
+            background: #43a047;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.3rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(67, 160, 71, 0.08);
+        }
+        #addBtn:hover {
+            background: #7b1f3a;
+            color: #fff0fa;
+            box-shadow: 0 4px 16px rgba(123, 31, 58, 0.15);
+        }
+        .todo-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .todo-list li {
+            background: #e3f2fd;
+            border-radius: 8px;
+            margin-bottom: 0.7rem;
+            padding: 0.7rem 1rem;
+            font-size: 1rem;
+            color: #7b1f3a;
+            box-shadow: 0 2px 8px rgba(123, 31, 58, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.2s;
+        }
+        .todo-list li.completed {
+            text-decoration: line-through;
+            color: #888;
+            background: #f3e5f5;
+        }
+        .action-btns {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .complete-btn, .delete-btn {
+            border: none;
+            border-radius: 6px;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .complete-btn {
+            background: #43a047;
+            color: #fff;
+        }
+        .complete-btn:hover {
+            background: #7b1f3a;
+        }
+        .delete-btn {
+            background: #d32f2f;
+            color: #fff;
+        }
+        .delete-btn:hover {
+            background: #7b1f3a;
+        }
+        @media (max-width: 500px) {
+            .todo-container {
+                max-width: 95vw;
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h1>My To-Do List</h1>
+        <div class="input-group">
+            <input type="text" id="todoInput" placeholder="Add a new task...">
+            <button id="addBtn">Add</button>
+        </div>
+        <ul id="todoList" class="todo-list"></ul>
+    </div>
+    <script>
+        // Array to hold tasks
+        let tasks = [];
+
+        // Get DOM elements
+        const todoInput = document.getElementById('todoInput');
+        const addBtn = document.getElementById('addBtn');
+        const todoList = document.getElementById('todoList');
+
+        // Add a new task to the list
+        function addTask() {
+            const taskText = todoInput.value.trim();
+            if (taskText === "") {
+                todoInput.focus();
+                return;
+            }
+            tasks.push({ text: taskText, completed: false });
+            todoInput.value = "";
+            todoInput.focus();
+            displayTasks();
+        }
+
+        // Display all tasks
+        function displayTasks() {
+            todoList.innerHTML = "";
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+                li.textContent = task.text;
+                if (task.completed) li.classList.add('completed');
+
+                // Action buttons container
+                const actionBtns = document.createElement('div');
+                actionBtns.className = "action-btns";
+
+                // Complete button
+                const completeBtn = document.createElement('button');
+                completeBtn.textContent = "Complete";
+                completeBtn.className = "complete-btn";
+                completeBtn.onclick = () => {
+                    tasks[index].completed = !tasks[index].completed;
+                    displayTasks();
+                };
+
+                // Delete button
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = "Delete";
+                deleteBtn.className = "delete-btn";
+                deleteBtn.onclick = () => {
+                    tasks.splice(index, 1);
+                    displayTasks();
+                };
+
+                actionBtns.appendChild(completeBtn);
+                actionBtns.appendChild(deleteBtn);
+                li.appendChild(actionBtns);
+
+                todoList.appendChild(li);
+            });
+        }
+
+        // Add task on button click
+        addBtn.addEventListener('click', addTask);
+
+        // Add task on Enter key
+        todoInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') addTask();
+        });
+
+        // Initial display
+        displayTasks();
+    </script>
+</body>
+</html>

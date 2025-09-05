@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Application</title>
+</head>
+<body>
+    <h1> Library </h1>
+    <input type="text" id="searchInput" placeholder="Enter book title to search">
+    <button onclick="searchBook()"> Search </button>
+    <div id="searchResult"></div>
+
+    <h2> Add New Book </h2>
+    <form id="addBookForm">
+        <label for="bookTitle">Title: </label>
+        <input type="text" id="bookTitle" required>
+        <button type="submit"> Add Book </button>
+    </form>
+
+    <div id="bookList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

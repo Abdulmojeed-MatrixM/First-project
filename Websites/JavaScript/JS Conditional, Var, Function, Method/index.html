@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JavaScript</title>
+</head>
+<body>
+    <h1 id="Hello World!">Welcome to JavaScript</h1>
+    <button onclick="changeText()">Click Here!</button>
+
+    <!-- conditional statements in HTML -->
+    <div id="content">
+        <p id="adultContent" style="display: none">
+            This is some adult content that is hidden by default. Welcome to the adult section!
+        </p>
+        <p id="minorContent" style="display: none">
+            Welcome to the minor section!
+        </p>
+    </div>
+    <script>
+        var myAge = 45;
+        if (myAge >= 16) {
+           document.getElementById("adultContent").style.display = "block";
+         } else {
+            document.getElementById("minorContent").style.display = "block";
+            }
+    </script>
+
+
+
+
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
+    <script src="script4.js"></script>
+    <script src="conScripts1.js"></script>
+    <script src="conScripts2.js"></script>
+    <script src="conScripts3.js"></script>
+    <script src="conScripts4.js"></script>
+</body>
+</html>

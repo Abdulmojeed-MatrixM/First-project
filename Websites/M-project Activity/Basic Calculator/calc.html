@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            background: #fff0fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #7b1f3a; /* wine */
+            margin-top: 2rem;
+        }
+        .calculator {
+            background: #e0ffe0;
+            max-width: 350px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(123, 31, 58, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .calculator input[type="text"] {
+            padding: 0.7rem;
+            border: 2px solid #7b1f3a;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            outline: none;
+        }
+        .calculator-buttons {
+            display: flex;
+            gap: 0.7rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        button {
+            background: #7b1f3a; /* wine */
+            color: #e0ffe0;      /* green background for calculator, wine for buttons */
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.3rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        button:hover {
+            background: #43a047; /* green */
+            color: #fff0fa;      /* lighter magenta */
+        }
+        h2 {
+            text-align: center;
+            color: #43a047; /* green */
+            margin-top: 1.5rem;
+        }
+        #result {
+            display: inline-block;
+            background: #fff0fa;
+            color: #7b1f3a;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-top: 0.7rem;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Calculator</h1>
+    <div class="calculator">
+        <input type="text" id="number1" placeholder="Enter first number">
+        <input type="text" id="number2" placeholder="Enter second number">
+        <div class="calculator-buttons">
+            <button onclick="calculate('add')">Add</button>
+            <button onclick="calculate('subtract')">Subtract</button>
+            <button onclick="calculate('multiply')">Multiply</button>
+            <button onclick="calculate('divide')">Divide</button>
+        </div>
+        <h2>Result: <span id="result"></span></h2>
+    </div>
+    <script>
+        function calculate(operation) {
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+            let result;
+
+            // Check for valid numbers
+            if (isNaN(num1) || isNaN(num2)) {
+                result = "Please enter valid numbers.";
+            } else {
+                switch (operation) {
+                    case 'add':
+                        result = `${num1} + ${num2} = ${num1 + num2}`;
+                        break;
+                    case 'subtract':
+                        result = `${num1} - ${num2} = ${num1 - num2}`;
+                        break;
+                    case 'multiply':
+                        result = `${num1} × ${num2} = ${num1 * num2}`;
+                        break;
+                    case 'divide':
+                        if (num2 === 0) {
+                            result = "Division by zero is not allowed.";
+                        } else {
+                            result = `${num1} ÷ ${num2} = ${num1 / num2}`;
+                        }
+                        break;
+                    default:
+                        result = "Unknown operation.";
+                }
+            }
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>

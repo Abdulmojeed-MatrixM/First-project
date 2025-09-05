@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #232f3e;
+            --accent: #febd69;
+            --success: #28a745;
+            --bg: #f3f3f3;
+            --card-bg: #fff;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .search-container {
+            background: var(--card-bg);
+            margin: 30px auto 20px auto;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-container input {
+            padding: 12px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .search-container input:focus {
+            border-color: var(--accent);
+        }
+        .search-container button {
+            padding: 12px 28px;
+            background-color: var(--accent);
+            color: #232f3e;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-container button:hover {
+            background-color: #f7ca00;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+        }
+        .product {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.15s, box-shadow 0.15s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .product:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+        }
+        .product img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background: #f7f7f7;
+        }
+        .product h2 {
+            font-size: 1.2em;
+            color: var(--primary);
+            margin: 0 0 8px 0;
+            font-weight: 700;
+            text-align: center;
+        }
+        .product p {
+            font-size: 1em;
+            color: #444;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+        .product .price {
+            font-size: 1.2em;
+            color: var(--success);
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .product .buy-btn {
+            background: var(--accent);
+            color: var(--primary);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 22px;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: auto;
+            transition: background 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .product .buy-btn:hover {
+            background: #f7ca00;
+        }
+        @media (max-width: 600px) {
+            .search-container {
+                padding: 15px;
+                flex-direction: column;
+            }
+            .search-container input {
+                width: 100%;
+            }
+            .product-list {
+                grid-template-columns: 1fr;
+                padding: 0 5px;
+            }
+            .product img {
+                width: 100%;
+                height: 140px;
+            }
+        }
+        .no-results {
+            text-align: center;
+            color: #888;
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ShopEase</h1>
+    </header>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button onclick="searchProduct()">Search</button>
+    </div>
+    <div class="product-list" id="product-list">
+        <!-- Product items will be dynamically added here -->
+    </div>
+
+    <script>
+        // Realistic product data
+        const products = [
+            {
+                name: "Apple MacBook Pro 14\"",
+                description: "Apple M2 Pro chip, 16GB RAM, 512GB SSD. Stunning Liquid Retina XDR display.",
+                price: 1899.99,
+                image: "https://images.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero_endframe__e6khcva4hkeq_large.jpg",
+                link: "https://www.apple.com/macbook-pro-14-and-16/"
+            },
+            {
+                name: "Sony WH-1000XM5 Headphones",
+                description: "Industry-leading noise cancellation, 30 hours battery, wireless Bluetooth.",
+                price: 349.99,
+                image: "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg",
+                link: "https://www.sony.com/electronics/headband-headphones/wh-1000xm5"
+            },
+            {
+                name: "Samsung Galaxy S23 Ultra",
+                description: "6.8\" QHD+ AMOLED, 200MP camera, 5000mAh battery, 256GB storage.",
+                price: 1199.99,
+                image: "https://images.samsung.com/is/image/samsung/p6pim/uk/sm-s918bzadeub/gallery/uk-galaxy-s23-ultra-s918-sm-s918bzadeub-534563892?$650_519_PNG$",
+                link: "https://www.samsung.com/global/galaxy/galaxy-s23-ultra/"
+            },
+            {
+                name: "Amazon Fire HD 10 Tablet",
+                description: "10.1\" Full HD, 32GB, Octa-core, Alexa hands-free, up to 12 hours battery.",
+                price: 149.99,
+                image: "https://images-na.ssl-images-amazon.com/images/I/61b6v5p2QNL._AC_SL1000_.jpg",
+                link: "https://www.amazon.com/dp/B08BX7FV5L"
+            },
+            {
+                name: "Garmin Forerunner 255 Smartwatch",
+                description: "GPS running watch, heart rate, music, 14 days battery, waterproof.",
+                price: 299.99,
+                image: "https://static.garmincdn.com/en/products/010-02641-01/v/cf-lg.jpg",
+                link: "https://www.garmin.com/en-US/p/774963"
+            },
+            {
+                name: "Canon EOS R7 Mirrorless Camera",
+                description: "32.5MP APS-C, 4K60p video, Dual Pixel AF, Wi-Fi, weather-sealed.",
+                price: 1499.00,
+                image: "https://m.media-amazon.com/images/I/81Qn6kQzQwL._AC_SL1500_.jpg",
+                link: "https://www.canon.co.uk/cameras/eos-r7/"
+            },
+            {
+                name: "Nintendo Switch OLED",
+                description: "7\" OLED screen, enhanced audio, 64GB storage, dock included.",
+                price: 319.99,
+                image: "https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_2.0/ncom/en_US/switch/site-design-update/hardware/switch-oled-white-set",
+                link: "https://www.nintendo.com/switch/oled-model/"
+            },
+            {
+                name: "Dyson V15 Detect Vacuum",
+                description: "Laser reveals microscopic dust, powerful suction, LCD screen.",
+                price: 599.99,
+                image: "https://www.dyson.co.uk/images/dyson/products/vacuum-cleaners/v15-detect/v15-detect-hero.png",
+                link: "https://www.dyson.co.uk/vacuum-cleaners/sticks/dyson-v15-detect"
+            }
+        ];
+
+        function displayProducts(productsToDisplay) {
+            const productList = document.getElementById("product-list");
+            productList.innerHTML = "";
+
+            if (productsToDisplay.length === 0) {
+                productList.innerHTML = `<div class="no-results">No products found. Try another search.</div>`;
+                return;
+            }
+
+            productsToDisplay.forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.classList.add("product");
+
+                productDiv.innerHTML = `
+                    <a href="${product.link}" target="_blank" style="text-decoration:none; color:inherit;">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h2>${product.name}</h2>
+                        <p>${product.description}</p>
+                        <p class="price">£${product.price.toFixed(2)}</p>
+                    </a>
+                    <a href="${product.link}" target="_blank" class="buy-btn">View & Buy</a>
+                `;
+                productList.appendChild(productDiv);
+            });
+        }
+
+        function searchProduct() {
+            const searchInput = document.getElementById("searchInput").value.toLowerCase().trim();
+            const foundProducts = products.filter(product =>
+                product.name.toLowerCase().includes(searchInput) ||
+                product.description.toLowerCase().includes(searchInput)
+            );
+            displayProducts(foundProducts);
+        }
+
+        // Enter key triggers search
+        document.getElementById("searchInput").addEventListener("keydown", function(e) {
+            if (e.key === "Enter") searchProduct();
+        });
+
+        // Display all products initially
+        displayProducts(products);
+    </script>
+</body>
+</html>

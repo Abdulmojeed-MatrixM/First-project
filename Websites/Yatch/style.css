@@ -1,0 +1,142 @@
+h1 {
+    font-size: 80px;
+    color: rgb(136, 220, 10);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+p {
+    font-size: 20px;
+    color: rgb(97, 143, 6);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+    padding: 30px; /* Add padding inside the div */
+    /*border: 5px outset blue; /*  blue border */ 
+}
+
+
+#paragraphs {
+    padding: 20px; 
+    /*border: 10px outset #a7d8fa; */
+} 
+
+
+/* Style for the image as an id */   
+#image {
+    padding: 10px; /* Add padding inside the image */
+    border: 10px outset #a7df8a; /* light green border */
+}
+
+body {
+    background-color: #32323c;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem; /* Responsive font size */;
+}
+h2 {
+    font-size: 1.4rem; /* Responsive font size */;
+    color: #e6e6e6;
+}
+
+
+/* Creating CHAPTER Style for the <div> */
+.chapter-section {
+    padding: 20px; /* Add padding inside the div */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);  
+    margin: 80px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.chapter-section h2 {
+    font-size: 24px; /* Font size for chapter headings */
+    color: #e6e6e6;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5px; /* Space below the heading */
+    border-bottom: 2px solid #e6e6e6; /* Underline effect */
+    display: inline-block; /* Align with the text */
+    padding-bottom: 5px; /* Space for the underline effect */
+}
+
+.chapter-section p {
+    font-size: 18px; /* Font size for chapter paragraphs */
+    color: #e6e6e6;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6; /* Line height for better readability */
+
+}
+
+/* Creating NAVIGATION Style for the <ul>, <a (hyperlink)> & <li> */
+ul {
+    list-style-type: none; /* Square bullets */
+    padding-left: 50px; /* Indent the list */
+    font-family: 'Arial', sans-serif; /* Font for the list */
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    /* color: rgb(44, 72, 2); Green color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+li {
+    /* margin-bottom: 10px;  Space between list items */
+    display: inline;
+}
+
+/* Creating NAVIGATION Style for the <nav> instead of <ul> */
+nav {
+    /* background-color: rgb(240, 248, 255);  Light blue background */
+    /* padding: 10px;  Add padding inside the nav */
+    /* border: 5px solid rgb(44, 72, 2);  Green border */
+    /* border-radius: 10px;  Rounded corners */
+    font-size: 40px;
+}
+
+/* Navigation bar style CSS */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    background-color: rgba(50, 50, 60, 0.95); /* Semi-transparent background */
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.52); /* Shadow effect */
+}
+
+nav ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
+    align-items: center; /* Center vertically */
+}
+
+nav li {
+    margin: 0 20px; /* Space between items */
+}
+
+nav a {
+    font-family: "Montserrat" sans-serif;
+    color: #e6e6e6;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px; /* Space for the underline effect */
+    border-bottom: 2px solid transparent; /* Initial border */
+    position: relative;
+}
+
+nav a:hover {
+    color: #1b1b1b;
+    border-bottom: 2px solid #e6e6e6; /* Underline effect on hover */
+}

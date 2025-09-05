@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example</title>
+    <style>
+        body {
+            transition: background-color 0.3s ease;
+        }
+        canvas {
+            display: block;
+            
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            border-radius: 5px;
+            position: absolute;
+            margin-right: 10px;
+        
+        }
+        
+        button#toggleButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        button#changeBackground {
+            position: absolute;
+            top: 10px;
+            left: 150px;
+        }
+
+        button.active {
+            background-color: #653e8e;
+        }
+
+        #squareArea {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin-top: 50px;
+        }
+       
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Toggle Button</button>
+    <button id="changeBackground">Change Background</button>
+    <div id="squareArea"></div>
+
+    <script>
+        // Get the button elements
+        const toggleButton = document.getElementById("toggleButton");
+        const changeBackground = document.getElementById("changeBackground");
+        const squareArea = document.getElementById("squareArea");
+
+        // Add an event Listener to the toggle button
+        toggleButton.addEventListener("click", function () {
+            toggleButton.classList.toggle("active");
+        });
+
+        // Add an event listener to the change background button
+        changeBackground.addEventListener("click", function () {
+            if (document.body.style.background.includes("linear-gradient")) {
+                document.body.style.background = "white";
+            } else {
+                document.body.style.background = "linear-gradient(to right, red, yellow)";
+            }
+        });
+
+        // Add an event Listener for mouse enter on the square area
+        squareArea.addEventListener("mouseenter", function () {
+            toggleButton.style.backgroundColor = "blue";
+        });
+
+        // Add an event Listener for mouse leave on the square area
+        squareArea.addEventListener("mouseleave", function () {
+            toggleButton.style.backgroundColor = "";
+        });
+
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>

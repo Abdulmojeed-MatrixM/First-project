@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Callback Example</title>
+</head>
+<body>
+    <script>
+        // This function simulates an asynchronous operation (using setTimeout)
+        function fetchData(callback) {
+            setTimeout(() => {
+                const data = { message: "Hello, World!" };
+                callback(null, data); // Invoke the callback with the data
+            }, 2000); // Simulating a 2-second delay
+        }
+
+        // Callback function to handle the fetched data
+        function handleData(error, data) {
+                if (error) {
+                    console.error("Error:", error);
+                } else {
+                    console.log("Data:", data);
+                }
+            };
+        // Call the fetchData function and pass the handleData function as a callback
+        fetchData(handleData);// output (after 2 seconds): Data: { message: "Hello World!" }
+    </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Banking System App</title>
+    <style>
+       body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1976d2 0%, #64b5f6 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(25, 118, 210, 0.15);
+            padding: 2rem 2.5rem;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+        .form-group label {
+            display: block;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 20px 20px 0 0;
+            padding: 0.7rem 2rem;
+            margin: 0 0.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .form-group button.active {
+            background: #1976d2;
+            color: #fff;
+        }
+        .form-group button:hover {
+            background-color: #6200b3;
+        }
+
+
+        label {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+        input, button, select {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: 6px;
+            border: 1px solid #bdbdbd;
+            margin-bottom: 0.7rem;
+            font-size: 1rem;
+        }
+        button {
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #125ea2;
+        }
+        .output {
+            background: #e3f2fd;
+            border-radius: 6px;
+            padding: 1rem;
+            min-height: 40px;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            color: #43a047;
+            margin-top: 1.5rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .transaction-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+        .transaction-list li {
+            background: #fff0fa;
+            border-left: 5px solid #43a047;
+            margin-bottom: 0.7rem;
+            padding: 0.7rem 1rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #7b1f3a;
+            box-shadow: 0 2px 8px rgba(123, 31, 58, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .transaction-list li.deposit { border-left-color: #43a047; }
+        .transaction-list li.withdraw { border-left-color: #d32f2f; }
+        .transaction-list li.balance { border-left-color: #1976d2; }
+        .transaction-list li.info { border-left-color: #6a1b9a; }
+        .transaction-date {
+            font-size: 0.85em;
+            color: #888;
+            margin-left: 1rem;
+        }
+        ::-webkit-scrollbar {
+        width: 6px;
+        background: #e3f2fd;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7b1f3a;
+            border-radius: 8px;
+        }
+        @media (max-width: 500px) {
+            .container { padding: 1rem; }
+            h1 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Banking System App</h1>
+
+        <div class="form-group">
+            <label for="accountHolder">Account Holder Name:</label>
+            <input type="text" id="accountHolder" placeholder="Enter account holder name">
+        </div>
+
+        <div class="form-group">
+            <label for="initialBalance">Initial Balance:</label>
+            <input type="number" id="initialBalance" placeholder="Enter Initial Balance">
+        </div>
+
+        <div class="form-group">
+            <button onclick="createAccount()">Create Account</button>
+        </div>
+        <div class="form-group">
+            <label for="accountNumber">Account Number:</label>
+            <input type="number" id="accountNumber" placeholder="Enter account number">
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter Amount">
+        </div>
+
+        <div class="form-group">
+            <button onclick="deposit()">Deposit</button>
+        </div>
+
+        <div class="form-group">
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+
+        <div class="form-group">
+            <button onclick="checkBalance()">Check Balance</button>
+        </div>
+
+        <div class="form-group">
+            <button onclick="displayAccountInfo()">Display Account Info</button>
+        </div>
+
+        <div class="output" id="output"></div>
+
+        <h2>Transaction History</h2>
+        <ul id="transactionList" class="transaction-list"></ul>
+    </div>
+    
+    <script>
+        class BankAccount {
+            constructor(accountNumber, accountHolder, balance = 0) {
+                this.accountNumber = accountNumber;
+                this.accountHolder = accountHolder;
+                this.balance = balance;
+                this.transactions = [];
+            }
+            deposit(amount) {
+                if (isNaN(amount) || amount <= 0) {
+                    return "Please enter a valid deposit amount.";
+                }
+                this.balance += amount;
+                this.addTransaction('Deposit', amount, this.balance);
+                return `$${amount} deposited. Current balance: $${this.balance}`;
+            }
+            withdraw(amount) {
+                if (isNaN(amount) || amount <= 0) {
+                    return "Please enter a valid withdrawal amount.";
+                }
+                if (amount > this.balance) {
+                    this.addTransaction('Withdraw (Failed)', amount, this.balance);
+                    return `Insufficient funds. Current balance: $${this.balance}`;
+                } else {
+                    this.balance -= amount;
+                    this.addTransaction('Withdraw', amount, this.balance);
+                    return `$${amount} withdrawn. Current balance: $${this.balance}`;
+                }
+            }
+            checkBalance() {
+                this.addTransaction('Balance Checked', null, this.balance);
+                return `The current account balance for ${this.accountHolder}: $${this.balance}`;
+            }
+            displayAccountInfo() {
+                this.addTransaction('Account Info Viewed', null, this.balance);
+                return `Account Number: ${this.accountNumber}, Account Holder: ${this.accountHolder}, Balance: $${this.balance}`;
+            }
+            addTransaction(type, amount, balance) {
+                const now = new Date();
+                this.transactions.unshift({
+                    type,
+                    amount,
+                    balance,
+                    date: now.toLocaleString()
+                });
+                if (this.transactions.length > 20) this.transactions.pop();
+            }
+        }
+
+        const accounts = new Map();
+
+        function renderTransactions(account) {
+            const transactionList = document.getElementById("transactionList");
+            transactionList.innerHTML = "";
+            if (!account || !account.transactions) return;
+            account.transactions.forEach(tx => {
+                const li = document.createElement('li');
+                if (tx.type.startsWith('Deposit')) li.classList.add('deposit');
+                else if (tx.type.startsWith('Withdraw')) li.classList.add('withdraw');
+                else if (tx.type.startsWith('Balance')) li.classList.add('balance');
+                else li.classList.add('info');
+                let desc = `${tx.type}`;
+                if (tx.amount !== null) desc += `: $${tx.amount}`;
+                desc += ` | Balance: $${tx.balance}`;
+                li.textContent = desc;
+                const dateSpan = document.createElement('span');
+                dateSpan.className = "transaction-date";
+                dateSpan.textContent = tx.date;
+                li.appendChild(dateSpan);
+                transactionList.appendChild(li);
+            });
+        }
+        
+        function getAccountFromInput() {
+            const accountNumber = parseInt(document.getElementById("accountNumber").value);
+            return accounts.get(accountNumber);
+        }
+
+        function createAccount() {
+            const accountHolder = document.getElementById("accountHolder").value.trim();
+            const initialBalance = parseFloat(document.getElementById("initialBalance").value);
+            if (!accountHolder) {
+                document.getElementById("output").innerText = "Please enter the account holder name.";
+                return;
+            }
+            if (isNaN(initialBalance) || initialBalance < 0) {
+                document.getElementById("output").innerText = "Please enter a valid initial balance.";
+                return;
+            }
+            const accountNumber = Math.floor(Math.random() * 1000000);
+            const newAccount = new BankAccount(accountNumber, accountHolder, initialBalance);
+            accounts.set(accountNumber, newAccount);
+            document.getElementById("output").innerText = `Account created successfully! Account Number: ${accountNumber}`;
+            //document.getElementById("output").innerHTML = `Account created successfully! Account Number: <b>${accountNumber}</b> for Account Holder: <b>${accountHolder}!</b>`;
+            renderTransactions(newAccount);
+        }
+
+        function deposit() {
+            const account = getAccountFromInput();
+            const amount = parseFloat(document.getElementById("amount").value);
+            if (account) {
+                const message = account.deposit(amount);
+                document.getElementById("output").innerText = message;
+                renderTransactions(account);
+            } else {
+                document.getElementById("output").innerText = "Account not found.";
+            }
+        }
+
+        function withdraw() {
+            const account = getAccountFromInput();
+            const amount = parseFloat(document.getElementById("amount").value);
+            if (account) {
+                const message = account.withdraw(amount);
+                document.getElementById("output").innerText = message;
+                renderTransactions(account);
+            } else {
+                document.getElementById("output").innerText = "Account not found.";
+            }
+        }
+
+        function checkBalance() {
+            const account = getAccountFromInput();
+            if (account) {
+                const message = account.checkBalance();
+                document.getElementById("output").innerText = message;
+                renderTransactions(account);
+            } else {
+                document.getElementById("output").innerText = "Account not found.";
+            }
+        }
+
+        function displayAccountInfo() {
+            const account = getAccountFromInput();
+            if (account) {
+                const message = account.displayAccountInfo();
+                document.getElementById("output").innerText = message;
+                renderTransactions(account);
+            } else {
+                document.getElementById("output").innerText = "Account not found.";
+            }
+        }
+    </script>
+</body>
+</html>

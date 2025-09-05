@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Greetings</h1>
+    <p>Welcome to our website!</p>
+    <script>
+        // This function logs a greeting message to the console
+        function saySalam (name) {
+            console.log("Salaam Alaykum WarahmotuLLahi, " + name + "!");
+        }
+        
+        // This is a simple JavaScript object representing a person
+        const ibaduLLAh = { name: "Abdullah", age: 25, city: "Medina",
+                saySalam: function () {
+                    console.log("Salam Alaykum, this is " + this.name + " from " + this.city + " and he is " + this.age + " years old.");
+                }
+        }
+
+        // Calling the function and method
+        saySalam("AbduLLah");
+        ibaduLLAh.saySalam();
+
+        // Function to calculate the area of a triangle
+        function calculateTriangleArea (base, height) {
+            return 0.5 * base * height;
+        }
+        const area1 = calculateTriangleArea (3, 9);
+        console.log("The area of the triangle is: " + area1 + " square units.");
+
+        const area2 = calculateTriangleArea (2, 8);
+        console.log("The area of the triangle is: " + area2 + " square units.");
+
+        console.log("The sum total of the areas of the triangle: Area 1 + Area 2 = " + (area1 + area2) + " square units in total.");
+
+
+        // Function to format the current date
+        function formatDate (date) {
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1; // Months are zero-indexed
+            const day = date.getDate();
+            return `${year}-${month}-${day}`; // Format as YYYY-MM-DD 
+        }
+
+        const today = new Date();
+        const formattedDate = formatDate(today);
+        console.log("Formatted Date for Today's date is: " + formattedDate);
+    </script>
+</body>
+</html>   

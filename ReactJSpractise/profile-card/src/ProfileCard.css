@@ -1,0 +1,46 @@
+.profile-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 24px;
+  margin: 16px;
+  width: 260px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.skills {
+  margin-top: 12px;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3730a3;
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin: 2px 4px;
+  font-size: 0.9em;
+}
+
+.profile-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
