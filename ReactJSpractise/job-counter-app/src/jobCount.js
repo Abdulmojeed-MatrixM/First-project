@@ -48,6 +48,7 @@ Step 3: Fix with useState
 To fix this, we use React’s useState hook, which stores values that survive re-renders and trigger UI updates.
 */
 
+/*
 import React, { useState } from 'react';
 
 const JobCounter = () => {
@@ -68,7 +69,7 @@ const JobCounter = () => {
 };
 
 export default JobCounter;
-
+*/
 
 /* 
 Key Discussion Points
@@ -85,3 +86,76 @@ State (useState) → persistent across renders, tells React to update the UI whe
 How does state solve the problem?
 setJobCount() updates the state and triggers React to re-render the component with the new value.
 */
+
+
+
+import React, { useState } from 'react';
+
+const AdvancedJobCounter = () => {
+  // 1. Initialize state for jobCount and environment
+  const [jobCount, setJobCount] = useState(0);
+  const [environment, setEnvironment] = useState("Production");
+
+  // 2. Functions to update state
+  const handleAddJob = () => {
+    setJobCount(jobCount + 1);
+  };
+
+  const handleRemoveJob = () => {
+    if (jobCount > 0) {
+      setJobCount(jobCount - 1);
+    }
+  };
+
+  const handleResetJobs = () => {
+    setJobCount(0);
+  };
+
+  const toggleEnvironment = () => {
+    setEnvironment((prevEnv) =>
+      prevEnv === "Production" ? "UAT" : "Production"
+    );
+  };
+
+  // 3. Function to return job status message
+  const getJobMessage = () => {
+    if (jobCount === 0) {
+      return "No jobs available";
+    } else if (jobCount >= 1 && jobCount <= 5) {
+      return "Few jobs available";
+    } else {
+      return "Many jobs available";
+    }
+  };
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "40px" }}>
+      <h1>Advanced Job Counter</h1>
+
+      {/* Display current job count */}
+      <p>
+        Current Jobs: <strong>{jobCount}</strong>
+      </p>
+
+      {/* Display current environment */}
+      <p>
+        Environment: <strong>{environment}</strong>
+      </p>
+
+      {/* Display job message */}
+      <p>{getJobMessage()}</p>
+
+      {/* Action buttons */}
+      <div style={{ marginTop: "20px" }}>
+        <button onClick={handleAddJob}>➕ Add Job</button>
+        <button onClick={handleRemoveJob} disabled={jobCount === 0}>
+          ➖ Remove Job
+        </button>
+        <button onClick={handleResetJobs}>🔄 Reset Jobs</button>
+        <button onClick={toggleEnvironment}>🌍 Toggle Environment</button>
+      </div>
+    </div>
+  );
+};
+
+export default AdvancedJobCounter;
