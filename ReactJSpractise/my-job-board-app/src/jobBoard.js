@@ -18,10 +18,10 @@ const JobBoard = () => {
 
   return (
     <div className="job-board">
-      {/* Display company name */}
+      {/* Display company name   */} 
       <h1>{companyName} Job Board</h1>
 
-      {/* Display job message */}
+      {/* Display job message */} 
       <p className="job-message">{getJobMessage()}</p>
 
       {/* Bonus: Expected jobs next week */}
@@ -43,3 +43,5 @@ const JobBoard = () => {
 };
 
 export default JobBoard;
+
+
