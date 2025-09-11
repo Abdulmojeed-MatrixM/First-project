@@ -1,0 +1,126 @@
+import React, { useState } from 'react';
+
+const App = () => {
+  const [bots, setBots] = useState([
+    { id: '1', name: 'Email Bot', status: 'Active' },
+    { id: '2', name: 'Data Bot', status: 'Inactive' }
+  ]);
+
+  const [newBot, setNewBot] = useState({ id: '', name: '', status: '' });
+
+  // Handles input changes to update the newBot state object
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewBot({ ...newBot, [name]: value });
+  };
+
+  // Adds a new bot to the list
+  const addBotToList = () => {
+    // Basic validation to ensure all fields are filled
+    if (newBot.id.trim() === '' || newBot.name.trim() === '' || newBot.status.trim() === '') {
+      alert('Please fill in all fields before adding a new bot.');
+      return;
+    }
+
+    // Add the new bot to the list using the spread operator
+    setBots([...bots, newBot]);
+
+    // Clear the input fields after adding
+    setNewBot({ id: '', name: '', status: '' });
+  };
+
+  // Deletes a bot from the list based on its ID
+  const deleteBot = (id) => {
+    // Use the filter method to create a new array without the bot to be deleted
+    const updatedBots = bots.filter(bot => bot.id !== id);
+    setBots(updatedBots);
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-100 p-8 flex items-center justify-center font-sans antialiased">
+      <div className="bg-white rounded-xl shadow-2xl p-6 sm:p-10 w-full max-w-2xl">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-6 text-center">Dynamic Bot Manager</h1>
+        <p className="text-gray-600 text-center mb-8">
+          Add, view, and manage your bot list.
+        </p>
+
+        {/* Input Form for New Bot */}
+        <div className="mb-8 p-6 bg-gray-50 rounded-lg shadow-inner">
+          <h2 className="text-xl font-bold text-gray-700 mb-4">Add a New Bot</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+            <input
+              type="text"
+              name="id"
+              placeholder="Bot ID"
+              value={newBot.id}
+              onChange={handleInputChange}
+              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+            />
+            <input
+              type="text"
+              name="name"
+              placeholder="Bot Name"
+              value={newBot.name}
+              onChange={handleInputChange}
+              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+            />
+            <input
+              type="text"
+              name="status"
+              placeholder="Status"
+              value={newBot.status}
+              onChange={handleInputChange}
+              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+            />
+          </div>
+          <button
+            onClick={addBotToList}
+            className="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Add Bot
+          </button>
+        </div>
+
+        {/* List of Bots */}
+        <div>
+          <h2 className="text-xl font-bold text-gray-700 mb-4">Current Bots</h2>
+          {bots.length === 0 ? (
+            <p className="text-gray-500 text-center">No bots in the list. Add one above!</p>
+          ) : (
+            <ul className="space-y-4">
+              {bots.map((bot) => (
+                <li
+                  key={bot.id}
+                  className="bg-white p-4 border border-gray-200 rounded-lg shadow-md flex items-center justify-between transition-transform transform hover:scale-[1.01]"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-gray-800 truncate">
+                      <span className="text-gray-500 mr-2">ID:</span>{bot.id}
+                    </p>
+                    <p className="text-gray-600 font-medium truncate">
+                      <span className="text-gray-500 mr-2">Name:</span>{bot.name}
+                    </p>
+                    <p className={`font-medium truncate ${bot.status === 'Active' ? 'text-green-500' : 'text-red-500'}`}>
+                      <span className="text-gray-500 mr-2">Status:</span>{bot.status}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => deleteBot(bot.id)}
+                    className="ml-4 bg-red-500 text-white p-2 rounded-full shadow-lg hover:bg-red-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500"
+                    aria-label={`Delete ${bot.name}`}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm6 0a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
