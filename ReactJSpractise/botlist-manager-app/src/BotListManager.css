@@ -1,0 +1,131 @@
+/* Container */
+.bot-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f4f7fb;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Header */
+.bot-header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004085;
+}
+
+/* Dropdown */
+.bot-filter {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #fff;
+}
+
+/* List */
+.bot-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bot-item {
+  background: #fff;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bot-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Input fields */
+.bot-input {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Status */
+.status {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.status.running {
+  color: #155724;
+  background: #d4edda;
+}
+
+.status.stopped {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.status.completed {
+  color: #0c5460;
+  background: #d1ecf1;
+}
+
+/* Buttons */
+.bot-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Button types */
+.primary-btn {
+  background: #007bff;
+}
+
+.edit-btn {
+  background: #17a2b8;
+}
+
+.save-btn {
+  background: #28a745;
+}
+
+.delete-btn {
+  background: #dc3545;
+}
+
+.add-btn {
+  margin-top: 20px;
+  background: #28a745;
+  padding: 12px 18px;
+  font-size: 1rem;
+}
