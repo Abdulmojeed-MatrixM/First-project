@@ -1,0 +1,87 @@
+// App.js
+import React, { useState } from "react";
+import Header from './JobComponent/Header';
+import JobList from './JobComponent/JobList';
+import Footer from './JobComponent/Footer';
+
+const App = () => {
+  const jobs = [
+    { id: 1, name: 'Email Extractor', status: 'running' },
+    { id: 2, name: 'Data Analyzer', status: 'completed' },
+    { id: 3, name: 'Report Generator', status: 'running' }
+  ];
+
+  return (
+    <div className="app">
+      <Header />
+      <JobList jobs={jobs} />
+      <Footer />
+      <JobItem job={{ id: 4, name: 'New Job', status: 'pending' }} />
+    </div>
+  );
+};
+
+export default App;
+
+
+// components/JobItem.js
+import React from 'react';
+
+const JobItem = ({ job }) => {
+  // Implement conditional rendering based on job status
+  return (
+    <div className={`job-item ${job.status}`}>
+      {/* Display job information here */}
+    </div>
+  );
+};
+
+export default JobItem;
+
+
+// components/JobList.js
+import React from 'react';
+import JobItem from './JobItem';
+
+
+const JobList = ({ jobs }) => {
+  return (
+    <div className="job-list">
+      {/* Map through jobs and render JobItem components */ <JobItem />}
+      {jobs.map((job) => (
+        <JobItem key={job.id} job={job} />
+      ))}
+    </div>
+  );
+};
+
+export default JobList;
+
+
+// components/Footer.js
+import React from 'react';
+
+const Footer = () => {
+  return (
+    <footer>
+      <p>© 2024 Job Board Application</p>
+    </footer>
+  );
+};
+
+export default Footer;
+
+
+// components/Header.js
+import React from 'react';
+
+const Header = () => {
+  return (
+    <header>
+      <h1>Job Board</h1>
+      {/* Add a logo image here */}
+    </header>
+  );
+};
+
+export default Header;

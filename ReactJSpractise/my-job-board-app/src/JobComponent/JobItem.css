@@ -1,0 +1,40 @@
+/* Container for each job item */
+.job-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.job-item:hover {
+  transform: scale(1.02);
+}
+
+/* 🔹 Running jobs → Skyblue border */
+.job-item.running {
+  border-left: 6px solid skyblue;
+  color: #0366d6;
+}
+
+/* 🔹 Completed jobs → Green border */
+.job-item.completed {
+  border-left: 6px solid green;
+  color: #155724;
+}
+
+/* 🔹 Pending jobs → Grey border */
+.job-item.pending {
+  border-left: 6px solid grey;
+  color: #6c757d;
+}
+
+/* Job title */
+.job-item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}

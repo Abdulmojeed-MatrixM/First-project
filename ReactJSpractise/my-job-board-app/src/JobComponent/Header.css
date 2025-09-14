@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: #007bff;
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
