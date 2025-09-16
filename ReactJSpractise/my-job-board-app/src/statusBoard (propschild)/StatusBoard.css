@@ -1,4 +1,4 @@
-/* Container for the whole status board */
+/* Status Board Layout */
 .status-board {
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
   flex-wrap: wrap;
 }
 
-/* Each ticket card */
+/* Each Ticket Card */
 .ticket-info {
   flex: 1;
   min-width: 220px;
@@ -18,29 +18,27 @@
   color: white;
   font-family: Arial, sans-serif;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s;
   cursor: pointer;
 }
 
 .ticket-info:hover {
   transform: scale(1.05);
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.2);
 }
 
-/* Ticket icon */
 .ticket-icon {
   width: 60px;
   height: 60px;
   margin-bottom: 15px;
 }
 
-/* Text */
 .ticket-text p {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 500;
 }
 
-/* Count */
 .ticket-count {
   display: block;
   margin-top: 10px;
@@ -48,7 +46,7 @@
   font-weight: bold;
 }
 
-/* 🔹 Conditional styling by status */
+/* Conditional Card Colors */
 .ticket-info.completed {
   background-color: #28a745; /* Green */
 }
@@ -59,4 +57,87 @@
 
 .ticket-info.failed {
   background-color: #dc3545; /* Red */
+}
+
+/* 🔹 Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.25);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-title {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ticket-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ticket-item {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Different colors per status inside modal */
+.ticket-item.completed {
+  background-color: #e6f4ea;
+  color: #28a745;
+}
+
+.ticket-item.in-progress {
+  background-color: #e6f7fb;
+  color: #17a2b8;
+}
+
+.ticket-item.failed {
+  background-color: #fdeaea;
+  color: #dc3545;
+}
+
+.close-btn {
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  background: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #000;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

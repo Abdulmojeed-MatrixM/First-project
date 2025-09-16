@@ -3,7 +3,7 @@ import Header from "./JobComponent/Header";   // Header component
 import Footer from "./JobComponent/Footer";   // Footer component
 import JobList from "./JobComponent/JobList"; // Job list container
 import "./App.css";                         // Global styles
-//import StatusBoard from "./statusBoard (propschild)/StatusBoard"; // Status board component
+import StatusBoard from "./statusBoard (propschild)/StatusBoard"; // Status board component
 
 const App = () => {
   // 🔹 State to hold list of jobs
@@ -47,9 +47,22 @@ const App = () => {
     job.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+
+    // 🔹 Calculate ticket counts for StatusBoard *******
+  const ticketCounts = {
+    completed: jobs.filter((job) => job.status === "completed").length,
+    "in-progress": jobs.filter((job) => job.status === "in-progress").length,
+    failed: jobs.filter((job) => job.status === "failed").length,
+  };
+
   return (
     <div className="app-container">
       <Header /> {/* App header */}
+
+
+      {/* <StatusBoard tickets={ticketCounts} />  StatusBoard component ******* */} 
+      {/* 🔹 Status Board always visible */}
+      <StatusBoard tickets={ticketCounts} />
 
       <main className="main-content">
         {/* 🔹 Controls section with toggle + search */}
