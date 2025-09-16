@@ -1,0 +1,30 @@
+/* JobForm.css */
+.form-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bot-input, 
+.job-category, 
+.job-status {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-width: 180px;
+}
+
+.submit-data {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-data:hover {
+  background: #0056b3;
+}

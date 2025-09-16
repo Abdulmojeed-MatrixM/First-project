@@ -1,0 +1,45 @@
+/* JobItem.css */
+.job-item {
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.job-category {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.job-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.status-dropdown {
+  padding: 4px 6px;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b52a37;
+}
