@@ -1,0 +1,33 @@
+.app-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9fb;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  background: #1c6419;
+  color: white;
+}
+
+.btn-danger {
+  background: #d9534f;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  background-color: rgb(8, 196, 65);
+}
