@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import JobForm from './JobComponents/JobForm';
 import JobColumn from './JobComponents/JobColumn';
+import Header from './JobComponents/Header';
+import Footer from './JobComponents/Footer';
 import './App.css';
 
 const App = () => {
@@ -33,31 +35,41 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <h1 className="app-title">Job Management Application</h1>
-      
-      {/* Form */}
-      <JobForm addJob={addJob} />
+       {/* Header */}
+      <Header />
 
-      {/* Job Columns */}
-      <div className="columns-container">
-        <JobColumn 
-          title="Need to Start" 
-          jobs={jobs.filter(job => job.status === 'Need to Start')}
-          updateJobStatus={updateJobStatus}
-          deleteJob={deleteJob}
-        />
-        <JobColumn 
-          title="In Progress" 
-          jobs={jobs.filter(job => job.status === 'In Progress')}
-          updateJobStatus={updateJobStatus}
-          deleteJob={deleteJob}
-        />
-        <JobColumn 
-          title="Completed" 
-          jobs={jobs.filter(job => job.status === 'Completed')}
-          updateJobStatus={updateJobStatus}
-          deleteJob={deleteJob}
-        />
+      <main className="main-content">
+        <h1 className="app-title">Job Management Application</h1>
+      
+        {/* Form */}
+        <JobForm addJob={addJob} />
+
+        {/* Job Columns */}
+        <div className="columns-container">
+          <JobColumn 
+            title="Need to Start" 
+            jobs={jobs.filter(job => job.status === 'Need to Start')}
+            updateJobStatus={updateJobStatus}
+            deleteJob={deleteJob}
+          />
+          <JobColumn 
+            title="In Progress" 
+            jobs={jobs.filter(job => job.status === 'In Progress')}
+            updateJobStatus={updateJobStatus}
+            deleteJob={deleteJob}
+          />
+          <JobColumn 
+            title="Completed" 
+            jobs={jobs.filter(job => job.status === 'Completed')}
+            updateJobStatus={updateJobStatus}
+            deleteJob={deleteJob}
+          />
+        </div>
+      </main>
+
+      {/* Footer */}
+      <div className="footer-container">
+        <Footer />
       </div>
     </div>
   );
