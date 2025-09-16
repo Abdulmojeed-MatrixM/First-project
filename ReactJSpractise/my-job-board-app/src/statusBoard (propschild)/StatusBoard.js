@@ -6,14 +6,18 @@ import failedImage from "../images/failed.jpg";         // ❌ Failed icon
 import "./StatusBoard.css"; // CSS for styling
 
 
+
 const StatusBoard = () => {
   // 🔹 Store actual tickets instead of just counts
-  const [tickets, ] = useState([
-    { id: 1, title: "Fix Login Bug", status: "completed" },
-    { id: 2, title: "Implement Dashboard", status: "in-progress" },
-    { id: 3, title: "Database Migration", status: "failed" },
-    { id: 4, title: "Update User API", status: "completed" },
-    { id: 5, title: "Design Landing Page", status: "in-progress" },
+  const [tickets] = useState([
+    { id: 1, title: "Frontend Developer", status: "running" },
+    { id: 2, title: "Backend Developer", status: "completed" },
+    { id: 3, title: "Project Manager", status: "pending" },
+    { id: 4, title: "Fix Login Bug", status: "completed" },
+    { id: 5, title: "Implement Dashboard", status: "in-progress" },
+    { id: 6, title: "Database Migration", status: "failed" },
+    { id: 7, title: "Update User API", status: "completed" },
+    { id: 8, title: "Design Landing Page", status: "in-progress" },
   ]);
 
   // 🔹 State to control modal visibility and selected status
@@ -44,7 +48,17 @@ const StatusBoard = () => {
         <p>Tickets In Progress</p>
       </TicketInfo>
 
-      {/* Failed */}
+      {/* Pending */}
+      <TicketInfo
+        result="pending"
+        image={failedImage}
+        count={tickets.filter((t) => t.status === "pending").length}
+        onClick={() => setSelectedStatus("pending")}
+      >
+        <p>Tickets Pending</p>
+      </TicketInfo>
+
+        {/* Failed */}
       <TicketInfo
         result="failed"
         image={failedImage}

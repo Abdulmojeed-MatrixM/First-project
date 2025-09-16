@@ -11,6 +11,11 @@ const App = () => {
     { id: 1, title: "Frontend Developer", status: "running" },
     { id: 2, title: "Backend Developer", status: "completed" },
     { id: 3, title: "Project Manager", status: "pending" },
+    { id: 4, title: "Fix Login Bug", status: "completed" },
+    { id: 5, title: "Implement Dashboard", status: "in-progress" },
+    { id: 6, title: "Database Migration", status: "failed" },
+    { id: 7, title: "Update User API", status: "completed" },
+    { id: 8, title: "Design Landing Page", status: "in-progress" },
   ]);
 
   // 🔹 State to toggle showing/hiding jobs

@@ -1,11 +1,11 @@
 /* Status Board Layout */
 .status-board {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
   gap: 20px;
   margin: 30px;
-  flex-wrap: wrap;
 }
 
 /* Each Ticket Card */
@@ -53,6 +53,10 @@
 
 .ticket-info.in-progress {
   background-color: #17a2b8; /* Skyblue */
+}
+
+.ticket-info.pending {
+  background-color: #d9dc35; /* Yellow */
 }
 
 .ticket-info.failed {
@@ -117,6 +121,11 @@
 .ticket-item.failed {
   background-color: #fdeaea;
   color: #dc3545;
+}
+
+.ticket-item.pending {
+  background-color: #d9dc35;
+  color: #525311;
 }
 
 .close-btn {
