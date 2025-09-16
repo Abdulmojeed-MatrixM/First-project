@@ -3,6 +3,7 @@ import Header from "./JobComponent/Header";   // Header component
 import Footer from "./JobComponent/Footer";   // Footer component
 import JobList from "./JobComponent/JobList"; // Job list container
 import "./App.css";                         // Global styles
+//import StatusBoard from "./statusBoard (propschild)/StatusBoard"; // Status board component
 
 const App = () => {
   // 🔹 State to hold list of jobs

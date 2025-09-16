@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import TicketInfo from "./TicketInfo"; // Reusable component
-import completedImage from "../images/completed.png";   // ✅ Completed icon
-import inProgressImage from "../images/in-progress.png"; // 🟦 In-progress icon
-import failedImage from "../images/failed.png";         // ❌ Failed icon
+import completedImage from "../images/completed.jpg";   // ✅ Completed icon
+import inProgressImage from "../images/in-progress.jpg"; // 🟦 In-progress icon
+import failedImage from "../images/failed.jpg";         // ❌ Failed icon
 import "./StatusBoard.css"; // CSS for styling
 
 const StatusBoard = () => {
