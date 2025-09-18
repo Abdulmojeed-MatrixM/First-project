@@ -9,6 +9,7 @@ import './App.css';
 const App = () => {
   // Job state
   const [jobs, setJobs] = useState([
+    // Sample jobs displayed on load
     { id: 1, title: 'Parse Emails', category: 'Read Emails', status: 'Need to Start' },
     { id: 2, title: 'SAP Extraction', category: 'Web Parsing', status: 'In Progress' },
     { id: 3, title: 'Generate Report', category: 'Send Emails', status: 'Completed' }
