@@ -1,9 +1,18 @@
-import './index.css'
+import './App.css'
 
 function App() {
 
   return (
-    <>      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-amber-100 to-blue-100">
+    <>
+    
+
+      <h1 className="bg-yellow-500 p-7 rounded-2xl text-amber-900">PathBreakerM</h1>
+      
+      <p className="text-3xl font-bold underline">
+        Welcome to my TailWind CSS in React using VITE
+      </p>
+
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-amber-100 to-blue-100">
       <h1 className="bg-emerald-500 p-7 rounded-2xl text-amber-900">PathBreakerM</h1>
       <p className="text-2xl font-light text-black">
         Welcome to my TailWind CSS in React using VITE
