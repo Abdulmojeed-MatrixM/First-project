@@ -1,0 +1,19 @@
+/* Header.css */
+.header {
+  background: #004080;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.header .logo { 
+    margin-right: 10px; 
+    height: 40px;
+    width: 40px;
+}
+.header .title { 
+    font-size: 1.5rem; 
+}
+
+
+

@@ -1,0 +1,24 @@
+/* JobManager.css */
+.job-manager { padding: 20px; }
+.job-columns {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.job-column {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.clear-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+

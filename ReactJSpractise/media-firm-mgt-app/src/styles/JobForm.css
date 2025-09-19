@@ -1,0 +1,11 @@
+/* JobForm.css */
+.job-form { display: flex; flex-direction: column; gap: 10px; }
+.category-selector { display: flex; gap: 10px; flex-wrap: wrap; }
+.category-btn {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.category-btn.selected { background: #004080; color: white; }
+.selected-categories { margin-top: 5px; font-size: 0.9em; }
+
