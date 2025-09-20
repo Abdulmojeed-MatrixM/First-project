@@ -1,0 +1,188 @@
+/* App.css - global styling and component styles */
+
+:root{
+  --bg: #5f5f5f;
+  --card-bg: #2f2f2f;
+  --muted: #bfc5cc;
+  --accent: #facc15; /* gold */
+  --primary: #2563eb; /* blue */
+  --success: #16a34a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  background: white;
+}
+
+.header-text { text-align: left; }
+
+.header-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.header-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Main layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  width: 100%;
+}
+
+/* Single column on small screens */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
+
+/* Card common */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12));
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* Input form styles */
+#user-input h2 { margin-top: 0; color: var(--primary); }
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+.input-group label {
+  width: 45%;
+  color: var(--muted);
+  font-weight: 600;
+}
+.input-group input {
+  width: 55%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+}
+.input-group input:focus {
+  outline: 2px solid rgba(37,99,235,0.15);
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.btn {
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn.primary {
+  background: var(--primary);
+  color: white;
+}
+.btn.muted {
+  background: rgba(255,255,255,0.06);
+  color: var(--muted);
+}
+
+/* Success / error messages */
+.success { color: var(--success); margin-top: 10px; }
+.error { color: #ff6b6b; margin-top: 10px; }
+
+/* Output styles */
+.results-card h2 { margin-top: 0; color: var(--primary); }
+.summary-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.summary-item {
+  background: rgba(255,255,255,0.03);
+  padding: 10px;
+  border-radius: 8px;
+  width: calc(33% - 8px);
+  min-width: 160px;
+}
+.summary-label { color: var(--muted); font-size: 0.9rem; }
+.summary-value { font-weight: 800; font-size: 1.1rem; color: #fff; }
+
+/* Table */
+.table-wrapper { overflow-x: auto; margin-top: 10px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 0.95rem;
+}
+th, td {
+  padding: 8px 10px;
+  border-bottom: 1px dashed rgba(255,255,255,0.06);
+  text-align: right;
+}
+th {
+  color: var(--muted);
+  font-weight: 700;
+}
+.align-right { text-align: right; }
+
+/* small-screen table fix */
+@media (max-width: 480px) {
+  th, td { font-size: 0.85rem; padding: 6px; }
+}
+
+/* Footer fallback styling (if you add Footer component) */
+.footer {
+  margin-top: auto;
+  padding: 12px;
+  text-align: center;
+  color: var(--muted);
+}
