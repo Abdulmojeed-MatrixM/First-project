@@ -4,7 +4,7 @@ const Card = ({ title, description, buttonText, imageUrl }) => {
   return (
     <div className="max-w-sm rounded-xl overflow-hidden shadow-lg m-4 bg-white hover:shadow-2xl transition-shadow duration-300">
       {/* Card Image */}
-      <img className="w-full h-48 object-cover" src={imageUrl} alt={title} />
+      <img className="w-full h-80 object-cover" src={imageUrl} alt={title} />
 
       {/* Card Content */}
       <div className="px-6 py-4">
@@ -14,7 +14,7 @@ const Card = ({ title, description, buttonText, imageUrl }) => {
 
       {/* Action Button */}
       <div className="px-6 pt-4 pb-4">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg w-full">
+        <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-lg w-full">
           {buttonText}
         </button>
       </div>
