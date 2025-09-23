@@ -59,7 +59,7 @@ const PasswordGenerator = () => {
           type="text"
           value={password}
           onChange={(e) => setPassword(e.target.value)} // 🔹 allow typing
-          className="outline-none w-full py-2 px-3 text-white"
+          className="outline-none w-full py-2 px-3 text-gray-900"
           placeholder="Password"
           ref={passwordRef}
         />
