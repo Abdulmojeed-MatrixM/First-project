@@ -1,10 +1,9 @@
 import React from "react";
-import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Movie Review App. All Rights Reserved.</p>
+      <small>© {new Date().getFullYear()} Movie Review App • Data from TMDB</small>
     </footer>
   );
 };
