@@ -1,14 +1,13 @@
 import React from "react";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import MovieList from "./components/MovieList";
-import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <main>
+      <main className="main">
         <MovieList />
       </main>
       <Footer />
