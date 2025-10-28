@@ -24,3 +24,7 @@ f=complex(a)
 print(r)
 print(d)
 print(f)
+
+#Random Number generation
+import random
+print(random.randrange(1,20))
