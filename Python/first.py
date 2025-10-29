@@ -83,3 +83,25 @@ print(is_greater(3, 7))   # False
 bool()
 print(bool(1))        # True
 print(bool(0))        # False
+
+
+#in
+fruits = ["apple", "banana", "cherry"]
+
+# Check if "banana" is in the list
+print("banana" in fruits)  # Output: True
+
+# Check if "grape" is in the list
+print("grape" in fruits)    # Output: False
+
+
+#is
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
+list3 = list1
+
+print(list1 == list2) # Output: True (values are equal)
+print(list1 is list2) # Output: False (different objects in memory)
+
+print(list1 == list3) # Output: True (values are equal)
+print(list1 is list3) # Output: True (list3 refers to the same object as list1)
