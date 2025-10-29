@@ -105,3 +105,35 @@ print(list1 is list2) # Output: False (different objects in memory)
 
 print(list1 == list3) # Output: True (values are equal)
 print(list1 is list3) # Output: True (list3 refers to the same object as list1)
+
+
+#list in dictionary
+
+my_dict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+
+# Check for a key (the default behavior)
+print("model" in my_dict)  # Output: True
+print("color" in my_dict)  # Output: False
+
+# To check for a value, use the .values() method
+print("Ford" in my_dict.values())  # Output: True
+print(1965 in my_dict.values()) # Output: False
+
+
+
+###
+#append i n a list
+my_list = ['a', 'b']
+my_list.append(['c', 'd'])
+# my_list is now ['a', 'b', ['c', 'd']]
+
+
+###
+# extend() in a list
+my_list = ['a', 'b']
+my_list.extend(['c', 'd'])
+# my_list is now ['a', 'b', 'c', 'd']
