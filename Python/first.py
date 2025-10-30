@@ -152,7 +152,7 @@ model_value = my_dict["model"]
 print(model_value) # Output: Mustang       
 
 
-### Remove a key-value pair using pop()
+### Remove a key-value pair 
 my_dict = {
     "brand": "Ford",
     "model": "Mustang",
