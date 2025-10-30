@@ -139,3 +139,14 @@ my_list.extend(['c', 'd'])
 # my_list is now ['a', 'b', 'c', 'd']
 
 
+###dictionary
+##dictionary
+my_dict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+
+# Accessing the value associated with the key "model"
+model_value = my_dict["model"]
+print(model_value) # Output: Mustang
