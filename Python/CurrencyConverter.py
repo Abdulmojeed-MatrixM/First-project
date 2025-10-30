@@ -1,16 +1,4 @@
-#import exchange_rates
-
-
-try:
-    import exchange_rates
-except ImportError:
-    from types import SimpleNamespace
-    # Fallback rates — replace with real values or a proper exchange_rates module
-    exchange_rates = SimpleNamespace(
-        USD_TO_EUR=0.92,
-        USD_TO_GBP=0.78,
-        USD_TO_JPY=144.0
-    )
+import exchange_rates
 
 def convert_usd_to_eur(amount):
     return amount * exchange_rates.USD_TO_EUR
@@ -35,3 +23,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
