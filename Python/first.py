@@ -163,3 +163,16 @@ del my_dict["year"]
 
 print(my_dict)
 # Output: {'brand': 'Ford', 'model': 'Mustang'}
+
+
+
+#pass statement
+age = 20
+
+if age >= 18:
+    # This block of code is intentionally left empty for now
+    pass
+else:
+    print("You are a minor.")
+
+print("Program continues here.")
