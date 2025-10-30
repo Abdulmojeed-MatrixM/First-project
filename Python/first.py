@@ -176,3 +176,8 @@ else:
     print("You are a minor.")
 
 print("Program continues here.")
+
+#Lambda function
+add = lambda x, y: x + y
+result = add(5, 3)
+print(result)  # Output: 8
