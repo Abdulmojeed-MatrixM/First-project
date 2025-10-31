@@ -83,6 +83,25 @@ pip install pytest
 pytest -q
 
 
+********************************
+Usage:
+
+Register a new user via Register link.
+
+Login with your email and password.
+
+Create tasks from the Add Task button in the Dashboard.
+
+Edit or delete tasks from the Dashboard.
+
+Running Tests
+
+This project includes basic tests using pytest. To run tests:
+
+Ensure your virtual environment is activated.
+
+Run:
+
 *******************************
 Project layout
 C:\WorkSpace\projectPY
@@ -104,8 +123,28 @@ Virtualenv not activated: Activate .\venv\Scripts\Activate.ps1 (PowerShell) or .
 Database issues: delete db.sqlite3 to recreate, or inspect database.py for path logic.
 Port already in use: change PORT env var or stop other service.
 
+SQLite file not found / permission issues
+Ensure DATABASE_PATH is writable by the process and the path exists.
+
+Secret key errors / session not persisting
+Set a secure SECRET_KEY in .env and restart the app.
+
+Port already in use
+Use export FLASK_RUN_PORT=5001 (mac/linux) or change the app.run() port in app.py.
+
+Tests failing
+Make sure you installed dev dependencies (pytest) and that you have not accidentally reused the production database in tests.
 
 **********************************
+Configuration
+
+DATABASE_PATH (in .env) — path to SQLite database file. Default: db.sqlite3.
+
+SECRET_KEY — Flask secret key for sessions and CSRF protection (set this to a secure random value).
+
+
+**************************************
+
 Development tips
 Use the debugger only in development. Do not enable debug=True in production.
 To inspect logs, run the server in the same terminal and watch stdout for tracebacks.
@@ -114,3 +153,13 @@ To add this folder to Git and push:
 git add projectPY
 git commit -m "Add projectPY"
 git push origin main
+
+
+****************************************
+Acknowledgements
+
+Built with Flask
+ and SQLite
+
+UI styled with Tailwind CSS
+ via CDN for convenience
