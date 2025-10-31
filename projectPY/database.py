@@ -1,39 +1,34 @@
-# database.py
+import os
 import sqlite3
-from pathlib import Path
 
-DB_PATH = Path("db.sqlite3")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.environ.get("DATABASE_FILE", os.path.join(BASE_DIR, "db.sqlite3"))
+
+def get_connection():
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    return conn
 
 def init_db():
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
-    c.execute('PRAGMA foreign_keys = ON;')
-
-    c.execute('''
-    CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT UNIQUE NOT NULL,
-        email TEXT UNIQUE NOT NULL,
-        password_hash TEXT NOT NULL
-    );
-    ''')
-
-    c.execute('''
-    CREATE TABLE IF NOT EXISTS tasks (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        user_id INTEGER NOT NULL,
-        title TEXT NOT NULL,
-        description TEXT,
-        due_date TEXT,
-        status TEXT DEFAULT 'Need to Complete',
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-    );
-    ''')
-
-    conn.commit()
-    conn.close()
-
-if __name__ == "__main__":
-    init_db()
-    print("Initialized database:", DB_PATH)
+    # create file and minimal schema if missing (adapt to your schema in models.py)
+    if not os.path.exists(DB_PATH):
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                username TEXT UNIQUE NOT NULL,
+                password TEXT NOT NULL
+            )
+        """)
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS tasks (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                title TEXT NOT NULL,
+                description TEXT,
+                completed INTEGER DEFAULT 0,
+                user_id INTEGER
+            )
+        """)
+        conn.commit()
+        conn.close()
