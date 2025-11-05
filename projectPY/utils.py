@@ -1,15 +1,15 @@
 # utils.py
-import sqlite3
-from flask import g
-from pathlib import Path
-from typing import Optional
 import os
+import sqlite3
+from pathlib import Path
+from flask import g
 
-DB_PATH = os.environ.get("DATABASE_PATH", "db.sqlite3")
+BASE_DIR = Path(__file__).parent
+DATABASE_PATH = Path(os.environ.get("DATABASE_PATH", os.environ.get("DATABASE_FILE", BASE_DIR / "db.sqlite3")))
 
 def get_db():
     if "db" not in g:
-        conn = sqlite3.connect(DB_PATH)
+        conn = sqlite3.connect(str(DATABASE_PATH))
         conn.row_factory = sqlite3.Row
         g.db = conn
     return g.db

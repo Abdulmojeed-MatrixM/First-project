@@ -1,10 +1,10 @@
 import csv
-import sqlite3
 import os
+import sqlite3
 from pathlib import Path
 
 BASE = Path(__file__).parent
-DB_PATH = Path(os.environ.get("DATABASE_FILE", BASE / "db.sqlite3"))
+DB_PATH = Path(os.environ.get("DATABASE_PATH", os.environ.get("DATABASE_FILE", BASE / "db.sqlite3")))
 OUT_CSV = BASE / "users_export.csv"
 
 
@@ -17,7 +17,6 @@ def export_users(out_path: Path = OUT_CSV):
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
 
-    # Select safe fields only — do NOT export password hashes
     cur.execute("SELECT id, username, email, created_at FROM users")
     rows = cur.fetchall()
 
