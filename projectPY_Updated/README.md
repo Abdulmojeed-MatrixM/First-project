@@ -163,3 +163,45 @@ Built with Flask
 
 UI styled with Tailwind CSS
  via CDN for convenience
+
+
+
+
+********************************************
+```
+
+## Database migration / tests (quick)
+
+If you had an older DB schema (tests failed because columns missing) you can either let init_db() migrate in-place, or create a fresh DB:
+
+To create a fresh DB (recommended for tests/dev):
+```powershell
+# from project root
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+del db.sqlite3      # Windows PowerShell; or move a backup copy
+python app.py       # will create db.sqlite3 with correct schema
+```
+
+## Admin user / login
+
+Use environment credentials or users table (with is_admin flag and hashed passwords).
+
+To set env admin (quick):
+- Copy .env.example -> .env and set ADMIN_USER and ADMIN_PASS.
+
+Start server:
+```powershell
+.\venv\Scripts\Activate.ps1
+python app.py
+```
+
+Login (PowerShell):
+```powershell
+$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+Invoke-RestMethod -Uri 'http://127.0.0.1:5000/admin/login' -Method Post -Body (@{ username='admin'; password='strongpassword'} | ConvertTo-Json) -ContentType 'application/json' -WebSession $session
+Invoke-WebRequest -Uri 'http://127.0.0.1:5000/admin/export-users' -OutFile .\users.csv -WebSession $session
+```
+
+Security notes:
+- Admin DB authentication expects password_hash in `users.password_hash` and verifies with werkzeug.security.check_password_hash. If you import users from older systems, ensure passwords are hashed using generate_password_hash before importing.
