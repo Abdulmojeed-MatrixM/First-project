@@ -1,0 +1,13 @@
+{
+  "name": "projectpy-css",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/src.css -o ./static/css/app.css --minify",
+    "dev:css": "tailwindcss -i ./assets/src.css -o ./static/css/app.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.0.0"
+  }
+}

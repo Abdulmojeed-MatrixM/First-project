@@ -1,29 +1,40 @@
-{% extends "base.html" %}
-{% block content %}
-  <div class="flex justify-between items-center mb-4">
-    <h2 class="text-2xl font-semibold">Your Tasks</h2>
-    <a href="{{ url_for('tasks.new_task') }}" class="bg-indigo-600 text-white px-3 py-2 rounded">Add Task</a>
-  </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dashboard</title>
+  <link href="{{ url_for('static', filename='css/app.css') }}" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+  <main class="main-card">
+    <h1 class="text-xl font-semibold mb-4">Your Tasks</h1>
 
-  {% if tasks %}
-    <ul class="space-y-4">
-      {% for task in tasks %}
-        <li class="bg-white p-4 rounded shadow flex justify-between items-start">
-          <div>
-            <h3 class="font-semibold">{{ task.title }}</h3>
-            <p class="text-sm text-gray-600">{{ task.description }}</p>
-            <p class="text-xs text-gray-500 mt-1">Due: {{ task.due_date or '—' }} | Status: {{ task.status }}</p>
+    {% if message %}
+      <div class="flash-item flash-success mb-3">{{ message }}</div>
+    {% endif %}
+
+    {% include '_flash.html' %}
+
+    {% if tasks %}
+      <div class="space-y-3">
+        {% for t in tasks %}
+          <div class="task">
+            <div>
+              <div class="font-medium">{{ t['title'] }}</div>
+              <div class="meta">{{ t['description'] or '' }}</div>
+            </div>
+            <div class="meta">{{ t['due_date'] or '' }}</div>
           </div>
-          <div class="space-y-2 text-right">
-            <a href="{{ url_for('tasks.edit_task', task_id=task.id) }}" class="text-blue-600">Edit</a>
-            <form method="post" action="{{ url_for('tasks.delete_task', task_id=task.id) }}">
-              <button class="text-red-600" type="submit">Delete</button>
-            </form>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p class="text-gray-600">You have no tasks yet.</p>
-  {% endif %}
-{% endblock %}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-sm text-muted">No tasks yet.</p>
+    {% endif %}
+
+    <div class="mt-6">
+      <a href="{{ url_for('tasks.create_task') }}" class="btn-primary">Create Task</a>
+    </div>
+  </main>
+</body>
+</html>

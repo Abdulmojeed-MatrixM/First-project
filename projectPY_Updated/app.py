@@ -1,17 +1,17 @@
 import os
 import sqlite3
-from flask import Flask, render_template, request, Response, abort, session, jsonify, redirect, url_for
+from flask import Flask, render_template, request, Response, abort, session, jsonify, redirect, url_for, flash
 from dotenv import load_dotenv
 from werkzeug.security import check_password_hash
 
-from database import init_db, get_connection, DATABASE_PATH  # get_connection optional
+from database import init_db, DATABASE_PATH
 from utils import close_db
 from auth import auth_bp
 from tasks import tasks_bp
 
 load_dotenv()
 
-def create_app():
+def create_app(test_config=None):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     templates_dir = os.path.join(base_dir, "templates")
     static_dir = os.path.join(base_dir, "static")
@@ -21,9 +21,17 @@ def create_app():
     app.config["SESSION_COOKIE_HTTPONLY"] = True
     app.config["SESSION_COOKIE_SECURE"] = os.environ.get("SESSION_COOKIE_SECURE", "False").lower() in ("1","true","yes")
 
-    # initialize DB safely
+    # allow tests to pass a test_config dict to override defaults
+    if test_config:
+        app.config.update(test_config)
+
+    # set a sensible default for DATABASE only when not provided by test_config
+    app.config.setdefault("DATABASE", str(DATABASE_PATH))
+
+    # initialize DB after config settled and inside the app context
     try:
-        init_db()
+        with app.app_context():
+            init_db()
     except Exception as e:
         app.logger.warning("init_db() failed on startup: %s", e)
 
@@ -44,21 +52,33 @@ def create_app():
     def index():
         return render_template("index.html")
 
+    @app.route("/dashboard")
+    def dashboard():
+        from utils import get_db
+        user_id = session.get("user_id")
+        if not user_id:
+            flash("Please log in", "info")
+            return redirect(url_for("auth.login"))
+
+        db = get_db()
+        cur = db.execute("SELECT * FROM tasks WHERE user_id = ? ORDER BY id DESC", (user_id,))
+        tasks = cur.fetchall()
+        return render_template("dashboard.html", tasks=tasks)
+
     @app.route("/admin/login", methods=["POST"])
     def admin_login():
         data = request.get_json(silent=True) or request.form
         username = data.get("username")
         password = data.get("password")
 
-        # Environment-based admin (fast path)
         env_user = os.environ.get("ADMIN_USER")
         env_pass = os.environ.get("ADMIN_PASS")
         if env_user and env_pass and username == env_user and password == env_pass:
             session["admin"] = True
             return jsonify({"status": "ok", "message": "admin logged in"}), 200
 
-        # Database-based admin auth (uses password_hash)
-        db_path = os.environ.get("DATABASE_PATH", os.environ.get("DATABASE_FILE", os.path.join(base_dir, "db.sqlite3")))
+        # use configured DB path
+        db_path = app.config.get("DATABASE", os.path.join(base_dir, "db.sqlite3"))
         try:
             conn = sqlite3.connect(db_path)
             conn.row_factory = sqlite3.Row
@@ -67,7 +87,6 @@ def create_app():
             row = cur.fetchone()
             conn.close()
             if row and row["is_admin"]:
-                # Use check_password_hash for verification
                 if password and check_password_hash(row["password_hash"], password):
                     session["admin"] = True
                     return jsonify({"status": "ok", "message": "admin logged in"}), 200
@@ -88,7 +107,7 @@ def create_app():
         if not session.get("admin"):
             abort(403)
 
-        db_path = os.environ.get("DATABASE_PATH", os.environ.get("DATABASE_FILE", os.path.join(base_dir, "db.sqlite3")))
+        db_path = app.config.get("DATABASE", os.path.join(base_dir, "db.sqlite3"))
         try:
             conn = sqlite3.connect(db_path)
             conn.row_factory = sqlite3.Row
@@ -116,7 +135,6 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    # Use FLASK_DEBUG or default to False (do not run debug in production)
     debug = os.environ.get("FLASK_DEBUG", "False").lower() in ("1", "true", "yes")
     port = int(os.environ.get("PORT", 5000))
     app.run(debug=debug, host="127.0.0.1", port=port)
