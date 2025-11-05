@@ -166,7 +166,6 @@ UI styled with Tailwind CSS
 
 
 *********************************
-```
 
 ## Database migration / tests (quick)
 
