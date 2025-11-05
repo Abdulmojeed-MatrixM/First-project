@@ -1,13 +1,35 @@
-{% extends "base.html" %}
-{% block content %}
-  <div class="max-w-md mx-auto bg-white p-6 rounded shadow">
-    <h2 class="text-xl font-semibold mb-4">Login</h2>
-    <form method="post">
-      <label class="block mb-2">Email</label>
-      <input name="email" class="w-full p-2 border rounded mb-3" />
-      <label class="block mb-2">Password</label>
-      <input name="password" type="password" class="w-full p-2 border rounded mb-3" />
-      <button class="bg-blue-600 text-white px-4 py-2 rounded">Login</button>
-    </form>
-  </div>
-{% endblock %}
+<!-- ...existing head ... -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+  <main>
+    <!-- flash messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for msg in messages %}
+            <div class="flash-item">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <div class="login-container">
+      <h1>Login</h1>
+      <form method="post" action="{{ url_for('auth.login') }}">
+        <label for="username">Username</label>
+        <input id="username" name="username" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required>
+        <button type="submit">Log in</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

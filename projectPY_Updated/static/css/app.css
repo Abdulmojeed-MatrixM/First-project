@@ -1,0 +1,95 @@
+/* Basic app styles, forms, buttons, flash messages */
+
+:root{
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --primary:#2563eb;
+  --success:#16a34a;
+  --danger:#dc2626;
+  --radius:8px;
+  --maxw:900px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+  padding:24px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  font-size:16px;
+}
+
+.container{
+  width:100%;
+  max-width:var(--maxw);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(15,23,42,0.08);
+  padding:24px;
+  margin:16px;
+}
+
+/* header/footer */
+header.site-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+h1{margin:0;font-size:1.25rem;color:#0f172a}
+
+/* forms */
+form{display:block}
+.form-row{margin-bottom:12px}
+label{display:block;font-size:0.9rem;color:var(--muted);margin-bottom:6px}
+input[type="text"], input[type="email"], input[type="password"], textarea, select{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #e6e9ee;
+  border-radius:6px;
+  background:#fff;
+  font-size:1rem;
+  color:#0f172a;
+}
+textarea{min-height:100px;resize:vertical}
+
+/* buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:6px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-secondary{background:#e6eefc;color:var(--primary)}
+.btn-danger{background:var(--danger);color:#fff}
+
+/* flash messages */
+.flash-messages{margin-bottom:12px}
+.flash-item{
+  padding:10px 12px;
+  border-radius:6px;
+  margin-bottom:8px;
+  background:#e6f4ea;
+  color:#064e3b;
+  border:1px solid rgba(16,185,129,0.12);
+}
+.flash-item.error{background:#fee2e2;color:#7f1d1d;border:1px solid rgba(220,38,38,0.12)}
+
+/* task list */
+.task{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:6px;border:1px solid #f1f5f9;margin-bottom:8px}
+.task .meta{color:var(--muted);font-size:0.9rem}
+
+/* responsive */
+@media (max-width:640px){
+  body{padding:12px}
+  .container{padding:16px;margin:8px}
+}
